@@ -1,0 +1,13 @@
+IMPERAS_SHRSUF=so
+IMPERAS_ARCH=Linux32
+IMPERAS_HOME=/home/amatin/work/IMPERAS/Imperas.20241211
+OLDPWD=/home/amatin/work/IMPERAS/Imperas.20241211/bin
+IMPERAS_RUNTIME=CpuManager
+PWD=/home/amatin/work/IMPERAS/Imperas.20241211/Examples/Models/Processor/FeatureUsage/RISCV_StfTrace
+IMPERASD_LICENSE_FILE=27010@global-licsrv2
+IMPERAS_PERSONALITY=CPUMAN_MULTI
+IMPERAS_M32=1
+IMPERAS_UNAME=Linux
+IMPERAS_ISS=iss.exe
+PATH=/home/amatin/work/IMPERAS/Imperas.20241211/bin/Linux32:/home/amatin/work/IMPERAS/Imperas.20241211/bin/Linux64:/mips/tools/mips/perf/miniconda/envs/sparta/bin:/mips/tools/mips/perf/miniconda/condabin:/usr/share/Modules/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/amatin/work/IMPERAS/Imperas.20241211/bin/Linux64:/home/amatin/work/IMPERAS/Imperas.20241211/bin/Linux64
+IMPERAS_VLNV=/home/amatin/work/IMPERAS/Imperas.20241211/lib/Linux64/ImperasLib

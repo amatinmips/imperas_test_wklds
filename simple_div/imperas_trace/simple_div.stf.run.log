@@ -1,0 +1,222 @@
+Info Session started: Thu Feb  6 12:01:56 2025
+
+Info PROGRAM /home/amatin/work/IMPERAS/Imperas.20241211/bin/Linux64/iss.exe
+Info ------------- ENVIRONMENT -------------
+Info IMPERAS_ARCH                             = Linux64
+Info IMPERASD_LICENSE_FILE                    = 27010@global-licsrv2
+Info IMPERAS_HOME                             = /home/amatin/work/IMPERAS/Imperas.20241211
+Info IMPERAS_ISS                              = iss.exe
+Info IMPERAS_M32                              = 1
+Info IMPERAS_PERSONALITY                      = CPUMAN_MULTI
+Info IMPERAS_RUNTIME                          = CpuManager
+Info IMPERAS_SHRSUF                           = so
+Info IMPERAS_UNAME                            = Linux
+Info IMPERAS_VLNV                             = /home/amatin/work/IMPERAS/Imperas.20241211/lib/Linux64/ImperasLib
+Info --------------------------------------
+Info -------- FLAGS (from command line)
+Info --program            /home/amatin/work/imperas_wklds/simple_div/simple_div.elf
+Info --processorvendor    mips.com
+Info --processorname      riscv
+Info --variant            M8500
+Info --override           iss/cpu0/add_Extensions=MACSU
+Info --extlib             iss/cpu0/stf=imperas.com/intercept/riscvStfTracer/1.0
+Info --override           iss/cpu0/stf/traceFile=/home/amatin/work/imperas_wklds/simple_div/imperas_trace/simple_div.stf
+Info --override           iss/cpu0/stf/verbose=T
+Info --override           iss/cpu0/stf/traceMemRead=T
+Info --override           iss/cpu0/stf/traceMemWrite=T
+Info --logfile            /home/amatin/work/imperas_wklds/simple_div/imperas_trace/simple_div.stf.run.log
+Info --verbose           
+IMPERAS Instruction Set Simulator (ISS)
+
+
+CpuManagerMulti (64-Bit)
+Version V-2023.09 veng.20241211.0
+Open Virtual Platform simulator from www.Synopsys.com.
+
+
+Copyright (c) 2005-2024 Synopsys, inc.
+This software and the associated documentation are proprietary to Synopsys,
+Inc. This software may only be used in accordance with the terms and conditions
+of a written license agreement with Synopsys, Inc. All other use, reproduction,
+or distribution of this software is strictly prohibited.  Licensed Products
+communicate with Synopsys servers for the purpose of providing software
+updates, detecting software piracy and verifying that customers are using
+Licensed Products in conformity with the applicable License Key for such
+Licensed Products. Synopsys will use information gathered in connection with
+this process to deliver software updates and pursue software pirates and
+infringers.
+
+Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+Inclusivity and Diversity" (Refer to article 000036315 at
+https://solvnetplus.synopsys.com)
+
+CpuManagerMulti started: Thu Feb  6 12:01:56 2025
+
+
+Info (OR_OF) Target 'iss/cpu0' has object file read from '/home/amatin/work/imperas_wklds/simple_div/simple_div.elf'
+Info (OR_PH) Program Headers:
+Info (OR_PH) Type           Offset     VirtAddr   PhysAddr   FileSiz    MemSiz     Flags Align
+Info (OR_PD) PROC           0x00001bb9 0x00000000 0x00000000 0x00000094 0x00000000 R--   1
+Info (OR_PD) LOAD           0x00000000 0x00010000 0x00010000 0x00001628 0x00001628 R-E   1000
+Info (OR_PD) LOAD           0x00001628 0x00012628 0x00012628 0x00000558 0x00000880 RW-   1000
+Info (OR_PD) OS             0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 RW-   10
+Warning (CF_PMP) Override 'iss/cpu0/stf/traceFile' matches 'iss/cpu0_hart0': This method of matching will be removed in the next release. Suggest replacing 'cpu0' with 'cpu0*'
+Warning (CF_PMP) Override 'iss/cpu0/stf/traceMemRead' matches 'iss/cpu0_hart0': This method of matching will be removed in the next release. Suggest replacing 'cpu0' with 'cpu0*'
+Warning (CF_PMP) Override 'iss/cpu0/stf/traceMemWrite' matches 'iss/cpu0_hart0': This method of matching will be removed in the next release. Suggest replacing 'cpu0' with 'cpu0*'
+Warning (CF_PMP) Override 'iss/cpu0/stf/verbose' matches 'iss/cpu0_hart0': This method of matching will be removed in the next release. Suggest replacing 'cpu0' with 'cpu0*'
+Info (STF_TRACE) Opening trace file '/home/amatin/work/imperas_wklds/simple_div/imperas_trace/simple_div.stf.hart0' for writing
+Info (STF_TRACE) Monitoring memory reads between 0x00000000 and 0xffffffff
+Info (STF_TRACE) Monitoring memory writes between 0x00000000 and 0xffffffff
+Warning (CF_PMP) Override 'iss/cpu0/stf/traceFile' matches 'iss/cpu0_hart1': This method of matching will be removed in the next release. Suggest replacing 'cpu0' with 'cpu0*'
+Warning (CF_PMP) Override 'iss/cpu0/stf/traceMemRead' matches 'iss/cpu0_hart1': This method of matching will be removed in the next release. Suggest replacing 'cpu0' with 'cpu0*'
+Warning (CF_PMP) Override 'iss/cpu0/stf/traceMemWrite' matches 'iss/cpu0_hart1': This method of matching will be removed in the next release. Suggest replacing 'cpu0' with 'cpu0*'
+Warning (CF_PMP) Override 'iss/cpu0/stf/verbose' matches 'iss/cpu0_hart1': This method of matching will be removed in the next release. Suggest replacing 'cpu0' with 'cpu0*'
+Info (STF_TRACE) Opening trace file '/home/amatin/work/imperas_wklds/simple_div/imperas_trace/simple_div.stf.hart1' for writing
+Info (STF_TRACE) Monitoring memory reads between 0x00000000 and 0xffffffff
+Info (STF_TRACE) Monitoring memory writes between 0x00000000 and 0xffffffff
+Warning (CF_PMP) Override 'iss/cpu0/stf/traceFile' matches 'iss/cpu0_hart2': This method of matching will be removed in the next release. Suggest replacing 'cpu0' with 'cpu0*'
+Warning (CF_PMP) Override 'iss/cpu0/stf/traceMemRead' matches 'iss/cpu0_hart2': This method of matching will be removed in the next release. Suggest replacing 'cpu0' with 'cpu0*'
+Warning (CF_PMP) Override 'iss/cpu0/stf/traceMemWrite' matches 'iss/cpu0_hart2': This method of matching will be removed in the next release. Suggest replacing 'cpu0' with 'cpu0*'
+Warning (CF_PMP) Override 'iss/cpu0/stf/verbose' matches 'iss/cpu0_hart2': This method of matching will be removed in the next release. Suggest replacing 'cpu0' with 'cpu0*'
+Info (STF_TRACE) Opening trace file '/home/amatin/work/imperas_wklds/simple_div/imperas_trace/simple_div.stf.hart2' for writing
+Info (STF_TRACE) Monitoring memory reads between 0x00000000 and 0xffffffff
+Info (STF_TRACE) Monitoring memory writes between 0x00000000 and 0xffffffff
+Warning (CF_PMP) Override 'iss/cpu0/stf/traceFile' matches 'iss/cpu0_hart3': This method of matching will be removed in the next release. Suggest replacing 'cpu0' with 'cpu0*'
+Warning (CF_PMP) Override 'iss/cpu0/stf/traceMemRead' matches 'iss/cpu0_hart3': This method of matching will be removed in the next release. Suggest replacing 'cpu0' with 'cpu0*'
+Warning (CF_PMP) Override 'iss/cpu0/stf/traceMemWrite' matches 'iss/cpu0_hart3': This method of matching will be removed in the next release. Suggest replacing 'cpu0' with 'cpu0*'
+Warning (CF_PMP) Override 'iss/cpu0/stf/verbose' matches 'iss/cpu0_hart3': This method of matching will be removed in the next release. Suggest replacing 'cpu0' with 'cpu0*'
+Info (STF_TRACE) Opening trace file '/home/amatin/work/imperas_wklds/simple_div/imperas_trace/simple_div.stf.hart3' for writing
+Info (STF_TRACE) Monitoring memory reads between 0x00000000 and 0xffffffff
+Info (STF_TRACE) Monitoring memory writes between 0x00000000 and 0xffffffff
+Warning (CF_PMP) Override 'iss/cpu0/stf/traceFile' matches 'iss/cpu0_hart4': This method of matching will be removed in the next release. Suggest replacing 'cpu0' with 'cpu0*'
+Warning (CF_PMP) Override 'iss/cpu0/stf/traceMemRead' matches 'iss/cpu0_hart4': This method of matching will be removed in the next release. Suggest replacing 'cpu0' with 'cpu0*'
+Warning (CF_PMP) Override 'iss/cpu0/stf/traceMemWrite' matches 'iss/cpu0_hart4': This method of matching will be removed in the next release. Suggest replacing 'cpu0' with 'cpu0*'
+Warning (CF_PMP) Override 'iss/cpu0/stf/verbose' matches 'iss/cpu0_hart4': This method of matching will be removed in the next release. Suggest replacing 'cpu0' with 'cpu0*'
+Info (STF_TRACE) Opening trace file '/home/amatin/work/imperas_wklds/simple_div/imperas_trace/simple_div.stf.hart4' for writing
+Info (STF_TRACE) Monitoring memory reads between 0x00000000 and 0xffffffff
+Info (STF_TRACE) Monitoring memory writes between 0x00000000 and 0xffffffff
+Warning (CF_PMP) Override 'iss/cpu0/stf/traceFile' matches 'iss/cpu0_hart5': This method of matching will be removed in the next release. Suggest replacing 'cpu0' with 'cpu0*'
+Warning (CF_PMP) Override 'iss/cpu0/stf/traceMemRead' matches 'iss/cpu0_hart5': This method of matching will be removed in the next release. Suggest replacing 'cpu0' with 'cpu0*'
+Warning (CF_PMP) Override 'iss/cpu0/stf/traceMemWrite' matches 'iss/cpu0_hart5': This method of matching will be removed in the next release. Suggest replacing 'cpu0' with 'cpu0*'
+Warning (CF_PMP) Override 'iss/cpu0/stf/verbose' matches 'iss/cpu0_hart5': This method of matching will be removed in the next release. Suggest replacing 'cpu0' with 'cpu0*'
+Info (STF_TRACE) Opening trace file '/home/amatin/work/imperas_wklds/simple_div/imperas_trace/simple_div.stf.hart5' for writing
+Info (STF_TRACE) Monitoring memory reads between 0x00000000 and 0xffffffff
+Info (STF_TRACE) Monitoring memory writes between 0x00000000 and 0xffffffff
+Warning (CF_PMP) Override 'iss/cpu0/stf/traceFile' matches 'iss/cpu0_hart6': This method of matching will be removed in the next release. Suggest replacing 'cpu0' with 'cpu0*'
+Warning (CF_PMP) Override 'iss/cpu0/stf/traceMemRead' matches 'iss/cpu0_hart6': This method of matching will be removed in the next release. Suggest replacing 'cpu0' with 'cpu0*'
+Warning (CF_PMP) Override 'iss/cpu0/stf/traceMemWrite' matches 'iss/cpu0_hart6': This method of matching will be removed in the next release. Suggest replacing 'cpu0' with 'cpu0*'
+Warning (CF_PMP) Override 'iss/cpu0/stf/verbose' matches 'iss/cpu0_hart6': This method of matching will be removed in the next release. Suggest replacing 'cpu0' with 'cpu0*'
+Info (STF_TRACE) Opening trace file '/home/amatin/work/imperas_wklds/simple_div/imperas_trace/simple_div.stf.hart6' for writing
+Info (STF_TRACE) Monitoring memory reads between 0x00000000 and 0xffffffff
+Info (STF_TRACE) Monitoring memory writes between 0x00000000 and 0xffffffff
+Warning (CF_PMP) Override 'iss/cpu0/stf/traceFile' matches 'iss/cpu0_hart7': This method of matching will be removed in the next release. Suggest replacing 'cpu0' with 'cpu0*'
+Warning (CF_PMP) Override 'iss/cpu0/stf/traceMemRead' matches 'iss/cpu0_hart7': This method of matching will be removed in the next release. Suggest replacing 'cpu0' with 'cpu0*'
+Warning (CF_PMP) Override 'iss/cpu0/stf/traceMemWrite' matches 'iss/cpu0_hart7': This method of matching will be removed in the next release. Suggest replacing 'cpu0' with 'cpu0*'
+Warning (CF_PMP) Override 'iss/cpu0/stf/verbose' matches 'iss/cpu0_hart7': This method of matching will be removed in the next release. Suggest replacing 'cpu0' with 'cpu0*'
+Info (STF_TRACE) Opening trace file '/home/amatin/work/imperas_wklds/simple_div/imperas_trace/simple_div.stf.hart7' for writing
+Info (STF_TRACE) Monitoring memory reads between 0x00000000 and 0xffffffff
+Info (STF_TRACE) Monitoring memory writes between 0x00000000 and 0xffffffff
+Warning (CF_PMP) Override 'iss/cpu0/stf/traceFile' matches 'iss/cpu0_hart8': This method of matching will be removed in the next release. Suggest replacing 'cpu0' with 'cpu0*'
+Warning (CF_PMP) Override 'iss/cpu0/stf/traceMemRead' matches 'iss/cpu0_hart8': This method of matching will be removed in the next release. Suggest replacing 'cpu0' with 'cpu0*'
+Warning (CF_PMP) Override 'iss/cpu0/stf/traceMemWrite' matches 'iss/cpu0_hart8': This method of matching will be removed in the next release. Suggest replacing 'cpu0' with 'cpu0*'
+Warning (CF_PMP) Override 'iss/cpu0/stf/verbose' matches 'iss/cpu0_hart8': This method of matching will be removed in the next release. Suggest replacing 'cpu0' with 'cpu0*'
+Info (STF_TRACE) Opening trace file '/home/amatin/work/imperas_wklds/simple_div/imperas_trace/simple_div.stf.hart8' for writing
+Info (STF_TRACE) Monitoring memory reads between 0x00000000 and 0xffffffff
+Info (STF_TRACE) Monitoring memory writes between 0x00000000 and 0xffffffff
+Warning (CF_PMP) Override 'iss/cpu0/stf/traceFile' matches 'iss/cpu0_hart9': This method of matching will be removed in the next release. Suggest replacing 'cpu0' with 'cpu0*'
+Warning (CF_PMP) Override 'iss/cpu0/stf/traceMemRead' matches 'iss/cpu0_hart9': This method of matching will be removed in the next release. Suggest replacing 'cpu0' with 'cpu0*'
+Warning (CF_PMP) Override 'iss/cpu0/stf/traceMemWrite' matches 'iss/cpu0_hart9': This method of matching will be removed in the next release. Suggest replacing 'cpu0' with 'cpu0*'
+Warning (CF_PMP) Override 'iss/cpu0/stf/verbose' matches 'iss/cpu0_hart9': This method of matching will be removed in the next release. Suggest replacing 'cpu0' with 'cpu0*'
+Info (STF_TRACE) Opening trace file '/home/amatin/work/imperas_wklds/simple_div/imperas_trace/simple_div.stf.hart9' for writing
+Info (STF_TRACE) Monitoring memory reads between 0x00000000 and 0xffffffff
+Info (STF_TRACE) Monitoring memory writes between 0x00000000 and 0xffffffff
+Warning (CF_PMP) Override 'iss/cpu0/stf/traceFile' matches 'iss/cpu0_hart10': This method of matching will be removed in the next release. Suggest replacing 'cpu0' with 'cpu0*'
+Warning (CF_PMP) Override 'iss/cpu0/stf/traceMemRead' matches 'iss/cpu0_hart10': This method of matching will be removed in the next release. Suggest replacing 'cpu0' with 'cpu0*'
+Warning (CF_PMP) Override 'iss/cpu0/stf/traceMemWrite' matches 'iss/cpu0_hart10': This method of matching will be removed in the next release. Suggest replacing 'cpu0' with 'cpu0*'
+Warning (CF_PMP) Override 'iss/cpu0/stf/verbose' matches 'iss/cpu0_hart10': This method of matching will be removed in the next release. Suggest replacing 'cpu0' with 'cpu0*'
+Info (STF_TRACE) Opening trace file '/home/amatin/work/imperas_wklds/simple_div/imperas_trace/simple_div.stf.hart10' for writing
+Info (STF_TRACE) Monitoring memory reads between 0x00000000 and 0xffffffff
+Info (STF_TRACE) Monitoring memory writes between 0x00000000 and 0xffffffff
+Warning (CF_PMP) Override 'iss/cpu0/stf/traceFile' matches 'iss/cpu0_hart11': This method of matching will be removed in the next release. Suggest replacing 'cpu0' with 'cpu0*'
+Warning (CF_PMP) Override 'iss/cpu0/stf/traceMemRead' matches 'iss/cpu0_hart11': This method of matching will be removed in the next release. Suggest replacing 'cpu0' with 'cpu0*'
+Warning (CF_PMP) Override 'iss/cpu0/stf/traceMemWrite' matches 'iss/cpu0_hart11': This method of matching will be removed in the next release. Suggest replacing 'cpu0' with 'cpu0*'
+Warning (CF_PMP) Override 'iss/cpu0/stf/verbose' matches 'iss/cpu0_hart11': This method of matching will be removed in the next release. Suggest replacing 'cpu0' with 'cpu0*'
+Info (STF_TRACE) Opening trace file '/home/amatin/work/imperas_wklds/simple_div/imperas_trace/simple_div.stf.hart11' for writing
+Info (STF_TRACE) Monitoring memory reads between 0x00000000 and 0xffffffff
+Info (STF_TRACE) Monitoring memory writes between 0x00000000 and 0xffffffff
+Warning (CF_PMP) Override 'iss/cpu0/stf/traceFile' matches 'iss/cpu0_hart12': This method of matching will be removed in the next release. Suggest replacing 'cpu0' with 'cpu0*'
+Warning (CF_PMP) Override 'iss/cpu0/stf/traceMemRead' matches 'iss/cpu0_hart12': This method of matching will be removed in the next release. Suggest replacing 'cpu0' with 'cpu0*'
+Warning (CF_PMP) Override 'iss/cpu0/stf/traceMemWrite' matches 'iss/cpu0_hart12': This method of matching will be removed in the next release. Suggest replacing 'cpu0' with 'cpu0*'
+Warning (CF_PMP) Override 'iss/cpu0/stf/verbose' matches 'iss/cpu0_hart12': This method of matching will be removed in the next release. Suggest replacing 'cpu0' with 'cpu0*'
+Info (STF_TRACE) Opening trace file '/home/amatin/work/imperas_wklds/simple_div/imperas_trace/simple_div.stf.hart12' for writing
+Info (STF_TRACE) Monitoring memory reads between 0x00000000 and 0xffffffff
+Info (STF_TRACE) Monitoring memory writes between 0x00000000 and 0xffffffff
+Warning (CF_PMP) Override 'iss/cpu0/stf/traceFile' matches 'iss/cpu0_hart13': This method of matching will be removed in the next release. Suggest replacing 'cpu0' with 'cpu0*'
+Warning (CF_PMP) Override 'iss/cpu0/stf/traceMemRead' matches 'iss/cpu0_hart13': This method of matching will be removed in the next release. Suggest replacing 'cpu0' with 'cpu0*'
+Warning (CF_PMP) Override 'iss/cpu0/stf/traceMemWrite' matches 'iss/cpu0_hart13': This method of matching will be removed in the next release. Suggest replacing 'cpu0' with 'cpu0*'
+Warning (CF_PMP) Override 'iss/cpu0/stf/verbose' matches 'iss/cpu0_hart13': This method of matching will be removed in the next release. Suggest replacing 'cpu0' with 'cpu0*'
+Info (STF_TRACE) Opening trace file '/home/amatin/work/imperas_wklds/simple_div/imperas_trace/simple_div.stf.hart13' for writing
+Info (STF_TRACE) Monitoring memory reads between 0x00000000 and 0xffffffff
+Info (STF_TRACE) Monitoring memory writes between 0x00000000 and 0xffffffff
+Warning (CF_PMP) Override 'iss/cpu0/stf/traceFile' matches 'iss/cpu0_hart14': This method of matching will be removed in the next release. Suggest replacing 'cpu0' with 'cpu0*'
+Warning (CF_PMP) Override 'iss/cpu0/stf/traceMemRead' matches 'iss/cpu0_hart14': This method of matching will be removed in the next release. Suggest replacing 'cpu0' with 'cpu0*'
+Warning (CF_PMP) Override 'iss/cpu0/stf/traceMemWrite' matches 'iss/cpu0_hart14': This method of matching will be removed in the next release. Suggest replacing 'cpu0' with 'cpu0*'
+Warning (CF_PMP) Override 'iss/cpu0/stf/verbose' matches 'iss/cpu0_hart14': This method of matching will be removed in the next release. Suggest replacing 'cpu0' with 'cpu0*'
+Info (STF_TRACE) Opening trace file '/home/amatin/work/imperas_wklds/simple_div/imperas_trace/simple_div.stf.hart14' for writing
+Info (STF_TRACE) Monitoring memory reads between 0x00000000 and 0xffffffff
+Info (STF_TRACE) Monitoring memory writes between 0x00000000 and 0xffffffff
+Warning (CF_PMP) Override 'iss/cpu0/stf/traceFile' matches 'iss/cpu0_hart15': This method of matching will be removed in the next release. Suggest replacing 'cpu0' with 'cpu0*'
+Warning (CF_PMP) Override 'iss/cpu0/stf/traceMemRead' matches 'iss/cpu0_hart15': This method of matching will be removed in the next release. Suggest replacing 'cpu0' with 'cpu0*'
+Warning (CF_PMP) Override 'iss/cpu0/stf/traceMemWrite' matches 'iss/cpu0_hart15': This method of matching will be removed in the next release. Suggest replacing 'cpu0' with 'cpu0*'
+Warning (CF_PMP) Override 'iss/cpu0/stf/verbose' matches 'iss/cpu0_hart15': This method of matching will be removed in the next release. Suggest replacing 'cpu0' with 'cpu0*'
+Info (STF_TRACE) Opening trace file '/home/amatin/work/imperas_wklds/simple_div/imperas_trace/simple_div.stf.hart15' for writing
+Info (STF_TRACE) Monitoring memory reads between 0x00000000 and 0xffffffff
+Info (STF_TRACE) Monitoring memory writes between 0x00000000 and 0xffffffff
+Processor Exception (PC_PRX) Processor 'iss/cpu0_hart0' 0x0: 0000     illegal
+Processor Exception (PC_FIX) Executing at uninitialized address 0x0
+Processor Exception (PC_FUM) NOTE: simulated exceptions are not enabled on processor iss/cpu0_hart0. To continue execution when fetching from uninitialized memory, please ensure simulated exceptions are enabled.
+Info 
+Info ---------------------------------------------------
+Info CPU 'iss/cpu0_hart0' STATISTICS
+Info   Type                  : riscv (M8500)
+Info   Nominal MIPS          : 100
+Info   Final program counter : 0x0
+Info   Simulated instructions: 384
+Info   Simulated MIPS        : run too short for meaningful result
+Info   Translated insns      : 96
+Info   Simulated:translated  : 4:1
+Info ---------------------------------------------------
+Info 
+Info ---------------------------------------------------
+Info SIMULATION TIME STATISTICS
+Info   Simulated time        : 0.00 seconds
+Info   User time             : 0.01 seconds
+Info   System time           : 0.00 seconds
+Info   Elapsed time          : 0.01 seconds
+Info ---------------------------------------------------
+
+CpuManagerMulti finished: Thu Feb  6 12:01:57 2025
+
+
+CpuManagerMulti (64-Bit)
+Version V-2023.09 veng.20241211.0
+Open Virtual Platform simulator from www.Synopsys.com.
+
+Info (STF_TRACE) Trace file closed
+Info (STF_TRACE) Trace file closed
+Info (STF_TRACE) Trace file closed
+Info (STF_TRACE) Trace file closed
+Info (STF_TRACE) Trace file closed
+Info (STF_TRACE) Trace file closed
+Info (STF_TRACE) Trace file closed
+Info (STF_TRACE) Trace file closed
+Info (STF_TRACE) Trace file closed
+Info (STF_TRACE) Trace file closed
+Info (STF_TRACE) Trace file closed
+Info (STF_TRACE) Trace file closed
+Info (STF_TRACE) Trace file closed
+Info (STF_TRACE) Trace file closed
+Info (STF_TRACE) Trace file closed
+Info (STF_TRACE) Trace file closed
+Info Session ended: Thu Feb  6 12:01:57 2025
+
