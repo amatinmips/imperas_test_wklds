@@ -1,0 +1,23 @@
+
+hello_world_kingv.elf:     file format elf64-littleriscv
+
+SYMBOL TABLE:
+000000000001d2c8 l    d  .init_array	0000000000000000 .init_array
+000000000001d2d0 l     O .init_array	0000000000000000 __frame_dummy_init_array_entry
+000000000001d2d8 l       .init_array	0000000000000000 __init_array_end
+000000000001d2c8 l       .init_array	0000000000000000 __preinit_array_end
+000000000001d2c8 l       .init_array	0000000000000000 __init_array_start
+000000000001d2c8 l       .init_array	0000000000000000 __preinit_array_start
+
+
+Contents of section .init_array:
+ 1d2c8 e8000100 00000000 98010100 00000000  ................
+
+Disassembly of section .init_array:
+
+000000000001d2c8 <__init_array_start>:
+   1d2c8:	000100e8          	.word	0x000100e8
+   1d2cc:	00000000          	.word	0x00000000
+
+000000000001d2d0 <__frame_dummy_init_array_entry>:
+   1d2d0:	00010198 00000000                       ........

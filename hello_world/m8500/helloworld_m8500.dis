@@ -1,0 +1,22 @@
+
+hello_world_raven.elf:     file format elf32-littleriscv
+
+SYMBOL TABLE:
+00020000 l    d  .init_array	00000000 .init_array
+00020004 l     O .init_array	00000000 __frame_dummy_init_array_entry
+00020008 l       .init_array	00000000 __init_array_end
+00020000 l       .init_array	00000000 __preinit_array_end
+00020000 l       .init_array	00000000 __init_array_start
+00020000 l       .init_array	00000000 __preinit_array_start
+
+
+Contents of section .init_array:
+ 20000 b8000100 68010100                    ....h...        
+
+Disassembly of section .init_array:
+
+00020000 <__init_array_start>:
+   20000:	000100b8          	.word	0x000100b8
+
+00020004 <__frame_dummy_init_array_entry>:
+   20004:	00010168                                h...

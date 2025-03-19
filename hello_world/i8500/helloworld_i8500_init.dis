@@ -1,0 +1,23 @@
+
+hello_world_shogun.elf:     file format elf64-littleriscv
+
+SYMBOL TABLE:
+000000000001e470 l    d  .init_array	0000000000000000 .init_array
+000000000001e478 l     O .init_array	0000000000000000 __frame_dummy_init_array_entry
+000000000001e480 l       .init_array	0000000000000000 __init_array_end
+000000000001e46c l       .init_array	0000000000000000 __preinit_array_end
+000000000001e470 l       .init_array	0000000000000000 __init_array_start
+000000000001e46c l       .init_array	0000000000000000 __preinit_array_start
+
+
+Contents of section .init_array:
+ 1e470 20010100 00000000 d4010100 00000000   ...............
+
+Disassembly of section .init_array:
+
+000000000001e470 <__init_array_start>:
+   1e470:	00010120          	.word	0x00010120
+   1e474:	00000000          	.word	0x00000000
+
+000000000001e478 <__frame_dummy_init_array_entry>:
+   1e478:	000101d4 00000000                       ........
