@@ -1,0 +1,1367 @@
+Info Session started: Wed Apr 30 14:25:37 2025
+
+Info PROGRAM /home/amatin/work/IMPERAS_0418/Imperas.X-2025.06/bin/Linux64/iss.exe
+Info ------------- ENVIRONMENT -------------
+Info IMPERAS_ARCH                             = Linux64
+Info SNPSLMD_LICENSE_FILE                     = 27010@global-licsrv2
+Info IMPERAS_HOME                             = /home/amatin/work/IMPERAS_0418/Imperas.X-2025.06
+Info IMPERAS_ISS                              = iss.exe
+Info IMPERAS_M32                              = 0
+Info IMPERAS_PERSONALITY                      = CPUMAN_MULTI
+Info IMPERAS_RUNTIME                          = CpuManager
+Info IMPERAS_SHRSUF                           = so
+Info IMPERAS_UNAME                            = Linux
+Info IMPERAS_VLNV                             = /home/amatin/work/IMPERAS_0418/Imperas.X-2025.06/lib/Linux64/ImperasLib
+Info --------------------------------------
+Info -------- FLAGS (from command line)
+Info --program            /home/amatin/Raven_FFT/1024_CFFT_FP32/CFFT_1024_FP32_newlib.elf
+Info --processorvendor    mips.com
+Info --processorname      riscv
+Info --variant            M8500
+Info --override           iss/cpu0/add_Extensions=MACSU
+Info --override           iss/cpu0/mstatus_FS=1
+Info --extlib             iss/cpu0_hart0/stf=imperas.com/intercept/riscvStfTracer/1.0
+Info --override           iss/cpu0/stf/traceFile=FFT_m8500.stf
+Info --override           iss/cpu0/Smcsrind=T
+Info --override           CLIC_version=0.10-draft-20250317
+Info --override           iss/cpu0/stf/verbose=T
+Info --override           iss/cpu0/stf/traceMemRead=T
+Info --override           iss/cpu0/stf/traceMemWrite=T
+Info --tracefull         
+Info --logfile            FFT_m8500.stf.run.log
+Info --verbose           
+IMPERAS Instruction Set Simulator (ISS)
+
+
+CpuManagerMulti (64-Bit)
+Version X-2025.06-PRE-20250417 veng.20250418.0
+Open Virtual Platform simulator from www.Synopsys.com.
+
+
+Copyright (c) 2005-2024 Synopsys, inc.
+This software and the associated documentation are proprietary to Synopsys, Inc.
+This software may only be used in accordance with the terms and conditions
+of a written license agreement with Synopsys, Inc. All other use, reproduction,
+or distribution of this software is strictly prohibited.  Licensed Products
+communicate with Synopsys servers for the purpose of providing software
+updates, detecting software piracy and verifying that customers are using
+Licensed Products in conformity with the applicable License Key for such
+Licensed Products. Synopsys will use information gathered in connection with
+this process to deliver software updates and pursue software pirates and infringers.
+
+Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on Inclusivity and Diversity"
+(Refer to article 000036315 at https://solvnetplus.synopsys.com)
+
+CpuManagerMulti started: Wed Apr 30 14:25:37 2025
+
+
+Info (OR_OF) Target 'iss/cpu0' has object file read from '/home/amatin/Raven_FFT/1024_CFFT_FP32/CFFT_1024_FP32_newlib.elf'
+Info (OR_PH) Program Headers:
+Info (OR_PH) Type           Offset     VirtAddr   PhysAddr   FileSiz    MemSiz     Flags Align
+Info (OR_PD) PROC           0x0006d6a1 0x00000000 0x00000000 0x00000094 0x00000000 R--   1
+Info (OR_PD) LOAD           0x00000000 0x00010000 0x00010000 0x0006b10c 0x0006b10c R-E   1000
+Info (OR_PD) LOAD           0x0006b10c 0x0007c10c 0x0007c10c 0x0000255c 0x00002888 RW-   1000
+Info (OR_PD) OS             0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 RW-   10
+Warning (CF_PMP) Override 'iss/cpu0/stf/traceFile' matches 'iss/cpu0_hart0': This method of matching will be removed in the next release. Suggest replacing 'cpu0' with 'cpu0*'
+Warning (CF_PMP) Override 'iss/cpu0/stf/traceMemRead' matches 'iss/cpu0_hart0': This method of matching will be removed in the next release. Suggest replacing 'cpu0' with 'cpu0*'
+Warning (CF_PMP) Override 'iss/cpu0/stf/traceMemWrite' matches 'iss/cpu0_hart0': This method of matching will be removed in the next release. Suggest replacing 'cpu0' with 'cpu0*'
+Warning (CF_PMP) Override 'iss/cpu0/stf/verbose' matches 'iss/cpu0_hart0': This method of matching will be removed in the next release. Suggest replacing 'cpu0' with 'cpu0*'
+Info (STF_TRACE) Opening trace file 'FFT_m8500.stf.hart0' for writing
+Info (STF_TRACE) Monitoring memory reads between 0x00000000 and 0xffffffff
+Info (STF_TRACE) Monitoring memory writes between 0x00000000 and 0xffffffff
+Info 1: 'iss/cpu0_hart0', 0x00000000000100c8(_start): Machine 0006e197 auipc   gp,0x6e
+Info 1: 'iss/cpu0_hart0',   gp 00000000 -> 0007e0c8
+Info 2: 'iss/cpu0_hart0', 0x00000000000100cc(_start+4): Machine 0cc18193 addi    gp,gp,204
+Info 2: 'iss/cpu0_hart0',   gp 0007e0c8 -> 0007e194
+Info 3: 'iss/cpu0_hart0', 0x00000000000100d0(_start+8): Machine 4d418513 addi    a0,gp,1236
+Info 3: 'iss/cpu0_hart0',   a0 00000000 -> 0007e668
+Info 4: 'iss/cpu0_hart0', 0x00000000000100d4(_start+c): Machine 0006f617 auipc   a2,0x6f
+Info 4: 'iss/cpu0_hart0',   a2 00000000 -> 0007f0d4
+Info 5: 'iss/cpu0_hart0', 0x00000000000100d8(_start+10): Machine 8c060613 addi    a2,a2,-1856
+Info 5: 'iss/cpu0_hart0',   a2 0007f0d4 -> 0007e994
+Info 6: 'iss/cpu0_hart0', 0x00000000000100dc(_start+14): Machine 8e09     sub     a2,a2,a0
+Info 6: 'iss/cpu0_hart0',   a2 0007e994 -> 0000032c
+Info 7: 'iss/cpu0_hart0', 0x00000000000100de(_start+16): Machine 4581     li      a1,0
+Info 7: 'iss/cpu0_hart0',   a1 00000000 -> 00000000
+Info 8: 'iss/cpu0_hart0', 0x00000000000100e0(_start+18): Machine 219000ef jal     ra,10af8
+Info 8: 'iss/cpu0_hart0',   ra 00000000 -> 000100e4
+Info 9: 'iss/cpu0_hart0', 0x0000000000010af8(memset): Machine 433d     li      t1,15
+Info 9: 'iss/cpu0_hart0',   t1 00000000 -> 0000000f
+Info 10: 'iss/cpu0_hart0', 0x0000000000010afa(memset+2): Machine 872a     mv      a4,a0
+Info 10: 'iss/cpu0_hart0',   a4 00000000 -> 0007e668
+Info 11: 'iss/cpu0_hart0', 0x0000000000010afc(memset+4): Machine 02c37363 bgeu    t1,a2,10b22
+Info 12: 'iss/cpu0_hart0', 0x0000000000010b00(memset+8): Machine 00f77793 andi    a5,a4,15
+Info 12: 'iss/cpu0_hart0',   a5 00000000 -> 00000008
+Info 13: 'iss/cpu0_hart0', 0x0000000000010b04(memset+c): Machine efbd     bnez    a5,10b82
+Info 14: 'iss/cpu0_hart0', 0x0000000000010b82(memset+8a): Machine 00279693 slli    a3,a5,0x2
+Info 14: 'iss/cpu0_hart0',   a3 00000000 -> 00000020
+Info 15: 'iss/cpu0_hart0', 0x0000000000010b86(memset+8e): Machine 00000297 auipc   t0,0x0
+Info 15: 'iss/cpu0_hart0',   t0 00000000 -> 00010b86
+Info 16: 'iss/cpu0_hart0', 0x0000000000010b8a(memset+92): Machine 9696     add     a3,a3,t0
+Info 16: 'iss/cpu0_hart0',   a3 00000020 -> 00010ba6
+Info 17: 'iss/cpu0_hart0', 0x0000000000010b8c(memset+94): Machine 8286     mv      t0,ra
+Info 17: 'iss/cpu0_hart0',   t0 00010b86 -> 000100e4
+Info 18: 'iss/cpu0_hart0', 0x0000000000010b8e(memset+96): Machine fa8680e7 jalr    ra,-88(a3)
+Info 18: 'iss/cpu0_hart0',   ra 000100e4 -> 00010b92
+Info 19: 'iss/cpu0_hart0', 0x0000000000010b4e(memset+56): Machine 00b703a3 sb      a1,7(a4)
+Info 19: 'iss/cpu0_hart0',   MEMW 0x7e66f 0x7e66f 1 00
+Info 19: 'iss/cpu0_hart0',   MEMW 0x7e66f 0x7e66f 1 00
+Info 20: 'iss/cpu0_hart0', 0x0000000000010b52(memset+5a): Machine 00b70323 sb      a1,6(a4)
+Info 20: 'iss/cpu0_hart0',   MEMW 0x7e66e 0x7e66e 1 00
+Info 20: 'iss/cpu0_hart0',   MEMW 0x7e66e 0x7e66e 1 00
+Info 21: 'iss/cpu0_hart0', 0x0000000000010b56(memset+5e): Machine 00b702a3 sb      a1,5(a4)
+Info 21: 'iss/cpu0_hart0',   MEMW 0x7e66d 0x7e66d 1 00
+Info 21: 'iss/cpu0_hart0',   MEMW 0x7e66d 0x7e66d 1 00
+Info 22: 'iss/cpu0_hart0', 0x0000000000010b5a(memset+62): Machine 00b70223 sb      a1,4(a4)
+Info 22: 'iss/cpu0_hart0',   MEMW 0x7e66c 0x7e66c 1 00
+Info 22: 'iss/cpu0_hart0',   MEMW 0x7e66c 0x7e66c 1 00
+Info 23: 'iss/cpu0_hart0', 0x0000000000010b5e(memset+66): Machine 00b701a3 sb      a1,3(a4)
+Info 23: 'iss/cpu0_hart0',   MEMW 0x7e66b 0x7e66b 1 00
+Info 23: 'iss/cpu0_hart0',   MEMW 0x7e66b 0x7e66b 1 00
+Info 24: 'iss/cpu0_hart0', 0x0000000000010b62(memset+6a): Machine 00b70123 sb      a1,2(a4)
+Info 24: 'iss/cpu0_hart0',   MEMW 0x7e66a 0x7e66a 1 00
+Info 24: 'iss/cpu0_hart0',   MEMW 0x7e66a 0x7e66a 1 00
+Info 25: 'iss/cpu0_hart0', 0x0000000000010b66(memset+6e): Machine 00b700a3 sb      a1,1(a4)
+Info 25: 'iss/cpu0_hart0',   MEMW 0x7e669 0x7e669 1 00
+Info 25: 'iss/cpu0_hart0',   MEMW 0x7e669 0x7e669 1 00
+Info 26: 'iss/cpu0_hart0', 0x0000000000010b6a(memset+72): Machine 00b70023 sb      a1,0(a4)
+Info 26: 'iss/cpu0_hart0',   MEMW 0x7e668 0x7e668 1 00
+Info 26: 'iss/cpu0_hart0',   MEMW 0x7e668 0x7e668 1 00
+Info 27: 'iss/cpu0_hart0', 0x0000000000010b6e(memset+76): Machine 8082     jr      ra
+Info 28: 'iss/cpu0_hart0', 0x0000000000010b92(memset+9a): Machine 8096     mv      ra,t0
+Info 28: 'iss/cpu0_hart0',   ra 00010b92 -> 000100e4
+Info 29: 'iss/cpu0_hart0', 0x0000000000010b94(memset+9c): Machine 17c1     addi    a5,a5,-16
+Info 29: 'iss/cpu0_hart0',   a5 00000008 -> fffffff8
+Info 30: 'iss/cpu0_hart0', 0x0000000000010b96(memset+9e): Machine 8f1d     sub     a4,a4,a5
+Info 30: 'iss/cpu0_hart0',   a4 0007e668 -> 0007e670
+Info 31: 'iss/cpu0_hart0', 0x0000000000010b98(memset+a0): Machine 963e     add     a2,a2,a5
+Info 31: 'iss/cpu0_hart0',   a2 0000032c -> 00000324
+Info 32: 'iss/cpu0_hart0', 0x0000000000010b9a(memset+a2): Machine f8c374e3 bgeu    t1,a2,10b22
+Info 33: 'iss/cpu0_hart0', 0x0000000000010b9e(memset+a6): Machine b7a5     j       10b06
+Info 34: 'iss/cpu0_hart0', 0x0000000000010b06(memset+e): Machine e5ad     bnez    a1,10b70
+Info 35: 'iss/cpu0_hart0', 0x0000000000010b08(memset+10): Machine ff067693 andi    a3,a2,-16
+Info 35: 'iss/cpu0_hart0',   a3 00010ba6 -> 00000320
+Info 36: 'iss/cpu0_hart0', 0x0000000000010b0c(memset+14): Machine 8a3d     andi    a2,a2,15
+Info 36: 'iss/cpu0_hart0',   a2 00000324 -> 00000004
+Info 37: 'iss/cpu0_hart0', 0x0000000000010b0e(memset+16): Machine 96ba     add     a3,a3,a4
+Info 37: 'iss/cpu0_hart0',   a3 00000320 -> 0007e990
+Info 38: 'iss/cpu0_hart0', 0x0000000000010b10(memset+18): Machine c30c     sw      a1,0(a4)
+Info 38: 'iss/cpu0_hart0',   MEMW 0x7e670 0x7e670 4 00000000
+Info 38: 'iss/cpu0_hart0',   MEMW 0x7e670 0x7e670 4 00000000
+Info 39: 'iss/cpu0_hart0', 0x0000000000010b12(memset+1a): Machine c34c     sw      a1,4(a4)
+Info 39: 'iss/cpu0_hart0',   MEMW 0x7e674 0x7e674 4 00000000
+Info 39: 'iss/cpu0_hart0',   MEMW 0x7e674 0x7e674 4 00000000
+Info 40: 'iss/cpu0_hart0', 0x0000000000010b14(memset+1c): Machine c70c     sw      a1,8(a4)
+Info 40: 'iss/cpu0_hart0',   MEMW 0x7e678 0x7e678 4 00000000
+Info 40: 'iss/cpu0_hart0',   MEMW 0x7e678 0x7e678 4 00000000
+Info 41: 'iss/cpu0_hart0', 0x0000000000010b16(memset+1e): Machine c74c     sw      a1,12(a4)
+Info 41: 'iss/cpu0_hart0',   MEMW 0x7e67c 0x7e67c 4 00000000
+Info 41: 'iss/cpu0_hart0',   MEMW 0x7e67c 0x7e67c 4 00000000
+Info 42: 'iss/cpu0_hart0', 0x0000000000010b18(memset+20): Machine 0741     addi    a4,a4,16
+Info 42: 'iss/cpu0_hart0',   a4 0007e670 -> 0007e680
+Info 43: 'iss/cpu0_hart0', 0x0000000000010b1a(memset+22): Machine fed76be3 bltu    a4,a3,10b10
+Info 44: 'iss/cpu0_hart0', 0x0000000000010b10(memset+18): Machine c30c     sw      a1,0(a4)
+Info 44: 'iss/cpu0_hart0',   MEMW 0x7e680 0x7e680 4 00000000
+Info 44: 'iss/cpu0_hart0',   MEMW 0x7e680 0x7e680 4 00000000
+Info 45: 'iss/cpu0_hart0', 0x0000000000010b12(memset+1a): Machine c34c     sw      a1,4(a4)
+Info 45: 'iss/cpu0_hart0',   MEMW 0x7e684 0x7e684 4 00000000
+Info 45: 'iss/cpu0_hart0',   MEMW 0x7e684 0x7e684 4 00000000
+Info 46: 'iss/cpu0_hart0', 0x0000000000010b14(memset+1c): Machine c70c     sw      a1,8(a4)
+Info 46: 'iss/cpu0_hart0',   MEMW 0x7e688 0x7e688 4 00000000
+Info 46: 'iss/cpu0_hart0',   MEMW 0x7e688 0x7e688 4 00000000
+Info 47: 'iss/cpu0_hart0', 0x0000000000010b16(memset+1e): Machine c74c     sw      a1,12(a4)
+Info 47: 'iss/cpu0_hart0',   MEMW 0x7e68c 0x7e68c 4 00000000
+Info 47: 'iss/cpu0_hart0',   MEMW 0x7e68c 0x7e68c 4 00000000
+Info 48: 'iss/cpu0_hart0', 0x0000000000010b18(memset+20): Machine 0741     addi    a4,a4,16
+Info 48: 'iss/cpu0_hart0',   a4 0007e680 -> 0007e690
+Info 49: 'iss/cpu0_hart0', 0x0000000000010b1a(memset+22): Machine fed76be3 bltu    a4,a3,10b10
+Info 50: 'iss/cpu0_hart0', 0x0000000000010b10(memset+18): Machine c30c     sw      a1,0(a4)
+Info 50: 'iss/cpu0_hart0',   MEMW 0x7e690 0x7e690 4 00000000
+Info 50: 'iss/cpu0_hart0',   MEMW 0x7e690 0x7e690 4 00000000
+Info 51: 'iss/cpu0_hart0', 0x0000000000010b12(memset+1a): Machine c34c     sw      a1,4(a4)
+Info 51: 'iss/cpu0_hart0',   MEMW 0x7e694 0x7e694 4 00000000
+Info 51: 'iss/cpu0_hart0',   MEMW 0x7e694 0x7e694 4 00000000
+Info 52: 'iss/cpu0_hart0', 0x0000000000010b14(memset+1c): Machine c70c     sw      a1,8(a4)
+Info 52: 'iss/cpu0_hart0',   MEMW 0x7e698 0x7e698 4 00000000
+Info 52: 'iss/cpu0_hart0',   MEMW 0x7e698 0x7e698 4 00000000
+Info 53: 'iss/cpu0_hart0', 0x0000000000010b16(memset+1e): Machine c74c     sw      a1,12(a4)
+Info 53: 'iss/cpu0_hart0',   MEMW 0x7e69c 0x7e69c 4 00000000
+Info 53: 'iss/cpu0_hart0',   MEMW 0x7e69c 0x7e69c 4 00000000
+Info 54: 'iss/cpu0_hart0', 0x0000000000010b18(memset+20): Machine 0741     addi    a4,a4,16
+Info 54: 'iss/cpu0_hart0',   a4 0007e690 -> 0007e6a0
+Info 55: 'iss/cpu0_hart0', 0x0000000000010b1a(memset+22): Machine fed76be3 bltu    a4,a3,10b10
+Info 56: 'iss/cpu0_hart0', 0x0000000000010b10(memset+18): Machine c30c     sw      a1,0(a4)
+Info 56: 'iss/cpu0_hart0',   MEMW 0x7e6a0 0x7e6a0 4 00000000
+Info 56: 'iss/cpu0_hart0',   MEMW 0x7e6a0 0x7e6a0 4 00000000
+Info 57: 'iss/cpu0_hart0', 0x0000000000010b12(memset+1a): Machine c34c     sw      a1,4(a4)
+Info 57: 'iss/cpu0_hart0',   MEMW 0x7e6a4 0x7e6a4 4 00000000
+Info 57: 'iss/cpu0_hart0',   MEMW 0x7e6a4 0x7e6a4 4 00000000
+Info 58: 'iss/cpu0_hart0', 0x0000000000010b14(memset+1c): Machine c70c     sw      a1,8(a4)
+Info 58: 'iss/cpu0_hart0',   MEMW 0x7e6a8 0x7e6a8 4 00000000
+Info 58: 'iss/cpu0_hart0',   MEMW 0x7e6a8 0x7e6a8 4 00000000
+Info 59: 'iss/cpu0_hart0', 0x0000000000010b16(memset+1e): Machine c74c     sw      a1,12(a4)
+Info 59: 'iss/cpu0_hart0',   MEMW 0x7e6ac 0x7e6ac 4 00000000
+Info 59: 'iss/cpu0_hart0',   MEMW 0x7e6ac 0x7e6ac 4 00000000
+Info 60: 'iss/cpu0_hart0', 0x0000000000010b18(memset+20): Machine 0741     addi    a4,a4,16
+Info 60: 'iss/cpu0_hart0',   a4 0007e6a0 -> 0007e6b0
+Info 61: 'iss/cpu0_hart0', 0x0000000000010b1a(memset+22): Machine fed76be3 bltu    a4,a3,10b10
+Info 62: 'iss/cpu0_hart0', 0x0000000000010b10(memset+18): Machine c30c     sw      a1,0(a4)
+Info 62: 'iss/cpu0_hart0',   MEMW 0x7e6b0 0x7e6b0 4 00000000
+Info 62: 'iss/cpu0_hart0',   MEMW 0x7e6b0 0x7e6b0 4 00000000
+Info 63: 'iss/cpu0_hart0', 0x0000000000010b12(memset+1a): Machine c34c     sw      a1,4(a4)
+Info 63: 'iss/cpu0_hart0',   MEMW 0x7e6b4 0x7e6b4 4 00000000
+Info 63: 'iss/cpu0_hart0',   MEMW 0x7e6b4 0x7e6b4 4 00000000
+Info 64: 'iss/cpu0_hart0', 0x0000000000010b14(memset+1c): Machine c70c     sw      a1,8(a4)
+Info 64: 'iss/cpu0_hart0',   MEMW 0x7e6b8 0x7e6b8 4 00000000
+Info 64: 'iss/cpu0_hart0',   MEMW 0x7e6b8 0x7e6b8 4 00000000
+Info 65: 'iss/cpu0_hart0', 0x0000000000010b16(memset+1e): Machine c74c     sw      a1,12(a4)
+Info 65: 'iss/cpu0_hart0',   MEMW 0x7e6bc 0x7e6bc 4 00000000
+Info 65: 'iss/cpu0_hart0',   MEMW 0x7e6bc 0x7e6bc 4 00000000
+Info 66: 'iss/cpu0_hart0', 0x0000000000010b18(memset+20): Machine 0741     addi    a4,a4,16
+Info 66: 'iss/cpu0_hart0',   a4 0007e6b0 -> 0007e6c0
+Info 67: 'iss/cpu0_hart0', 0x0000000000010b1a(memset+22): Machine fed76be3 bltu    a4,a3,10b10
+Info 68: 'iss/cpu0_hart0', 0x0000000000010b10(memset+18): Machine c30c     sw      a1,0(a4)
+Info 68: 'iss/cpu0_hart0',   MEMW 0x7e6c0 0x7e6c0 4 00000000
+Info 68: 'iss/cpu0_hart0',   MEMW 0x7e6c0 0x7e6c0 4 00000000
+Info 69: 'iss/cpu0_hart0', 0x0000000000010b12(memset+1a): Machine c34c     sw      a1,4(a4)
+Info 69: 'iss/cpu0_hart0',   MEMW 0x7e6c4 0x7e6c4 4 00000000
+Info 69: 'iss/cpu0_hart0',   MEMW 0x7e6c4 0x7e6c4 4 00000000
+Info 70: 'iss/cpu0_hart0', 0x0000000000010b14(memset+1c): Machine c70c     sw      a1,8(a4)
+Info 70: 'iss/cpu0_hart0',   MEMW 0x7e6c8 0x7e6c8 4 00000000
+Info 70: 'iss/cpu0_hart0',   MEMW 0x7e6c8 0x7e6c8 4 00000000
+Info 71: 'iss/cpu0_hart0', 0x0000000000010b16(memset+1e): Machine c74c     sw      a1,12(a4)
+Info 71: 'iss/cpu0_hart0',   MEMW 0x7e6cc 0x7e6cc 4 00000000
+Info 71: 'iss/cpu0_hart0',   MEMW 0x7e6cc 0x7e6cc 4 00000000
+Info 72: 'iss/cpu0_hart0', 0x0000000000010b18(memset+20): Machine 0741     addi    a4,a4,16
+Info 72: 'iss/cpu0_hart0',   a4 0007e6c0 -> 0007e6d0
+Info 73: 'iss/cpu0_hart0', 0x0000000000010b1a(memset+22): Machine fed76be3 bltu    a4,a3,10b10
+Info 74: 'iss/cpu0_hart0', 0x0000000000010b10(memset+18): Machine c30c     sw      a1,0(a4)
+Info 74: 'iss/cpu0_hart0',   MEMW 0x7e6d0 0x7e6d0 4 00000000
+Info 74: 'iss/cpu0_hart0',   MEMW 0x7e6d0 0x7e6d0 4 00000000
+Info 75: 'iss/cpu0_hart0', 0x0000000000010b12(memset+1a): Machine c34c     sw      a1,4(a4)
+Info 75: 'iss/cpu0_hart0',   MEMW 0x7e6d4 0x7e6d4 4 00000000
+Info 75: 'iss/cpu0_hart0',   MEMW 0x7e6d4 0x7e6d4 4 00000000
+Info 76: 'iss/cpu0_hart0', 0x0000000000010b14(memset+1c): Machine c70c     sw      a1,8(a4)
+Info 76: 'iss/cpu0_hart0',   MEMW 0x7e6d8 0x7e6d8 4 00000000
+Info 76: 'iss/cpu0_hart0',   MEMW 0x7e6d8 0x7e6d8 4 00000000
+Info 77: 'iss/cpu0_hart0', 0x0000000000010b16(memset+1e): Machine c74c     sw      a1,12(a4)
+Info 77: 'iss/cpu0_hart0',   MEMW 0x7e6dc 0x7e6dc 4 00000000
+Info 77: 'iss/cpu0_hart0',   MEMW 0x7e6dc 0x7e6dc 4 00000000
+Info 78: 'iss/cpu0_hart0', 0x0000000000010b18(memset+20): Machine 0741     addi    a4,a4,16
+Info 78: 'iss/cpu0_hart0',   a4 0007e6d0 -> 0007e6e0
+Info 79: 'iss/cpu0_hart0', 0x0000000000010b1a(memset+22): Machine fed76be3 bltu    a4,a3,10b10
+Info 80: 'iss/cpu0_hart0', 0x0000000000010b10(memset+18): Machine c30c     sw      a1,0(a4)
+Info 80: 'iss/cpu0_hart0',   MEMW 0x7e6e0 0x7e6e0 4 00000000
+Info 80: 'iss/cpu0_hart0',   MEMW 0x7e6e0 0x7e6e0 4 00000000
+Info 81: 'iss/cpu0_hart0', 0x0000000000010b12(memset+1a): Machine c34c     sw      a1,4(a4)
+Info 81: 'iss/cpu0_hart0',   MEMW 0x7e6e4 0x7e6e4 4 00000000
+Info 81: 'iss/cpu0_hart0',   MEMW 0x7e6e4 0x7e6e4 4 00000000
+Info 82: 'iss/cpu0_hart0', 0x0000000000010b14(memset+1c): Machine c70c     sw      a1,8(a4)
+Info 82: 'iss/cpu0_hart0',   MEMW 0x7e6e8 0x7e6e8 4 00000000
+Info 82: 'iss/cpu0_hart0',   MEMW 0x7e6e8 0x7e6e8 4 00000000
+Info 83: 'iss/cpu0_hart0', 0x0000000000010b16(memset+1e): Machine c74c     sw      a1,12(a4)
+Info 83: 'iss/cpu0_hart0',   MEMW 0x7e6ec 0x7e6ec 4 00000000
+Info 83: 'iss/cpu0_hart0',   MEMW 0x7e6ec 0x7e6ec 4 00000000
+Info 84: 'iss/cpu0_hart0', 0x0000000000010b18(memset+20): Machine 0741     addi    a4,a4,16
+Info 84: 'iss/cpu0_hart0',   a4 0007e6e0 -> 0007e6f0
+Info 85: 'iss/cpu0_hart0', 0x0000000000010b1a(memset+22): Machine fed76be3 bltu    a4,a3,10b10
+Info 86: 'iss/cpu0_hart0', 0x0000000000010b10(memset+18): Machine c30c     sw      a1,0(a4)
+Info 86: 'iss/cpu0_hart0',   MEMW 0x7e6f0 0x7e6f0 4 00000000
+Info 86: 'iss/cpu0_hart0',   MEMW 0x7e6f0 0x7e6f0 4 00000000
+Info 87: 'iss/cpu0_hart0', 0x0000000000010b12(memset+1a): Machine c34c     sw      a1,4(a4)
+Info 87: 'iss/cpu0_hart0',   MEMW 0x7e6f4 0x7e6f4 4 00000000
+Info 87: 'iss/cpu0_hart0',   MEMW 0x7e6f4 0x7e6f4 4 00000000
+Info 88: 'iss/cpu0_hart0', 0x0000000000010b14(memset+1c): Machine c70c     sw      a1,8(a4)
+Info 88: 'iss/cpu0_hart0',   MEMW 0x7e6f8 0x7e6f8 4 00000000
+Info 88: 'iss/cpu0_hart0',   MEMW 0x7e6f8 0x7e6f8 4 00000000
+Info 89: 'iss/cpu0_hart0', 0x0000000000010b16(memset+1e): Machine c74c     sw      a1,12(a4)
+Info 89: 'iss/cpu0_hart0',   MEMW 0x7e6fc 0x7e6fc 4 00000000
+Info 89: 'iss/cpu0_hart0',   MEMW 0x7e6fc 0x7e6fc 4 00000000
+Info 90: 'iss/cpu0_hart0', 0x0000000000010b18(memset+20): Machine 0741     addi    a4,a4,16
+Info 90: 'iss/cpu0_hart0',   a4 0007e6f0 -> 0007e700
+Info 91: 'iss/cpu0_hart0', 0x0000000000010b1a(memset+22): Machine fed76be3 bltu    a4,a3,10b10
+Info 92: 'iss/cpu0_hart0', 0x0000000000010b10(memset+18): Machine c30c     sw      a1,0(a4)
+Info 92: 'iss/cpu0_hart0',   MEMW 0x7e700 0x7e700 4 00000000
+Info 92: 'iss/cpu0_hart0',   MEMW 0x7e700 0x7e700 4 00000000
+Info 93: 'iss/cpu0_hart0', 0x0000000000010b12(memset+1a): Machine c34c     sw      a1,4(a4)
+Info 93: 'iss/cpu0_hart0',   MEMW 0x7e704 0x7e704 4 00000000
+Info 93: 'iss/cpu0_hart0',   MEMW 0x7e704 0x7e704 4 00000000
+Info 94: 'iss/cpu0_hart0', 0x0000000000010b14(memset+1c): Machine c70c     sw      a1,8(a4)
+Info 94: 'iss/cpu0_hart0',   MEMW 0x7e708 0x7e708 4 00000000
+Info 94: 'iss/cpu0_hart0',   MEMW 0x7e708 0x7e708 4 00000000
+Info 95: 'iss/cpu0_hart0', 0x0000000000010b16(memset+1e): Machine c74c     sw      a1,12(a4)
+Info 95: 'iss/cpu0_hart0',   MEMW 0x7e70c 0x7e70c 4 00000000
+Info 95: 'iss/cpu0_hart0',   MEMW 0x7e70c 0x7e70c 4 00000000
+Info 96: 'iss/cpu0_hart0', 0x0000000000010b18(memset+20): Machine 0741     addi    a4,a4,16
+Info 96: 'iss/cpu0_hart0',   a4 0007e700 -> 0007e710
+Info 97: 'iss/cpu0_hart0', 0x0000000000010b1a(memset+22): Machine fed76be3 bltu    a4,a3,10b10
+Info 98: 'iss/cpu0_hart0', 0x0000000000010b10(memset+18): Machine c30c     sw      a1,0(a4)
+Info 98: 'iss/cpu0_hart0',   MEMW 0x7e710 0x7e710 4 00000000
+Info 98: 'iss/cpu0_hart0',   MEMW 0x7e710 0x7e710 4 00000000
+Info 99: 'iss/cpu0_hart0', 0x0000000000010b12(memset+1a): Machine c34c     sw      a1,4(a4)
+Info 99: 'iss/cpu0_hart0',   MEMW 0x7e714 0x7e714 4 00000000
+Info 99: 'iss/cpu0_hart0',   MEMW 0x7e714 0x7e714 4 00000000
+Info 100: 'iss/cpu0_hart0', 0x0000000000010b14(memset+1c): Machine c70c     sw      a1,8(a4)
+Info 100: 'iss/cpu0_hart0',   MEMW 0x7e718 0x7e718 4 00000000
+Info 100: 'iss/cpu0_hart0',   MEMW 0x7e718 0x7e718 4 00000000
+Info 101: 'iss/cpu0_hart0', 0x0000000000010b16(memset+1e): Machine c74c     sw      a1,12(a4)
+Info 101: 'iss/cpu0_hart0',   MEMW 0x7e71c 0x7e71c 4 00000000
+Info 101: 'iss/cpu0_hart0',   MEMW 0x7e71c 0x7e71c 4 00000000
+Info 102: 'iss/cpu0_hart0', 0x0000000000010b18(memset+20): Machine 0741     addi    a4,a4,16
+Info 102: 'iss/cpu0_hart0',   a4 0007e710 -> 0007e720
+Info 103: 'iss/cpu0_hart0', 0x0000000000010b1a(memset+22): Machine fed76be3 bltu    a4,a3,10b10
+Info 104: 'iss/cpu0_hart0', 0x0000000000010b10(memset+18): Machine c30c     sw      a1,0(a4)
+Info 104: 'iss/cpu0_hart0',   MEMW 0x7e720 0x7e720 4 00000000
+Info 104: 'iss/cpu0_hart0',   MEMW 0x7e720 0x7e720 4 00000000
+Info 105: 'iss/cpu0_hart0', 0x0000000000010b12(memset+1a): Machine c34c     sw      a1,4(a4)
+Info 105: 'iss/cpu0_hart0',   MEMW 0x7e724 0x7e724 4 00000000
+Info 105: 'iss/cpu0_hart0',   MEMW 0x7e724 0x7e724 4 00000000
+Info 106: 'iss/cpu0_hart0', 0x0000000000010b14(memset+1c): Machine c70c     sw      a1,8(a4)
+Info 106: 'iss/cpu0_hart0',   MEMW 0x7e728 0x7e728 4 00000000
+Info 106: 'iss/cpu0_hart0',   MEMW 0x7e728 0x7e728 4 00000000
+Info 107: 'iss/cpu0_hart0', 0x0000000000010b16(memset+1e): Machine c74c     sw      a1,12(a4)
+Info 107: 'iss/cpu0_hart0',   MEMW 0x7e72c 0x7e72c 4 00000000
+Info 107: 'iss/cpu0_hart0',   MEMW 0x7e72c 0x7e72c 4 00000000
+Info 108: 'iss/cpu0_hart0', 0x0000000000010b18(memset+20): Machine 0741     addi    a4,a4,16
+Info 108: 'iss/cpu0_hart0',   a4 0007e720 -> 0007e730
+Info 109: 'iss/cpu0_hart0', 0x0000000000010b1a(memset+22): Machine fed76be3 bltu    a4,a3,10b10
+Info 110: 'iss/cpu0_hart0', 0x0000000000010b10(memset+18): Machine c30c     sw      a1,0(a4)
+Info 110: 'iss/cpu0_hart0',   MEMW 0x7e730 0x7e730 4 00000000
+Info 110: 'iss/cpu0_hart0',   MEMW 0x7e730 0x7e730 4 00000000
+Info 111: 'iss/cpu0_hart0', 0x0000000000010b12(memset+1a): Machine c34c     sw      a1,4(a4)
+Info 111: 'iss/cpu0_hart0',   MEMW 0x7e734 0x7e734 4 00000000
+Info 111: 'iss/cpu0_hart0',   MEMW 0x7e734 0x7e734 4 00000000
+Info 112: 'iss/cpu0_hart0', 0x0000000000010b14(memset+1c): Machine c70c     sw      a1,8(a4)
+Info 112: 'iss/cpu0_hart0',   MEMW 0x7e738 0x7e738 4 00000000
+Info 112: 'iss/cpu0_hart0',   MEMW 0x7e738 0x7e738 4 00000000
+Info 113: 'iss/cpu0_hart0', 0x0000000000010b16(memset+1e): Machine c74c     sw      a1,12(a4)
+Info 113: 'iss/cpu0_hart0',   MEMW 0x7e73c 0x7e73c 4 00000000
+Info 113: 'iss/cpu0_hart0',   MEMW 0x7e73c 0x7e73c 4 00000000
+Info 114: 'iss/cpu0_hart0', 0x0000000000010b18(memset+20): Machine 0741     addi    a4,a4,16
+Info 114: 'iss/cpu0_hart0',   a4 0007e730 -> 0007e740
+Info 115: 'iss/cpu0_hart0', 0x0000000000010b1a(memset+22): Machine fed76be3 bltu    a4,a3,10b10
+Info 116: 'iss/cpu0_hart0', 0x0000000000010b10(memset+18): Machine c30c     sw      a1,0(a4)
+Info 116: 'iss/cpu0_hart0',   MEMW 0x7e740 0x7e740 4 00000000
+Info 116: 'iss/cpu0_hart0',   MEMW 0x7e740 0x7e740 4 00000000
+Info 117: 'iss/cpu0_hart0', 0x0000000000010b12(memset+1a): Machine c34c     sw      a1,4(a4)
+Info 117: 'iss/cpu0_hart0',   MEMW 0x7e744 0x7e744 4 00000000
+Info 117: 'iss/cpu0_hart0',   MEMW 0x7e744 0x7e744 4 00000000
+Info 118: 'iss/cpu0_hart0', 0x0000000000010b14(memset+1c): Machine c70c     sw      a1,8(a4)
+Info 118: 'iss/cpu0_hart0',   MEMW 0x7e748 0x7e748 4 00000000
+Info 118: 'iss/cpu0_hart0',   MEMW 0x7e748 0x7e748 4 00000000
+Info 119: 'iss/cpu0_hart0', 0x0000000000010b16(memset+1e): Machine c74c     sw      a1,12(a4)
+Info 119: 'iss/cpu0_hart0',   MEMW 0x7e74c 0x7e74c 4 00000000
+Info 119: 'iss/cpu0_hart0',   MEMW 0x7e74c 0x7e74c 4 00000000
+Info 120: 'iss/cpu0_hart0', 0x0000000000010b18(memset+20): Machine 0741     addi    a4,a4,16
+Info 120: 'iss/cpu0_hart0',   a4 0007e740 -> 0007e750
+Info 121: 'iss/cpu0_hart0', 0x0000000000010b1a(memset+22): Machine fed76be3 bltu    a4,a3,10b10
+Info 122: 'iss/cpu0_hart0', 0x0000000000010b10(memset+18): Machine c30c     sw      a1,0(a4)
+Info 122: 'iss/cpu0_hart0',   MEMW 0x7e750 0x7e750 4 00000000
+Info 122: 'iss/cpu0_hart0',   MEMW 0x7e750 0x7e750 4 00000000
+Info 123: 'iss/cpu0_hart0', 0x0000000000010b12(memset+1a): Machine c34c     sw      a1,4(a4)
+Info 123: 'iss/cpu0_hart0',   MEMW 0x7e754 0x7e754 4 00000000
+Info 123: 'iss/cpu0_hart0',   MEMW 0x7e754 0x7e754 4 00000000
+Info 124: 'iss/cpu0_hart0', 0x0000000000010b14(memset+1c): Machine c70c     sw      a1,8(a4)
+Info 124: 'iss/cpu0_hart0',   MEMW 0x7e758 0x7e758 4 00000000
+Info 124: 'iss/cpu0_hart0',   MEMW 0x7e758 0x7e758 4 00000000
+Info 125: 'iss/cpu0_hart0', 0x0000000000010b16(memset+1e): Machine c74c     sw      a1,12(a4)
+Info 125: 'iss/cpu0_hart0',   MEMW 0x7e75c 0x7e75c 4 00000000
+Info 125: 'iss/cpu0_hart0',   MEMW 0x7e75c 0x7e75c 4 00000000
+Info 126: 'iss/cpu0_hart0', 0x0000000000010b18(memset+20): Machine 0741     addi    a4,a4,16
+Info 126: 'iss/cpu0_hart0',   a4 0007e750 -> 0007e760
+Info 127: 'iss/cpu0_hart0', 0x0000000000010b1a(memset+22): Machine fed76be3 bltu    a4,a3,10b10
+Info 128: 'iss/cpu0_hart0', 0x0000000000010b10(memset+18): Machine c30c     sw      a1,0(a4)
+Info 128: 'iss/cpu0_hart0',   MEMW 0x7e760 0x7e760 4 00000000
+Info 128: 'iss/cpu0_hart0',   MEMW 0x7e760 0x7e760 4 00000000
+Info 129: 'iss/cpu0_hart0', 0x0000000000010b12(memset+1a): Machine c34c     sw      a1,4(a4)
+Info 129: 'iss/cpu0_hart0',   MEMW 0x7e764 0x7e764 4 00000000
+Info 129: 'iss/cpu0_hart0',   MEMW 0x7e764 0x7e764 4 00000000
+Info 130: 'iss/cpu0_hart0', 0x0000000000010b14(memset+1c): Machine c70c     sw      a1,8(a4)
+Info 130: 'iss/cpu0_hart0',   MEMW 0x7e768 0x7e768 4 00000000
+Info 130: 'iss/cpu0_hart0',   MEMW 0x7e768 0x7e768 4 00000000
+Info 131: 'iss/cpu0_hart0', 0x0000000000010b16(memset+1e): Machine c74c     sw      a1,12(a4)
+Info 131: 'iss/cpu0_hart0',   MEMW 0x7e76c 0x7e76c 4 00000000
+Info 131: 'iss/cpu0_hart0',   MEMW 0x7e76c 0x7e76c 4 00000000
+Info 132: 'iss/cpu0_hart0', 0x0000000000010b18(memset+20): Machine 0741     addi    a4,a4,16
+Info 132: 'iss/cpu0_hart0',   a4 0007e760 -> 0007e770
+Info 133: 'iss/cpu0_hart0', 0x0000000000010b1a(memset+22): Machine fed76be3 bltu    a4,a3,10b10
+Info 134: 'iss/cpu0_hart0', 0x0000000000010b10(memset+18): Machine c30c     sw      a1,0(a4)
+Info 134: 'iss/cpu0_hart0',   MEMW 0x7e770 0x7e770 4 00000000
+Info 134: 'iss/cpu0_hart0',   MEMW 0x7e770 0x7e770 4 00000000
+Info 135: 'iss/cpu0_hart0', 0x0000000000010b12(memset+1a): Machine c34c     sw      a1,4(a4)
+Info 135: 'iss/cpu0_hart0',   MEMW 0x7e774 0x7e774 4 00000000
+Info 135: 'iss/cpu0_hart0',   MEMW 0x7e774 0x7e774 4 00000000
+Info 136: 'iss/cpu0_hart0', 0x0000000000010b14(memset+1c): Machine c70c     sw      a1,8(a4)
+Info 136: 'iss/cpu0_hart0',   MEMW 0x7e778 0x7e778 4 00000000
+Info 136: 'iss/cpu0_hart0',   MEMW 0x7e778 0x7e778 4 00000000
+Info 137: 'iss/cpu0_hart0', 0x0000000000010b16(memset+1e): Machine c74c     sw      a1,12(a4)
+Info 137: 'iss/cpu0_hart0',   MEMW 0x7e77c 0x7e77c 4 00000000
+Info 137: 'iss/cpu0_hart0',   MEMW 0x7e77c 0x7e77c 4 00000000
+Info 138: 'iss/cpu0_hart0', 0x0000000000010b18(memset+20): Machine 0741     addi    a4,a4,16
+Info 138: 'iss/cpu0_hart0',   a4 0007e770 -> 0007e780
+Info 139: 'iss/cpu0_hart0', 0x0000000000010b1a(memset+22): Machine fed76be3 bltu    a4,a3,10b10
+Info 140: 'iss/cpu0_hart0', 0x0000000000010b10(memset+18): Machine c30c     sw      a1,0(a4)
+Info 140: 'iss/cpu0_hart0',   MEMW 0x7e780 0x7e780 4 00000000
+Info 140: 'iss/cpu0_hart0',   MEMW 0x7e780 0x7e780 4 00000000
+Info 141: 'iss/cpu0_hart0', 0x0000000000010b12(memset+1a): Machine c34c     sw      a1,4(a4)
+Info 141: 'iss/cpu0_hart0',   MEMW 0x7e784 0x7e784 4 00000000
+Info 141: 'iss/cpu0_hart0',   MEMW 0x7e784 0x7e784 4 00000000
+Info 142: 'iss/cpu0_hart0', 0x0000000000010b14(memset+1c): Machine c70c     sw      a1,8(a4)
+Info 142: 'iss/cpu0_hart0',   MEMW 0x7e788 0x7e788 4 00000000
+Info 142: 'iss/cpu0_hart0',   MEMW 0x7e788 0x7e788 4 00000000
+Info 143: 'iss/cpu0_hart0', 0x0000000000010b16(memset+1e): Machine c74c     sw      a1,12(a4)
+Info 143: 'iss/cpu0_hart0',   MEMW 0x7e78c 0x7e78c 4 00000000
+Info 143: 'iss/cpu0_hart0',   MEMW 0x7e78c 0x7e78c 4 00000000
+Info 144: 'iss/cpu0_hart0', 0x0000000000010b18(memset+20): Machine 0741     addi    a4,a4,16
+Info 144: 'iss/cpu0_hart0',   a4 0007e780 -> 0007e790
+Info 145: 'iss/cpu0_hart0', 0x0000000000010b1a(memset+22): Machine fed76be3 bltu    a4,a3,10b10
+Info 146: 'iss/cpu0_hart0', 0x0000000000010b10(memset+18): Machine c30c     sw      a1,0(a4)
+Info 146: 'iss/cpu0_hart0',   MEMW 0x7e790 0x7e790 4 00000000
+Info 146: 'iss/cpu0_hart0',   MEMW 0x7e790 0x7e790 4 00000000
+Info 147: 'iss/cpu0_hart0', 0x0000000000010b12(memset+1a): Machine c34c     sw      a1,4(a4)
+Info 147: 'iss/cpu0_hart0',   MEMW 0x7e794 0x7e794 4 00000000
+Info 147: 'iss/cpu0_hart0',   MEMW 0x7e794 0x7e794 4 00000000
+Info 148: 'iss/cpu0_hart0', 0x0000000000010b14(memset+1c): Machine c70c     sw      a1,8(a4)
+Info 148: 'iss/cpu0_hart0',   MEMW 0x7e798 0x7e798 4 00000000
+Info 148: 'iss/cpu0_hart0',   MEMW 0x7e798 0x7e798 4 00000000
+Info 149: 'iss/cpu0_hart0', 0x0000000000010b16(memset+1e): Machine c74c     sw      a1,12(a4)
+Info 149: 'iss/cpu0_hart0',   MEMW 0x7e79c 0x7e79c 4 00000000
+Info 149: 'iss/cpu0_hart0',   MEMW 0x7e79c 0x7e79c 4 00000000
+Info 150: 'iss/cpu0_hart0', 0x0000000000010b18(memset+20): Machine 0741     addi    a4,a4,16
+Info 150: 'iss/cpu0_hart0',   a4 0007e790 -> 0007e7a0
+Info 151: 'iss/cpu0_hart0', 0x0000000000010b1a(memset+22): Machine fed76be3 bltu    a4,a3,10b10
+Info 152: 'iss/cpu0_hart0', 0x0000000000010b10(memset+18): Machine c30c     sw      a1,0(a4)
+Info 152: 'iss/cpu0_hart0',   MEMW 0x7e7a0 0x7e7a0 4 00000000
+Info 152: 'iss/cpu0_hart0',   MEMW 0x7e7a0 0x7e7a0 4 00000000
+Info 153: 'iss/cpu0_hart0', 0x0000000000010b12(memset+1a): Machine c34c     sw      a1,4(a4)
+Info 153: 'iss/cpu0_hart0',   MEMW 0x7e7a4 0x7e7a4 4 00000000
+Info 153: 'iss/cpu0_hart0',   MEMW 0x7e7a4 0x7e7a4 4 00000000
+Info 154: 'iss/cpu0_hart0', 0x0000000000010b14(memset+1c): Machine c70c     sw      a1,8(a4)
+Info 154: 'iss/cpu0_hart0',   MEMW 0x7e7a8 0x7e7a8 4 00000000
+Info 154: 'iss/cpu0_hart0',   MEMW 0x7e7a8 0x7e7a8 4 00000000
+Info 155: 'iss/cpu0_hart0', 0x0000000000010b16(memset+1e): Machine c74c     sw      a1,12(a4)
+Info 155: 'iss/cpu0_hart0',   MEMW 0x7e7ac 0x7e7ac 4 00000000
+Info 155: 'iss/cpu0_hart0',   MEMW 0x7e7ac 0x7e7ac 4 00000000
+Info 156: 'iss/cpu0_hart0', 0x0000000000010b18(memset+20): Machine 0741     addi    a4,a4,16
+Info 156: 'iss/cpu0_hart0',   a4 0007e7a0 -> 0007e7b0
+Info 157: 'iss/cpu0_hart0', 0x0000000000010b1a(memset+22): Machine fed76be3 bltu    a4,a3,10b10
+Info 158: 'iss/cpu0_hart0', 0x0000000000010b10(memset+18): Machine c30c     sw      a1,0(a4)
+Info 158: 'iss/cpu0_hart0',   MEMW 0x7e7b0 0x7e7b0 4 00000000
+Info 158: 'iss/cpu0_hart0',   MEMW 0x7e7b0 0x7e7b0 4 00000000
+Info 159: 'iss/cpu0_hart0', 0x0000000000010b12(memset+1a): Machine c34c     sw      a1,4(a4)
+Info 159: 'iss/cpu0_hart0',   MEMW 0x7e7b4 0x7e7b4 4 00000000
+Info 159: 'iss/cpu0_hart0',   MEMW 0x7e7b4 0x7e7b4 4 00000000
+Info 160: 'iss/cpu0_hart0', 0x0000000000010b14(memset+1c): Machine c70c     sw      a1,8(a4)
+Info 160: 'iss/cpu0_hart0',   MEMW 0x7e7b8 0x7e7b8 4 00000000
+Info 160: 'iss/cpu0_hart0',   MEMW 0x7e7b8 0x7e7b8 4 00000000
+Info 161: 'iss/cpu0_hart0', 0x0000000000010b16(memset+1e): Machine c74c     sw      a1,12(a4)
+Info 161: 'iss/cpu0_hart0',   MEMW 0x7e7bc 0x7e7bc 4 00000000
+Info 161: 'iss/cpu0_hart0',   MEMW 0x7e7bc 0x7e7bc 4 00000000
+Info 162: 'iss/cpu0_hart0', 0x0000000000010b18(memset+20): Machine 0741     addi    a4,a4,16
+Info 162: 'iss/cpu0_hart0',   a4 0007e7b0 -> 0007e7c0
+Info 163: 'iss/cpu0_hart0', 0x0000000000010b1a(memset+22): Machine fed76be3 bltu    a4,a3,10b10
+Info 164: 'iss/cpu0_hart0', 0x0000000000010b10(memset+18): Machine c30c     sw      a1,0(a4)
+Info 164: 'iss/cpu0_hart0',   MEMW 0x7e7c0 0x7e7c0 4 00000000
+Info 164: 'iss/cpu0_hart0',   MEMW 0x7e7c0 0x7e7c0 4 00000000
+Info 165: 'iss/cpu0_hart0', 0x0000000000010b12(memset+1a): Machine c34c     sw      a1,4(a4)
+Info 165: 'iss/cpu0_hart0',   MEMW 0x7e7c4 0x7e7c4 4 00000000
+Info 165: 'iss/cpu0_hart0',   MEMW 0x7e7c4 0x7e7c4 4 00000000
+Info 166: 'iss/cpu0_hart0', 0x0000000000010b14(memset+1c): Machine c70c     sw      a1,8(a4)
+Info 166: 'iss/cpu0_hart0',   MEMW 0x7e7c8 0x7e7c8 4 00000000
+Info 166: 'iss/cpu0_hart0',   MEMW 0x7e7c8 0x7e7c8 4 00000000
+Info 167: 'iss/cpu0_hart0', 0x0000000000010b16(memset+1e): Machine c74c     sw      a1,12(a4)
+Info 167: 'iss/cpu0_hart0',   MEMW 0x7e7cc 0x7e7cc 4 00000000
+Info 167: 'iss/cpu0_hart0',   MEMW 0x7e7cc 0x7e7cc 4 00000000
+Info 168: 'iss/cpu0_hart0', 0x0000000000010b18(memset+20): Machine 0741     addi    a4,a4,16
+Info 168: 'iss/cpu0_hart0',   a4 0007e7c0 -> 0007e7d0
+Info 169: 'iss/cpu0_hart0', 0x0000000000010b1a(memset+22): Machine fed76be3 bltu    a4,a3,10b10
+Info 170: 'iss/cpu0_hart0', 0x0000000000010b10(memset+18): Machine c30c     sw      a1,0(a4)
+Info 170: 'iss/cpu0_hart0',   MEMW 0x7e7d0 0x7e7d0 4 00000000
+Info 170: 'iss/cpu0_hart0',   MEMW 0x7e7d0 0x7e7d0 4 00000000
+Info 171: 'iss/cpu0_hart0', 0x0000000000010b12(memset+1a): Machine c34c     sw      a1,4(a4)
+Info 171: 'iss/cpu0_hart0',   MEMW 0x7e7d4 0x7e7d4 4 00000000
+Info 171: 'iss/cpu0_hart0',   MEMW 0x7e7d4 0x7e7d4 4 00000000
+Info 172: 'iss/cpu0_hart0', 0x0000000000010b14(memset+1c): Machine c70c     sw      a1,8(a4)
+Info 172: 'iss/cpu0_hart0',   MEMW 0x7e7d8 0x7e7d8 4 00000000
+Info 172: 'iss/cpu0_hart0',   MEMW 0x7e7d8 0x7e7d8 4 00000000
+Info 173: 'iss/cpu0_hart0', 0x0000000000010b16(memset+1e): Machine c74c     sw      a1,12(a4)
+Info 173: 'iss/cpu0_hart0',   MEMW 0x7e7dc 0x7e7dc 4 00000000
+Info 173: 'iss/cpu0_hart0',   MEMW 0x7e7dc 0x7e7dc 4 00000000
+Info 174: 'iss/cpu0_hart0', 0x0000000000010b18(memset+20): Machine 0741     addi    a4,a4,16
+Info 174: 'iss/cpu0_hart0',   a4 0007e7d0 -> 0007e7e0
+Info 175: 'iss/cpu0_hart0', 0x0000000000010b1a(memset+22): Machine fed76be3 bltu    a4,a3,10b10
+Info 176: 'iss/cpu0_hart0', 0x0000000000010b10(memset+18): Machine c30c     sw      a1,0(a4)
+Info 176: 'iss/cpu0_hart0',   MEMW 0x7e7e0 0x7e7e0 4 00000000
+Info 176: 'iss/cpu0_hart0',   MEMW 0x7e7e0 0x7e7e0 4 00000000
+Info 177: 'iss/cpu0_hart0', 0x0000000000010b12(memset+1a): Machine c34c     sw      a1,4(a4)
+Info 177: 'iss/cpu0_hart0',   MEMW 0x7e7e4 0x7e7e4 4 00000000
+Info 177: 'iss/cpu0_hart0',   MEMW 0x7e7e4 0x7e7e4 4 00000000
+Info 178: 'iss/cpu0_hart0', 0x0000000000010b14(memset+1c): Machine c70c     sw      a1,8(a4)
+Info 178: 'iss/cpu0_hart0',   MEMW 0x7e7e8 0x7e7e8 4 00000000
+Info 178: 'iss/cpu0_hart0',   MEMW 0x7e7e8 0x7e7e8 4 00000000
+Info 179: 'iss/cpu0_hart0', 0x0000000000010b16(memset+1e): Machine c74c     sw      a1,12(a4)
+Info 179: 'iss/cpu0_hart0',   MEMW 0x7e7ec 0x7e7ec 4 00000000
+Info 179: 'iss/cpu0_hart0',   MEMW 0x7e7ec 0x7e7ec 4 00000000
+Info 180: 'iss/cpu0_hart0', 0x0000000000010b18(memset+20): Machine 0741     addi    a4,a4,16
+Info 180: 'iss/cpu0_hart0',   a4 0007e7e0 -> 0007e7f0
+Info 181: 'iss/cpu0_hart0', 0x0000000000010b1a(memset+22): Machine fed76be3 bltu    a4,a3,10b10
+Info 182: 'iss/cpu0_hart0', 0x0000000000010b10(memset+18): Machine c30c     sw      a1,0(a4)
+Info 182: 'iss/cpu0_hart0',   MEMW 0x7e7f0 0x7e7f0 4 00000000
+Info 182: 'iss/cpu0_hart0',   MEMW 0x7e7f0 0x7e7f0 4 00000000
+Info 183: 'iss/cpu0_hart0', 0x0000000000010b12(memset+1a): Machine c34c     sw      a1,4(a4)
+Info 183: 'iss/cpu0_hart0',   MEMW 0x7e7f4 0x7e7f4 4 00000000
+Info 183: 'iss/cpu0_hart0',   MEMW 0x7e7f4 0x7e7f4 4 00000000
+Info 184: 'iss/cpu0_hart0', 0x0000000000010b14(memset+1c): Machine c70c     sw      a1,8(a4)
+Info 184: 'iss/cpu0_hart0',   MEMW 0x7e7f8 0x7e7f8 4 00000000
+Info 184: 'iss/cpu0_hart0',   MEMW 0x7e7f8 0x7e7f8 4 00000000
+Info 185: 'iss/cpu0_hart0', 0x0000000000010b16(memset+1e): Machine c74c     sw      a1,12(a4)
+Info 185: 'iss/cpu0_hart0',   MEMW 0x7e7fc 0x7e7fc 4 00000000
+Info 185: 'iss/cpu0_hart0',   MEMW 0x7e7fc 0x7e7fc 4 00000000
+Info 186: 'iss/cpu0_hart0', 0x0000000000010b18(memset+20): Machine 0741     addi    a4,a4,16
+Info 186: 'iss/cpu0_hart0',   a4 0007e7f0 -> 0007e800
+Info 187: 'iss/cpu0_hart0', 0x0000000000010b1a(memset+22): Machine fed76be3 bltu    a4,a3,10b10
+Info 188: 'iss/cpu0_hart0', 0x0000000000010b10(memset+18): Machine c30c     sw      a1,0(a4)
+Info 188: 'iss/cpu0_hart0',   MEMW 0x7e800 0x7e800 4 00000000
+Info 188: 'iss/cpu0_hart0',   MEMW 0x7e800 0x7e800 4 00000000
+Info 189: 'iss/cpu0_hart0', 0x0000000000010b12(memset+1a): Machine c34c     sw      a1,4(a4)
+Info 189: 'iss/cpu0_hart0',   MEMW 0x7e804 0x7e804 4 00000000
+Info 189: 'iss/cpu0_hart0',   MEMW 0x7e804 0x7e804 4 00000000
+Info 190: 'iss/cpu0_hart0', 0x0000000000010b14(memset+1c): Machine c70c     sw      a1,8(a4)
+Info 190: 'iss/cpu0_hart0',   MEMW 0x7e808 0x7e808 4 00000000
+Info 190: 'iss/cpu0_hart0',   MEMW 0x7e808 0x7e808 4 00000000
+Info 191: 'iss/cpu0_hart0', 0x0000000000010b16(memset+1e): Machine c74c     sw      a1,12(a4)
+Info 191: 'iss/cpu0_hart0',   MEMW 0x7e80c 0x7e80c 4 00000000
+Info 191: 'iss/cpu0_hart0',   MEMW 0x7e80c 0x7e80c 4 00000000
+Info 192: 'iss/cpu0_hart0', 0x0000000000010b18(memset+20): Machine 0741     addi    a4,a4,16
+Info 192: 'iss/cpu0_hart0',   a4 0007e800 -> 0007e810
+Info 193: 'iss/cpu0_hart0', 0x0000000000010b1a(memset+22): Machine fed76be3 bltu    a4,a3,10b10
+Info 194: 'iss/cpu0_hart0', 0x0000000000010b10(memset+18): Machine c30c     sw      a1,0(a4)
+Info 194: 'iss/cpu0_hart0',   MEMW 0x7e810 0x7e810 4 00000000
+Info 194: 'iss/cpu0_hart0',   MEMW 0x7e810 0x7e810 4 00000000
+Info 195: 'iss/cpu0_hart0', 0x0000000000010b12(memset+1a): Machine c34c     sw      a1,4(a4)
+Info 195: 'iss/cpu0_hart0',   MEMW 0x7e814 0x7e814 4 00000000
+Info 195: 'iss/cpu0_hart0',   MEMW 0x7e814 0x7e814 4 00000000
+Info 196: 'iss/cpu0_hart0', 0x0000000000010b14(memset+1c): Machine c70c     sw      a1,8(a4)
+Info 196: 'iss/cpu0_hart0',   MEMW 0x7e818 0x7e818 4 00000000
+Info 196: 'iss/cpu0_hart0',   MEMW 0x7e818 0x7e818 4 00000000
+Info 197: 'iss/cpu0_hart0', 0x0000000000010b16(memset+1e): Machine c74c     sw      a1,12(a4)
+Info 197: 'iss/cpu0_hart0',   MEMW 0x7e81c 0x7e81c 4 00000000
+Info 197: 'iss/cpu0_hart0',   MEMW 0x7e81c 0x7e81c 4 00000000
+Info 198: 'iss/cpu0_hart0', 0x0000000000010b18(memset+20): Machine 0741     addi    a4,a4,16
+Info 198: 'iss/cpu0_hart0',   a4 0007e810 -> 0007e820
+Info 199: 'iss/cpu0_hart0', 0x0000000000010b1a(memset+22): Machine fed76be3 bltu    a4,a3,10b10
+Info 200: 'iss/cpu0_hart0', 0x0000000000010b10(memset+18): Machine c30c     sw      a1,0(a4)
+Info 200: 'iss/cpu0_hart0',   MEMW 0x7e820 0x7e820 4 00000000
+Info 200: 'iss/cpu0_hart0',   MEMW 0x7e820 0x7e820 4 00000000
+Info 201: 'iss/cpu0_hart0', 0x0000000000010b12(memset+1a): Machine c34c     sw      a1,4(a4)
+Info 201: 'iss/cpu0_hart0',   MEMW 0x7e824 0x7e824 4 00000000
+Info 201: 'iss/cpu0_hart0',   MEMW 0x7e824 0x7e824 4 00000000
+Info 202: 'iss/cpu0_hart0', 0x0000000000010b14(memset+1c): Machine c70c     sw      a1,8(a4)
+Info 202: 'iss/cpu0_hart0',   MEMW 0x7e828 0x7e828 4 00000000
+Info 202: 'iss/cpu0_hart0',   MEMW 0x7e828 0x7e828 4 00000000
+Info 203: 'iss/cpu0_hart0', 0x0000000000010b16(memset+1e): Machine c74c     sw      a1,12(a4)
+Info 203: 'iss/cpu0_hart0',   MEMW 0x7e82c 0x7e82c 4 00000000
+Info 203: 'iss/cpu0_hart0',   MEMW 0x7e82c 0x7e82c 4 00000000
+Info 204: 'iss/cpu0_hart0', 0x0000000000010b18(memset+20): Machine 0741     addi    a4,a4,16
+Info 204: 'iss/cpu0_hart0',   a4 0007e820 -> 0007e830
+Info 205: 'iss/cpu0_hart0', 0x0000000000010b1a(memset+22): Machine fed76be3 bltu    a4,a3,10b10
+Info 206: 'iss/cpu0_hart0', 0x0000000000010b10(memset+18): Machine c30c     sw      a1,0(a4)
+Info 206: 'iss/cpu0_hart0',   MEMW 0x7e830 0x7e830 4 00000000
+Info 206: 'iss/cpu0_hart0',   MEMW 0x7e830 0x7e830 4 00000000
+Info 207: 'iss/cpu0_hart0', 0x0000000000010b12(memset+1a): Machine c34c     sw      a1,4(a4)
+Info 207: 'iss/cpu0_hart0',   MEMW 0x7e834 0x7e834 4 00000000
+Info 207: 'iss/cpu0_hart0',   MEMW 0x7e834 0x7e834 4 00000000
+Info 208: 'iss/cpu0_hart0', 0x0000000000010b14(memset+1c): Machine c70c     sw      a1,8(a4)
+Info 208: 'iss/cpu0_hart0',   MEMW 0x7e838 0x7e838 4 00000000
+Info 208: 'iss/cpu0_hart0',   MEMW 0x7e838 0x7e838 4 00000000
+Info 209: 'iss/cpu0_hart0', 0x0000000000010b16(memset+1e): Machine c74c     sw      a1,12(a4)
+Info 209: 'iss/cpu0_hart0',   MEMW 0x7e83c 0x7e83c 4 00000000
+Info 209: 'iss/cpu0_hart0',   MEMW 0x7e83c 0x7e83c 4 00000000
+Info 210: 'iss/cpu0_hart0', 0x0000000000010b18(memset+20): Machine 0741     addi    a4,a4,16
+Info 210: 'iss/cpu0_hart0',   a4 0007e830 -> 0007e840
+Info 211: 'iss/cpu0_hart0', 0x0000000000010b1a(memset+22): Machine fed76be3 bltu    a4,a3,10b10
+Info 212: 'iss/cpu0_hart0', 0x0000000000010b10(memset+18): Machine c30c     sw      a1,0(a4)
+Info 212: 'iss/cpu0_hart0',   MEMW 0x7e840 0x7e840 4 00000000
+Info 212: 'iss/cpu0_hart0',   MEMW 0x7e840 0x7e840 4 00000000
+Info 213: 'iss/cpu0_hart0', 0x0000000000010b12(memset+1a): Machine c34c     sw      a1,4(a4)
+Info 213: 'iss/cpu0_hart0',   MEMW 0x7e844 0x7e844 4 00000000
+Info 213: 'iss/cpu0_hart0',   MEMW 0x7e844 0x7e844 4 00000000
+Info 214: 'iss/cpu0_hart0', 0x0000000000010b14(memset+1c): Machine c70c     sw      a1,8(a4)
+Info 214: 'iss/cpu0_hart0',   MEMW 0x7e848 0x7e848 4 00000000
+Info 214: 'iss/cpu0_hart0',   MEMW 0x7e848 0x7e848 4 00000000
+Info 215: 'iss/cpu0_hart0', 0x0000000000010b16(memset+1e): Machine c74c     sw      a1,12(a4)
+Info 215: 'iss/cpu0_hart0',   MEMW 0x7e84c 0x7e84c 4 00000000
+Info 215: 'iss/cpu0_hart0',   MEMW 0x7e84c 0x7e84c 4 00000000
+Info 216: 'iss/cpu0_hart0', 0x0000000000010b18(memset+20): Machine 0741     addi    a4,a4,16
+Info 216: 'iss/cpu0_hart0',   a4 0007e840 -> 0007e850
+Info 217: 'iss/cpu0_hart0', 0x0000000000010b1a(memset+22): Machine fed76be3 bltu    a4,a3,10b10
+Info 218: 'iss/cpu0_hart0', 0x0000000000010b10(memset+18): Machine c30c     sw      a1,0(a4)
+Info 218: 'iss/cpu0_hart0',   MEMW 0x7e850 0x7e850 4 00000000
+Info 218: 'iss/cpu0_hart0',   MEMW 0x7e850 0x7e850 4 00000000
+Info 219: 'iss/cpu0_hart0', 0x0000000000010b12(memset+1a): Machine c34c     sw      a1,4(a4)
+Info 219: 'iss/cpu0_hart0',   MEMW 0x7e854 0x7e854 4 00000000
+Info 219: 'iss/cpu0_hart0',   MEMW 0x7e854 0x7e854 4 00000000
+Info 220: 'iss/cpu0_hart0', 0x0000000000010b14(memset+1c): Machine c70c     sw      a1,8(a4)
+Info 220: 'iss/cpu0_hart0',   MEMW 0x7e858 0x7e858 4 00000000
+Info 220: 'iss/cpu0_hart0',   MEMW 0x7e858 0x7e858 4 00000000
+Info 221: 'iss/cpu0_hart0', 0x0000000000010b16(memset+1e): Machine c74c     sw      a1,12(a4)
+Info 221: 'iss/cpu0_hart0',   MEMW 0x7e85c 0x7e85c 4 00000000
+Info 221: 'iss/cpu0_hart0',   MEMW 0x7e85c 0x7e85c 4 00000000
+Info 222: 'iss/cpu0_hart0', 0x0000000000010b18(memset+20): Machine 0741     addi    a4,a4,16
+Info 222: 'iss/cpu0_hart0',   a4 0007e850 -> 0007e860
+Info 223: 'iss/cpu0_hart0', 0x0000000000010b1a(memset+22): Machine fed76be3 bltu    a4,a3,10b10
+Info 224: 'iss/cpu0_hart0', 0x0000000000010b10(memset+18): Machine c30c     sw      a1,0(a4)
+Info 224: 'iss/cpu0_hart0',   MEMW 0x7e860 0x7e860 4 00000000
+Info 224: 'iss/cpu0_hart0',   MEMW 0x7e860 0x7e860 4 00000000
+Info 225: 'iss/cpu0_hart0', 0x0000000000010b12(memset+1a): Machine c34c     sw      a1,4(a4)
+Info 225: 'iss/cpu0_hart0',   MEMW 0x7e864 0x7e864 4 00000000
+Info 225: 'iss/cpu0_hart0',   MEMW 0x7e864 0x7e864 4 00000000
+Info 226: 'iss/cpu0_hart0', 0x0000000000010b14(memset+1c): Machine c70c     sw      a1,8(a4)
+Info 226: 'iss/cpu0_hart0',   MEMW 0x7e868 0x7e868 4 00000000
+Info 226: 'iss/cpu0_hart0',   MEMW 0x7e868 0x7e868 4 00000000
+Info 227: 'iss/cpu0_hart0', 0x0000000000010b16(memset+1e): Machine c74c     sw      a1,12(a4)
+Info 227: 'iss/cpu0_hart0',   MEMW 0x7e86c 0x7e86c 4 00000000
+Info 227: 'iss/cpu0_hart0',   MEMW 0x7e86c 0x7e86c 4 00000000
+Info 228: 'iss/cpu0_hart0', 0x0000000000010b18(memset+20): Machine 0741     addi    a4,a4,16
+Info 228: 'iss/cpu0_hart0',   a4 0007e860 -> 0007e870
+Info 229: 'iss/cpu0_hart0', 0x0000000000010b1a(memset+22): Machine fed76be3 bltu    a4,a3,10b10
+Info 230: 'iss/cpu0_hart0', 0x0000000000010b10(memset+18): Machine c30c     sw      a1,0(a4)
+Info 230: 'iss/cpu0_hart0',   MEMW 0x7e870 0x7e870 4 00000000
+Info 230: 'iss/cpu0_hart0',   MEMW 0x7e870 0x7e870 4 00000000
+Info 231: 'iss/cpu0_hart0', 0x0000000000010b12(memset+1a): Machine c34c     sw      a1,4(a4)
+Info 231: 'iss/cpu0_hart0',   MEMW 0x7e874 0x7e874 4 00000000
+Info 231: 'iss/cpu0_hart0',   MEMW 0x7e874 0x7e874 4 00000000
+Info 232: 'iss/cpu0_hart0', 0x0000000000010b14(memset+1c): Machine c70c     sw      a1,8(a4)
+Info 232: 'iss/cpu0_hart0',   MEMW 0x7e878 0x7e878 4 00000000
+Info 232: 'iss/cpu0_hart0',   MEMW 0x7e878 0x7e878 4 00000000
+Info 233: 'iss/cpu0_hart0', 0x0000000000010b16(memset+1e): Machine c74c     sw      a1,12(a4)
+Info 233: 'iss/cpu0_hart0',   MEMW 0x7e87c 0x7e87c 4 00000000
+Info 233: 'iss/cpu0_hart0',   MEMW 0x7e87c 0x7e87c 4 00000000
+Info 234: 'iss/cpu0_hart0', 0x0000000000010b18(memset+20): Machine 0741     addi    a4,a4,16
+Info 234: 'iss/cpu0_hart0',   a4 0007e870 -> 0007e880
+Info 235: 'iss/cpu0_hart0', 0x0000000000010b1a(memset+22): Machine fed76be3 bltu    a4,a3,10b10
+Info 236: 'iss/cpu0_hart0', 0x0000000000010b10(memset+18): Machine c30c     sw      a1,0(a4)
+Info 236: 'iss/cpu0_hart0',   MEMW 0x7e880 0x7e880 4 00000000
+Info 236: 'iss/cpu0_hart0',   MEMW 0x7e880 0x7e880 4 00000000
+Info 237: 'iss/cpu0_hart0', 0x0000000000010b12(memset+1a): Machine c34c     sw      a1,4(a4)
+Info 237: 'iss/cpu0_hart0',   MEMW 0x7e884 0x7e884 4 00000000
+Info 237: 'iss/cpu0_hart0',   MEMW 0x7e884 0x7e884 4 00000000
+Info 238: 'iss/cpu0_hart0', 0x0000000000010b14(memset+1c): Machine c70c     sw      a1,8(a4)
+Info 238: 'iss/cpu0_hart0',   MEMW 0x7e888 0x7e888 4 00000000
+Info 238: 'iss/cpu0_hart0',   MEMW 0x7e888 0x7e888 4 00000000
+Info 239: 'iss/cpu0_hart0', 0x0000000000010b16(memset+1e): Machine c74c     sw      a1,12(a4)
+Info 239: 'iss/cpu0_hart0',   MEMW 0x7e88c 0x7e88c 4 00000000
+Info 239: 'iss/cpu0_hart0',   MEMW 0x7e88c 0x7e88c 4 00000000
+Info 240: 'iss/cpu0_hart0', 0x0000000000010b18(memset+20): Machine 0741     addi    a4,a4,16
+Info 240: 'iss/cpu0_hart0',   a4 0007e880 -> 0007e890
+Info 241: 'iss/cpu0_hart0', 0x0000000000010b1a(memset+22): Machine fed76be3 bltu    a4,a3,10b10
+Info 242: 'iss/cpu0_hart0', 0x0000000000010b10(memset+18): Machine c30c     sw      a1,0(a4)
+Info 242: 'iss/cpu0_hart0',   MEMW 0x7e890 0x7e890 4 00000000
+Info 242: 'iss/cpu0_hart0',   MEMW 0x7e890 0x7e890 4 00000000
+Info 243: 'iss/cpu0_hart0', 0x0000000000010b12(memset+1a): Machine c34c     sw      a1,4(a4)
+Info 243: 'iss/cpu0_hart0',   MEMW 0x7e894 0x7e894 4 00000000
+Info 243: 'iss/cpu0_hart0',   MEMW 0x7e894 0x7e894 4 00000000
+Info 244: 'iss/cpu0_hart0', 0x0000000000010b14(memset+1c): Machine c70c     sw      a1,8(a4)
+Info 244: 'iss/cpu0_hart0',   MEMW 0x7e898 0x7e898 4 00000000
+Info 244: 'iss/cpu0_hart0',   MEMW 0x7e898 0x7e898 4 00000000
+Info 245: 'iss/cpu0_hart0', 0x0000000000010b16(memset+1e): Machine c74c     sw      a1,12(a4)
+Info 245: 'iss/cpu0_hart0',   MEMW 0x7e89c 0x7e89c 4 00000000
+Info 245: 'iss/cpu0_hart0',   MEMW 0x7e89c 0x7e89c 4 00000000
+Info 246: 'iss/cpu0_hart0', 0x0000000000010b18(memset+20): Machine 0741     addi    a4,a4,16
+Info 246: 'iss/cpu0_hart0',   a4 0007e890 -> 0007e8a0
+Info 247: 'iss/cpu0_hart0', 0x0000000000010b1a(memset+22): Machine fed76be3 bltu    a4,a3,10b10
+Info 248: 'iss/cpu0_hart0', 0x0000000000010b10(memset+18): Machine c30c     sw      a1,0(a4)
+Info 248: 'iss/cpu0_hart0',   MEMW 0x7e8a0 0x7e8a0 4 00000000
+Info 248: 'iss/cpu0_hart0',   MEMW 0x7e8a0 0x7e8a0 4 00000000
+Info 249: 'iss/cpu0_hart0', 0x0000000000010b12(memset+1a): Machine c34c     sw      a1,4(a4)
+Info 249: 'iss/cpu0_hart0',   MEMW 0x7e8a4 0x7e8a4 4 00000000
+Info 249: 'iss/cpu0_hart0',   MEMW 0x7e8a4 0x7e8a4 4 00000000
+Info 250: 'iss/cpu0_hart0', 0x0000000000010b14(memset+1c): Machine c70c     sw      a1,8(a4)
+Info 250: 'iss/cpu0_hart0',   MEMW 0x7e8a8 0x7e8a8 4 00000000
+Info 250: 'iss/cpu0_hart0',   MEMW 0x7e8a8 0x7e8a8 4 00000000
+Info 251: 'iss/cpu0_hart0', 0x0000000000010b16(memset+1e): Machine c74c     sw      a1,12(a4)
+Info 251: 'iss/cpu0_hart0',   MEMW 0x7e8ac 0x7e8ac 4 00000000
+Info 251: 'iss/cpu0_hart0',   MEMW 0x7e8ac 0x7e8ac 4 00000000
+Info 252: 'iss/cpu0_hart0', 0x0000000000010b18(memset+20): Machine 0741     addi    a4,a4,16
+Info 252: 'iss/cpu0_hart0',   a4 0007e8a0 -> 0007e8b0
+Info 253: 'iss/cpu0_hart0', 0x0000000000010b1a(memset+22): Machine fed76be3 bltu    a4,a3,10b10
+Info 254: 'iss/cpu0_hart0', 0x0000000000010b10(memset+18): Machine c30c     sw      a1,0(a4)
+Info 254: 'iss/cpu0_hart0',   MEMW 0x7e8b0 0x7e8b0 4 00000000
+Info 254: 'iss/cpu0_hart0',   MEMW 0x7e8b0 0x7e8b0 4 00000000
+Info 255: 'iss/cpu0_hart0', 0x0000000000010b12(memset+1a): Machine c34c     sw      a1,4(a4)
+Info 255: 'iss/cpu0_hart0',   MEMW 0x7e8b4 0x7e8b4 4 00000000
+Info 255: 'iss/cpu0_hart0',   MEMW 0x7e8b4 0x7e8b4 4 00000000
+Info 256: 'iss/cpu0_hart0', 0x0000000000010b14(memset+1c): Machine c70c     sw      a1,8(a4)
+Info 256: 'iss/cpu0_hart0',   MEMW 0x7e8b8 0x7e8b8 4 00000000
+Info 256: 'iss/cpu0_hart0',   MEMW 0x7e8b8 0x7e8b8 4 00000000
+Info 257: 'iss/cpu0_hart0', 0x0000000000010b16(memset+1e): Machine c74c     sw      a1,12(a4)
+Info 257: 'iss/cpu0_hart0',   MEMW 0x7e8bc 0x7e8bc 4 00000000
+Info 257: 'iss/cpu0_hart0',   MEMW 0x7e8bc 0x7e8bc 4 00000000
+Info 258: 'iss/cpu0_hart0', 0x0000000000010b18(memset+20): Machine 0741     addi    a4,a4,16
+Info 258: 'iss/cpu0_hart0',   a4 0007e8b0 -> 0007e8c0
+Info 259: 'iss/cpu0_hart0', 0x0000000000010b1a(memset+22): Machine fed76be3 bltu    a4,a3,10b10
+Info 260: 'iss/cpu0_hart0', 0x0000000000010b10(memset+18): Machine c30c     sw      a1,0(a4)
+Info 260: 'iss/cpu0_hart0',   MEMW 0x7e8c0 0x7e8c0 4 00000000
+Info 260: 'iss/cpu0_hart0',   MEMW 0x7e8c0 0x7e8c0 4 00000000
+Info 261: 'iss/cpu0_hart0', 0x0000000000010b12(memset+1a): Machine c34c     sw      a1,4(a4)
+Info 261: 'iss/cpu0_hart0',   MEMW 0x7e8c4 0x7e8c4 4 00000000
+Info 261: 'iss/cpu0_hart0',   MEMW 0x7e8c4 0x7e8c4 4 00000000
+Info 262: 'iss/cpu0_hart0', 0x0000000000010b14(memset+1c): Machine c70c     sw      a1,8(a4)
+Info 262: 'iss/cpu0_hart0',   MEMW 0x7e8c8 0x7e8c8 4 00000000
+Info 262: 'iss/cpu0_hart0',   MEMW 0x7e8c8 0x7e8c8 4 00000000
+Info 263: 'iss/cpu0_hart0', 0x0000000000010b16(memset+1e): Machine c74c     sw      a1,12(a4)
+Info 263: 'iss/cpu0_hart0',   MEMW 0x7e8cc 0x7e8cc 4 00000000
+Info 263: 'iss/cpu0_hart0',   MEMW 0x7e8cc 0x7e8cc 4 00000000
+Info 264: 'iss/cpu0_hart0', 0x0000000000010b18(memset+20): Machine 0741     addi    a4,a4,16
+Info 264: 'iss/cpu0_hart0',   a4 0007e8c0 -> 0007e8d0
+Info 265: 'iss/cpu0_hart0', 0x0000000000010b1a(memset+22): Machine fed76be3 bltu    a4,a3,10b10
+Info 266: 'iss/cpu0_hart0', 0x0000000000010b10(memset+18): Machine c30c     sw      a1,0(a4)
+Info 266: 'iss/cpu0_hart0',   MEMW 0x7e8d0 0x7e8d0 4 00000000
+Info 266: 'iss/cpu0_hart0',   MEMW 0x7e8d0 0x7e8d0 4 00000000
+Info 267: 'iss/cpu0_hart0', 0x0000000000010b12(memset+1a): Machine c34c     sw      a1,4(a4)
+Info 267: 'iss/cpu0_hart0',   MEMW 0x7e8d4 0x7e8d4 4 00000000
+Info 267: 'iss/cpu0_hart0',   MEMW 0x7e8d4 0x7e8d4 4 00000000
+Info 268: 'iss/cpu0_hart0', 0x0000000000010b14(memset+1c): Machine c70c     sw      a1,8(a4)
+Info 268: 'iss/cpu0_hart0',   MEMW 0x7e8d8 0x7e8d8 4 00000000
+Info 268: 'iss/cpu0_hart0',   MEMW 0x7e8d8 0x7e8d8 4 00000000
+Info 269: 'iss/cpu0_hart0', 0x0000000000010b16(memset+1e): Machine c74c     sw      a1,12(a4)
+Info 269: 'iss/cpu0_hart0',   MEMW 0x7e8dc 0x7e8dc 4 00000000
+Info 269: 'iss/cpu0_hart0',   MEMW 0x7e8dc 0x7e8dc 4 00000000
+Info 270: 'iss/cpu0_hart0', 0x0000000000010b18(memset+20): Machine 0741     addi    a4,a4,16
+Info 270: 'iss/cpu0_hart0',   a4 0007e8d0 -> 0007e8e0
+Info 271: 'iss/cpu0_hart0', 0x0000000000010b1a(memset+22): Machine fed76be3 bltu    a4,a3,10b10
+Info 272: 'iss/cpu0_hart0', 0x0000000000010b10(memset+18): Machine c30c     sw      a1,0(a4)
+Info 272: 'iss/cpu0_hart0',   MEMW 0x7e8e0 0x7e8e0 4 00000000
+Info 272: 'iss/cpu0_hart0',   MEMW 0x7e8e0 0x7e8e0 4 00000000
+Info 273: 'iss/cpu0_hart0', 0x0000000000010b12(memset+1a): Machine c34c     sw      a1,4(a4)
+Info 273: 'iss/cpu0_hart0',   MEMW 0x7e8e4 0x7e8e4 4 00000000
+Info 273: 'iss/cpu0_hart0',   MEMW 0x7e8e4 0x7e8e4 4 00000000
+Info 274: 'iss/cpu0_hart0', 0x0000000000010b14(memset+1c): Machine c70c     sw      a1,8(a4)
+Info 274: 'iss/cpu0_hart0',   MEMW 0x7e8e8 0x7e8e8 4 00000000
+Info 274: 'iss/cpu0_hart0',   MEMW 0x7e8e8 0x7e8e8 4 00000000
+Info 275: 'iss/cpu0_hart0', 0x0000000000010b16(memset+1e): Machine c74c     sw      a1,12(a4)
+Info 275: 'iss/cpu0_hart0',   MEMW 0x7e8ec 0x7e8ec 4 00000000
+Info 275: 'iss/cpu0_hart0',   MEMW 0x7e8ec 0x7e8ec 4 00000000
+Info 276: 'iss/cpu0_hart0', 0x0000000000010b18(memset+20): Machine 0741     addi    a4,a4,16
+Info 276: 'iss/cpu0_hart0',   a4 0007e8e0 -> 0007e8f0
+Info 277: 'iss/cpu0_hart0', 0x0000000000010b1a(memset+22): Machine fed76be3 bltu    a4,a3,10b10
+Info 278: 'iss/cpu0_hart0', 0x0000000000010b10(memset+18): Machine c30c     sw      a1,0(a4)
+Info 278: 'iss/cpu0_hart0',   MEMW 0x7e8f0 0x7e8f0 4 00000000
+Info 278: 'iss/cpu0_hart0',   MEMW 0x7e8f0 0x7e8f0 4 00000000
+Info 279: 'iss/cpu0_hart0', 0x0000000000010b12(memset+1a): Machine c34c     sw      a1,4(a4)
+Info 279: 'iss/cpu0_hart0',   MEMW 0x7e8f4 0x7e8f4 4 00000000
+Info 279: 'iss/cpu0_hart0',   MEMW 0x7e8f4 0x7e8f4 4 00000000
+Info 280: 'iss/cpu0_hart0', 0x0000000000010b14(memset+1c): Machine c70c     sw      a1,8(a4)
+Info 280: 'iss/cpu0_hart0',   MEMW 0x7e8f8 0x7e8f8 4 00000000
+Info 280: 'iss/cpu0_hart0',   MEMW 0x7e8f8 0x7e8f8 4 00000000
+Info 281: 'iss/cpu0_hart0', 0x0000000000010b16(memset+1e): Machine c74c     sw      a1,12(a4)
+Info 281: 'iss/cpu0_hart0',   MEMW 0x7e8fc 0x7e8fc 4 00000000
+Info 281: 'iss/cpu0_hart0',   MEMW 0x7e8fc 0x7e8fc 4 00000000
+Info 282: 'iss/cpu0_hart0', 0x0000000000010b18(memset+20): Machine 0741     addi    a4,a4,16
+Info 282: 'iss/cpu0_hart0',   a4 0007e8f0 -> 0007e900
+Info 283: 'iss/cpu0_hart0', 0x0000000000010b1a(memset+22): Machine fed76be3 bltu    a4,a3,10b10
+Info 284: 'iss/cpu0_hart0', 0x0000000000010b10(memset+18): Machine c30c     sw      a1,0(a4)
+Info 284: 'iss/cpu0_hart0',   MEMW 0x7e900 0x7e900 4 00000000
+Info 284: 'iss/cpu0_hart0',   MEMW 0x7e900 0x7e900 4 00000000
+Info 285: 'iss/cpu0_hart0', 0x0000000000010b12(memset+1a): Machine c34c     sw      a1,4(a4)
+Info 285: 'iss/cpu0_hart0',   MEMW 0x7e904 0x7e904 4 00000000
+Info 285: 'iss/cpu0_hart0',   MEMW 0x7e904 0x7e904 4 00000000
+Info 286: 'iss/cpu0_hart0', 0x0000000000010b14(memset+1c): Machine c70c     sw      a1,8(a4)
+Info 286: 'iss/cpu0_hart0',   MEMW 0x7e908 0x7e908 4 00000000
+Info 286: 'iss/cpu0_hart0',   MEMW 0x7e908 0x7e908 4 00000000
+Info 287: 'iss/cpu0_hart0', 0x0000000000010b16(memset+1e): Machine c74c     sw      a1,12(a4)
+Info 287: 'iss/cpu0_hart0',   MEMW 0x7e90c 0x7e90c 4 00000000
+Info 287: 'iss/cpu0_hart0',   MEMW 0x7e90c 0x7e90c 4 00000000
+Info 288: 'iss/cpu0_hart0', 0x0000000000010b18(memset+20): Machine 0741     addi    a4,a4,16
+Info 288: 'iss/cpu0_hart0',   a4 0007e900 -> 0007e910
+Info 289: 'iss/cpu0_hart0', 0x0000000000010b1a(memset+22): Machine fed76be3 bltu    a4,a3,10b10
+Info 290: 'iss/cpu0_hart0', 0x0000000000010b10(memset+18): Machine c30c     sw      a1,0(a4)
+Info 290: 'iss/cpu0_hart0',   MEMW 0x7e910 0x7e910 4 00000000
+Info 290: 'iss/cpu0_hart0',   MEMW 0x7e910 0x7e910 4 00000000
+Info 291: 'iss/cpu0_hart0', 0x0000000000010b12(memset+1a): Machine c34c     sw      a1,4(a4)
+Info 291: 'iss/cpu0_hart0',   MEMW 0x7e914 0x7e914 4 00000000
+Info 291: 'iss/cpu0_hart0',   MEMW 0x7e914 0x7e914 4 00000000
+Info 292: 'iss/cpu0_hart0', 0x0000000000010b14(memset+1c): Machine c70c     sw      a1,8(a4)
+Info 292: 'iss/cpu0_hart0',   MEMW 0x7e918 0x7e918 4 00000000
+Info 292: 'iss/cpu0_hart0',   MEMW 0x7e918 0x7e918 4 00000000
+Info 293: 'iss/cpu0_hart0', 0x0000000000010b16(memset+1e): Machine c74c     sw      a1,12(a4)
+Info 293: 'iss/cpu0_hart0',   MEMW 0x7e91c 0x7e91c 4 00000000
+Info 293: 'iss/cpu0_hart0',   MEMW 0x7e91c 0x7e91c 4 00000000
+Info 294: 'iss/cpu0_hart0', 0x0000000000010b18(memset+20): Machine 0741     addi    a4,a4,16
+Info 294: 'iss/cpu0_hart0',   a4 0007e910 -> 0007e920
+Info 295: 'iss/cpu0_hart0', 0x0000000000010b1a(memset+22): Machine fed76be3 bltu    a4,a3,10b10
+Info 296: 'iss/cpu0_hart0', 0x0000000000010b10(memset+18): Machine c30c     sw      a1,0(a4)
+Info 296: 'iss/cpu0_hart0',   MEMW 0x7e920 0x7e920 4 00000000
+Info 296: 'iss/cpu0_hart0',   MEMW 0x7e920 0x7e920 4 00000000
+Info 297: 'iss/cpu0_hart0', 0x0000000000010b12(memset+1a): Machine c34c     sw      a1,4(a4)
+Info 297: 'iss/cpu0_hart0',   MEMW 0x7e924 0x7e924 4 00000000
+Info 297: 'iss/cpu0_hart0',   MEMW 0x7e924 0x7e924 4 00000000
+Info 298: 'iss/cpu0_hart0', 0x0000000000010b14(memset+1c): Machine c70c     sw      a1,8(a4)
+Info 298: 'iss/cpu0_hart0',   MEMW 0x7e928 0x7e928 4 00000000
+Info 298: 'iss/cpu0_hart0',   MEMW 0x7e928 0x7e928 4 00000000
+Info 299: 'iss/cpu0_hart0', 0x0000000000010b16(memset+1e): Machine c74c     sw      a1,12(a4)
+Info 299: 'iss/cpu0_hart0',   MEMW 0x7e92c 0x7e92c 4 00000000
+Info 299: 'iss/cpu0_hart0',   MEMW 0x7e92c 0x7e92c 4 00000000
+Info 300: 'iss/cpu0_hart0', 0x0000000000010b18(memset+20): Machine 0741     addi    a4,a4,16
+Info 300: 'iss/cpu0_hart0',   a4 0007e920 -> 0007e930
+Info 301: 'iss/cpu0_hart0', 0x0000000000010b1a(memset+22): Machine fed76be3 bltu    a4,a3,10b10
+Info 302: 'iss/cpu0_hart0', 0x0000000000010b10(memset+18): Machine c30c     sw      a1,0(a4)
+Info 302: 'iss/cpu0_hart0',   MEMW 0x7e930 0x7e930 4 00000000
+Info 302: 'iss/cpu0_hart0',   MEMW 0x7e930 0x7e930 4 00000000
+Info 303: 'iss/cpu0_hart0', 0x0000000000010b12(memset+1a): Machine c34c     sw      a1,4(a4)
+Info 303: 'iss/cpu0_hart0',   MEMW 0x7e934 0x7e934 4 00000000
+Info 303: 'iss/cpu0_hart0',   MEMW 0x7e934 0x7e934 4 00000000
+Info 304: 'iss/cpu0_hart0', 0x0000000000010b14(memset+1c): Machine c70c     sw      a1,8(a4)
+Info 304: 'iss/cpu0_hart0',   MEMW 0x7e938 0x7e938 4 00000000
+Info 304: 'iss/cpu0_hart0',   MEMW 0x7e938 0x7e938 4 00000000
+Info 305: 'iss/cpu0_hart0', 0x0000000000010b16(memset+1e): Machine c74c     sw      a1,12(a4)
+Info 305: 'iss/cpu0_hart0',   MEMW 0x7e93c 0x7e93c 4 00000000
+Info 305: 'iss/cpu0_hart0',   MEMW 0x7e93c 0x7e93c 4 00000000
+Info 306: 'iss/cpu0_hart0', 0x0000000000010b18(memset+20): Machine 0741     addi    a4,a4,16
+Info 306: 'iss/cpu0_hart0',   a4 0007e930 -> 0007e940
+Info 307: 'iss/cpu0_hart0', 0x0000000000010b1a(memset+22): Machine fed76be3 bltu    a4,a3,10b10
+Info 308: 'iss/cpu0_hart0', 0x0000000000010b10(memset+18): Machine c30c     sw      a1,0(a4)
+Info 308: 'iss/cpu0_hart0',   MEMW 0x7e940 0x7e940 4 00000000
+Info 308: 'iss/cpu0_hart0',   MEMW 0x7e940 0x7e940 4 00000000
+Info 309: 'iss/cpu0_hart0', 0x0000000000010b12(memset+1a): Machine c34c     sw      a1,4(a4)
+Info 309: 'iss/cpu0_hart0',   MEMW 0x7e944 0x7e944 4 00000000
+Info 309: 'iss/cpu0_hart0',   MEMW 0x7e944 0x7e944 4 00000000
+Info 310: 'iss/cpu0_hart0', 0x0000000000010b14(memset+1c): Machine c70c     sw      a1,8(a4)
+Info 310: 'iss/cpu0_hart0',   MEMW 0x7e948 0x7e948 4 00000000
+Info 310: 'iss/cpu0_hart0',   MEMW 0x7e948 0x7e948 4 00000000
+Info 311: 'iss/cpu0_hart0', 0x0000000000010b16(memset+1e): Machine c74c     sw      a1,12(a4)
+Info 311: 'iss/cpu0_hart0',   MEMW 0x7e94c 0x7e94c 4 00000000
+Info 311: 'iss/cpu0_hart0',   MEMW 0x7e94c 0x7e94c 4 00000000
+Info 312: 'iss/cpu0_hart0', 0x0000000000010b18(memset+20): Machine 0741     addi    a4,a4,16
+Info 312: 'iss/cpu0_hart0',   a4 0007e940 -> 0007e950
+Info 313: 'iss/cpu0_hart0', 0x0000000000010b1a(memset+22): Machine fed76be3 bltu    a4,a3,10b10
+Info 314: 'iss/cpu0_hart0', 0x0000000000010b10(memset+18): Machine c30c     sw      a1,0(a4)
+Info 314: 'iss/cpu0_hart0',   MEMW 0x7e950 0x7e950 4 00000000
+Info 314: 'iss/cpu0_hart0',   MEMW 0x7e950 0x7e950 4 00000000
+Info 315: 'iss/cpu0_hart0', 0x0000000000010b12(memset+1a): Machine c34c     sw      a1,4(a4)
+Info 315: 'iss/cpu0_hart0',   MEMW 0x7e954 0x7e954 4 00000000
+Info 315: 'iss/cpu0_hart0',   MEMW 0x7e954 0x7e954 4 00000000
+Info 316: 'iss/cpu0_hart0', 0x0000000000010b14(memset+1c): Machine c70c     sw      a1,8(a4)
+Info 316: 'iss/cpu0_hart0',   MEMW 0x7e958 0x7e958 4 00000000
+Info 316: 'iss/cpu0_hart0',   MEMW 0x7e958 0x7e958 4 00000000
+Info 317: 'iss/cpu0_hart0', 0x0000000000010b16(memset+1e): Machine c74c     sw      a1,12(a4)
+Info 317: 'iss/cpu0_hart0',   MEMW 0x7e95c 0x7e95c 4 00000000
+Info 317: 'iss/cpu0_hart0',   MEMW 0x7e95c 0x7e95c 4 00000000
+Info 318: 'iss/cpu0_hart0', 0x0000000000010b18(memset+20): Machine 0741     addi    a4,a4,16
+Info 318: 'iss/cpu0_hart0',   a4 0007e950 -> 0007e960
+Info 319: 'iss/cpu0_hart0', 0x0000000000010b1a(memset+22): Machine fed76be3 bltu    a4,a3,10b10
+Info 320: 'iss/cpu0_hart0', 0x0000000000010b10(memset+18): Machine c30c     sw      a1,0(a4)
+Info 320: 'iss/cpu0_hart0',   MEMW 0x7e960 0x7e960 4 00000000
+Info 320: 'iss/cpu0_hart0',   MEMW 0x7e960 0x7e960 4 00000000
+Info 321: 'iss/cpu0_hart0', 0x0000000000010b12(memset+1a): Machine c34c     sw      a1,4(a4)
+Info 321: 'iss/cpu0_hart0',   MEMW 0x7e964 0x7e964 4 00000000
+Info 321: 'iss/cpu0_hart0',   MEMW 0x7e964 0x7e964 4 00000000
+Info 322: 'iss/cpu0_hart0', 0x0000000000010b14(memset+1c): Machine c70c     sw      a1,8(a4)
+Info 322: 'iss/cpu0_hart0',   MEMW 0x7e968 0x7e968 4 00000000
+Info 322: 'iss/cpu0_hart0',   MEMW 0x7e968 0x7e968 4 00000000
+Info 323: 'iss/cpu0_hart0', 0x0000000000010b16(memset+1e): Machine c74c     sw      a1,12(a4)
+Info 323: 'iss/cpu0_hart0',   MEMW 0x7e96c 0x7e96c 4 00000000
+Info 323: 'iss/cpu0_hart0',   MEMW 0x7e96c 0x7e96c 4 00000000
+Info 324: 'iss/cpu0_hart0', 0x0000000000010b18(memset+20): Machine 0741     addi    a4,a4,16
+Info 324: 'iss/cpu0_hart0',   a4 0007e960 -> 0007e970
+Info 325: 'iss/cpu0_hart0', 0x0000000000010b1a(memset+22): Machine fed76be3 bltu    a4,a3,10b10
+Info 326: 'iss/cpu0_hart0', 0x0000000000010b10(memset+18): Machine c30c     sw      a1,0(a4)
+Info 326: 'iss/cpu0_hart0',   MEMW 0x7e970 0x7e970 4 00000000
+Info 326: 'iss/cpu0_hart0',   MEMW 0x7e970 0x7e970 4 00000000
+Info 327: 'iss/cpu0_hart0', 0x0000000000010b12(memset+1a): Machine c34c     sw      a1,4(a4)
+Info 327: 'iss/cpu0_hart0',   MEMW 0x7e974 0x7e974 4 00000000
+Info 327: 'iss/cpu0_hart0',   MEMW 0x7e974 0x7e974 4 00000000
+Info 328: 'iss/cpu0_hart0', 0x0000000000010b14(memset+1c): Machine c70c     sw      a1,8(a4)
+Info 328: 'iss/cpu0_hart0',   MEMW 0x7e978 0x7e978 4 00000000
+Info 328: 'iss/cpu0_hart0',   MEMW 0x7e978 0x7e978 4 00000000
+Info 329: 'iss/cpu0_hart0', 0x0000000000010b16(memset+1e): Machine c74c     sw      a1,12(a4)
+Info 329: 'iss/cpu0_hart0',   MEMW 0x7e97c 0x7e97c 4 00000000
+Info 329: 'iss/cpu0_hart0',   MEMW 0x7e97c 0x7e97c 4 00000000
+Info 330: 'iss/cpu0_hart0', 0x0000000000010b18(memset+20): Machine 0741     addi    a4,a4,16
+Info 330: 'iss/cpu0_hart0',   a4 0007e970 -> 0007e980
+Info 331: 'iss/cpu0_hart0', 0x0000000000010b1a(memset+22): Machine fed76be3 bltu    a4,a3,10b10
+Info 332: 'iss/cpu0_hart0', 0x0000000000010b10(memset+18): Machine c30c     sw      a1,0(a4)
+Info 332: 'iss/cpu0_hart0',   MEMW 0x7e980 0x7e980 4 00000000
+Info 332: 'iss/cpu0_hart0',   MEMW 0x7e980 0x7e980 4 00000000
+Info 333: 'iss/cpu0_hart0', 0x0000000000010b12(memset+1a): Machine c34c     sw      a1,4(a4)
+Info 333: 'iss/cpu0_hart0',   MEMW 0x7e984 0x7e984 4 00000000
+Info 333: 'iss/cpu0_hart0',   MEMW 0x7e984 0x7e984 4 00000000
+Info 334: 'iss/cpu0_hart0', 0x0000000000010b14(memset+1c): Machine c70c     sw      a1,8(a4)
+Info 334: 'iss/cpu0_hart0',   MEMW 0x7e988 0x7e988 4 00000000
+Info 334: 'iss/cpu0_hart0',   MEMW 0x7e988 0x7e988 4 00000000
+Info 335: 'iss/cpu0_hart0', 0x0000000000010b16(memset+1e): Machine c74c     sw      a1,12(a4)
+Info 335: 'iss/cpu0_hart0',   MEMW 0x7e98c 0x7e98c 4 00000000
+Info 335: 'iss/cpu0_hart0',   MEMW 0x7e98c 0x7e98c 4 00000000
+Info 336: 'iss/cpu0_hart0', 0x0000000000010b18(memset+20): Machine 0741     addi    a4,a4,16
+Info 336: 'iss/cpu0_hart0',   a4 0007e980 -> 0007e990
+Info 337: 'iss/cpu0_hart0', 0x0000000000010b1a(memset+22): Machine fed76be3 bltu    a4,a3,10b10
+Info 338: 'iss/cpu0_hart0', 0x0000000000010b1e(memset+26): Machine e211     bnez    a2,10b22
+Info 339: 'iss/cpu0_hart0', 0x0000000000010b22(memset+2a): Machine 40c306b3 sub     a3,t1,a2
+Info 339: 'iss/cpu0_hart0',   a3 0007e990 -> 0000000b
+Info 340: 'iss/cpu0_hart0', 0x0000000000010b26(memset+2e): Machine 068a     slli    a3,a3,0x2
+Info 340: 'iss/cpu0_hart0',   a3 0000000b -> 0000002c
+Info 341: 'iss/cpu0_hart0', 0x0000000000010b28(memset+30): Machine 00000297 auipc   t0,0x0
+Info 341: 'iss/cpu0_hart0',   t0 000100e4 -> 00010b28
+Info 342: 'iss/cpu0_hart0', 0x0000000000010b2c(memset+34): Machine 9696     add     a3,a3,t0
+Info 342: 'iss/cpu0_hart0',   a3 0000002c -> 00010b54
+Info 343: 'iss/cpu0_hart0', 0x0000000000010b2e(memset+36): Machine 00a68067 jr      10(a3)
+Info 344: 'iss/cpu0_hart0', 0x0000000000010b5e(memset+66): Machine 00b701a3 sb      a1,3(a4)
+Info 344: 'iss/cpu0_hart0',   MEMW 0x7e993 0x7e993 1 00
+Info 344: 'iss/cpu0_hart0',   MEMW 0x7e993 0x7e993 1 00
+Info 345: 'iss/cpu0_hart0', 0x0000000000010b62(memset+6a): Machine 00b70123 sb      a1,2(a4)
+Info 345: 'iss/cpu0_hart0',   MEMW 0x7e992 0x7e992 1 00
+Info 345: 'iss/cpu0_hart0',   MEMW 0x7e992 0x7e992 1 00
+Info 346: 'iss/cpu0_hart0', 0x0000000000010b66(memset+6e): Machine 00b700a3 sb      a1,1(a4)
+Info 346: 'iss/cpu0_hart0',   MEMW 0x7e991 0x7e991 1 00
+Info 346: 'iss/cpu0_hart0',   MEMW 0x7e991 0x7e991 1 00
+Info 347: 'iss/cpu0_hart0', 0x0000000000010b6a(memset+72): Machine 00b70023 sb      a1,0(a4)
+Info 347: 'iss/cpu0_hart0',   MEMW 0x7e990 0x7e990 1 00
+Info 347: 'iss/cpu0_hart0',   MEMW 0x7e990 0x7e990 1 00
+Info 348: 'iss/cpu0_hart0', 0x0000000000010b6e(memset+76): Machine 8082     jr      ra
+Info 349: 'iss/cpu0_hart0', 0x00000000000100e4(_start+1c): Machine 00001517 auipc   a0,0x1
+Info 349: 'iss/cpu0_hart0',   a0 0007e668 -> 000110e4
+Info 350: 'iss/cpu0_hart0', 0x00000000000100e8(_start+20): Machine b2e50513 addi    a0,a0,-1234
+Info 350: 'iss/cpu0_hart0',   a0 000110e4 -> 00010c12
+Info 351: 'iss/cpu0_hart0', 0x00000000000100ec(_start+24): Machine c519     beqz    a0,100fa
+Info 352: 'iss/cpu0_hart0', 0x00000000000100ee(_start+26): Machine 00001517 auipc   a0,0x1
+Info 352: 'iss/cpu0_hart0',   a0 00010c12 -> 000110ee
+Info 353: 'iss/cpu0_hart0', 0x00000000000100f2(_start+2a): Machine 29250513 addi    a0,a0,658
+Info 353: 'iss/cpu0_hart0',   a0 000110ee -> 00011380
+Info 354: 'iss/cpu0_hart0', 0x00000000000100f6(_start+2e): Machine 31d000ef jal     ra,10c12
+Info 354: 'iss/cpu0_hart0',   ra 000100e4 -> 000100fa
+Info 355: 'iss/cpu0_hart0', 0x0000000000010c12(atexit): Machine 85aa     mv      a1,a0
+Info 355: 'iss/cpu0_hart0',   a1 00000000 -> 00011380
+Info 356: 'iss/cpu0_hart0', 0x0000000000010c14(atexit+2): Machine 4681     li      a3,0
+Info 356: 'iss/cpu0_hart0',   a3 00010b54 -> 00000000
+Info 357: 'iss/cpu0_hart0', 0x0000000000010c16(atexit+4): Machine 4601     li      a2,0
+Info 357: 'iss/cpu0_hart0',   a2 00000004 -> 00000000
+Info 358: 'iss/cpu0_hart0', 0x0000000000010c18(atexit+6): Machine 4501     li      a0,0
+Info 358: 'iss/cpu0_hart0',   a0 00011380 -> 00000000
+Info 359: 'iss/cpu0_hart0', 0x0000000000010c1a(atexit+8): Machine 79c0006f j       113b6
+Info 360: 'iss/cpu0_hart0', 0x00000000000113b6(__register_exitproc): Machine 4e418713 addi    a4,gp,1252
+Info 360: 'iss/cpu0_hart0',   a4 0007e990 -> 0007e678
+Info 361: 'iss/cpu0_hart0', 0x00000000000113ba(__register_exitproc+4): Machine 431c     lw      a5,0(a4)
+Info 361: 'iss/cpu0_hart0',   MEMR 0x7e678 0x7e678 4 00000000
+Info 361: 'iss/cpu0_hart0',   MEMR 0x7e678 0x7e678 4 00000000
+Info 361: 'iss/cpu0_hart0',   a5 fffffff8 -> 00000000
+Info 362: 'iss/cpu0_hart0', 0x00000000000113bc(__register_exitproc+6): Machine cfb9     beqz    a5,1141a
+Info 363: 'iss/cpu0_hart0', 0x000000000001141a(__register_exitproc+64): Machine 67018793 addi    a5,gp,1648
+Info 363: 'iss/cpu0_hart0',   a5 00000000 -> 0007e804
+Info 364: 'iss/cpu0_hart0', 0x000000000001141e(__register_exitproc+68): Machine c31c     sw      a5,0(a4)
+Info 364: 'iss/cpu0_hart0',   MEMW 0x7e678 0x7e678 4 0007e804
+Info 364: 'iss/cpu0_hart0',   MEMW 0x7e678 0x7e678 4 0007e804
+Info 365: 'iss/cpu0_hart0', 0x0000000000011420(__register_exitproc+6a): Machine bf79     j       113be
+Info 366: 'iss/cpu0_hart0', 0x00000000000113be(__register_exitproc+8): Machine 43d8     lw      a4,4(a5)
+Info 366: 'iss/cpu0_hart0',   MEMR 0x7e808 0x7e808 4 00000000
+Info 366: 'iss/cpu0_hart0',   MEMR 0x7e808 0x7e808 4 00000000
+Info 366: 'iss/cpu0_hart0',   a4 0007e678 -> 00000000
+Info 367: 'iss/cpu0_hart0', 0x00000000000113c0(__register_exitproc+a): Machine 487d     li      a6,31
+Info 367: 'iss/cpu0_hart0',   a6 00000000 -> 0000001f
+Info 368: 'iss/cpu0_hart0', 0x00000000000113c2(__register_exitproc+c): Machine 06e84063 blt     a6,a4,11422
+Info 369: 'iss/cpu0_hart0', 0x00000000000113c6(__register_exitproc+10): Machine e911     bnez    a0,113da
+Info 370: 'iss/cpu0_hart0', 0x00000000000113c8(__register_exitproc+12): Machine 00271613 slli    a2,a4,0x2
+Info 370: 'iss/cpu0_hart0',   a2 00000000 -> 00000000
+Info 371: 'iss/cpu0_hart0', 0x00000000000113cc(__register_exitproc+16): Machine 0705     addi    a4,a4,1
+Info 371: 'iss/cpu0_hart0',   a4 00000000 -> 00000001
+Info 372: 'iss/cpu0_hart0', 0x00000000000113ce(__register_exitproc+18): Machine 00c786b3 add     a3,a5,a2
+Info 372: 'iss/cpu0_hart0',   a3 00000000 -> 0007e804
+Info 373: 'iss/cpu0_hart0', 0x00000000000113d2(__register_exitproc+1c): Machine c3d8     sw      a4,4(a5)
+Info 373: 'iss/cpu0_hart0',   MEMW 0x7e808 0x7e808 4 00000001
+Info 373: 'iss/cpu0_hart0',   MEMW 0x7e808 0x7e808 4 00000001
+Info 374: 'iss/cpu0_hart0', 0x00000000000113d4(__register_exitproc+1e): Machine 4501     li      a0,0
+Info 374: 'iss/cpu0_hart0',   a0 00000000 -> 00000000
+Info 375: 'iss/cpu0_hart0', 0x00000000000113d6(__register_exitproc+20): Machine c68c     sw      a1,8(a3)
+Info 375: 'iss/cpu0_hart0',   MEMW 0x7e80c 0x7e80c 4 00011380
+Info 375: 'iss/cpu0_hart0',   MEMW 0x7e80c 0x7e80c 4 00011380
+Info 376: 'iss/cpu0_hart0', 0x00000000000113d8(__register_exitproc+22): Machine 8082     jr      ra
+Info 377: 'iss/cpu0_hart0', 0x00000000000100fa(_start+32): Machine 2639     jal     ra,10408
+Info 377: 'iss/cpu0_hart0',   ra 000100fa -> 000100fc
+Info 378: 'iss/cpu0_hart0', 0x0000000000010408(__libc_init_array): Machine 1141     addi    sp,sp,-16
+Info 378: 'iss/cpu0_hart0',   sp fffff000 -> ffffeff0
+Info 379: 'iss/cpu0_hart0', 0x000000000001040a(__libc_init_array+2): Machine 0006c797 auipc   a5,0x6c
+Info 379: 'iss/cpu0_hart0',   a5 0007e804 -> 0007c40a
+Info 380: 'iss/cpu0_hart0', 0x000000000001040e(__libc_init_array+6): Machine d0278793 addi    a5,a5,-766
+Info 380: 'iss/cpu0_hart0',   a5 0007c40a -> 0007c10c
+Info 381: 'iss/cpu0_hart0', 0x0000000000010412(__libc_init_array+a): Machine c606     sw      ra,12(sp)
+Info 381: 'iss/cpu0_hart0',   MEMW 0xffffeffc 0xffffeffc 4 000100fc
+Info 381: 'iss/cpu0_hart0',   MEMW 0xffffeffc 0xffffeffc 4 000100fc
+Info 382: 'iss/cpu0_hart0', 0x0000000000010414(__libc_init_array+c): Machine c422     sw      s0,8(sp)
+Info 382: 'iss/cpu0_hart0',   MEMW 0xffffeff8 0xffffeff8 4 00000000
+Info 382: 'iss/cpu0_hart0',   MEMW 0xffffeff8 0xffffeff8 4 00000000
+Info 383: 'iss/cpu0_hart0', 0x0000000000010416(__libc_init_array+e): Machine 0006c417 auipc   s0,0x6c
+Info 383: 'iss/cpu0_hart0',   s0 00000000 -> 0007c416
+Info 384: 'iss/cpu0_hart0', 0x000000000001041a(__libc_init_array+12): Machine cf640413 addi    s0,s0,-778
+Info 384: 'iss/cpu0_hart0',   s0 0007c416 -> 0007c10c
+Info 385: 'iss/cpu0_hart0', 0x000000000001041e(__libc_init_array+16): Machine c226     sw      s1,4(sp)
+Info 385: 'iss/cpu0_hart0',   MEMW 0xffffeff4 0xffffeff4 4 00000000
+Info 385: 'iss/cpu0_hart0',   MEMW 0xffffeff4 0xffffeff4 4 00000000
+Info 386: 'iss/cpu0_hart0', 0x0000000000010420(__libc_init_array+18): Machine c04a     sw      s2,0(sp)
+Info 386: 'iss/cpu0_hart0',   MEMW 0xffffeff0 0xffffeff0 4 00000000
+Info 386: 'iss/cpu0_hart0',   MEMW 0xffffeff0 0xffffeff0 4 00000000
+Info 387: 'iss/cpu0_hart0', 0x0000000000010422(__libc_init_array+1a): Machine 40878933 sub     s2,a5,s0
+Info 387: 'iss/cpu0_hart0',   s2 00000000 -> 00000000
+Info 388: 'iss/cpu0_hart0', 0x0000000000010426(__libc_init_array+1e): Machine 00878b63 beq     a5,s0,1043c
+Info 389: 'iss/cpu0_hart0', 0x000000000001043c(__libc_init_array+34): Machine 0006c797 auipc   a5,0x6c
+Info 389: 'iss/cpu0_hart0',   a5 0007c10c -> 0007c43c
+Info 390: 'iss/cpu0_hart0', 0x0000000000010440(__libc_init_array+38): Machine cd878793 addi    a5,a5,-808
+Info 390: 'iss/cpu0_hart0',   a5 0007c43c -> 0007c114
+Info 391: 'iss/cpu0_hart0', 0x0000000000010444(__libc_init_array+3c): Machine 0006c417 auipc   s0,0x6c
+Info 391: 'iss/cpu0_hart0',   s0 0007c10c -> 0007c444
+Info 392: 'iss/cpu0_hart0', 0x0000000000010448(__libc_init_array+40): Machine cc840413 addi    s0,s0,-824
+Info 392: 'iss/cpu0_hart0',   s0 0007c444 -> 0007c10c
+Info 393: 'iss/cpu0_hart0', 0x000000000001044c(__libc_init_array+44): Machine 40878933 sub     s2,a5,s0
+Info 393: 'iss/cpu0_hart0',   s2 00000000 -> 00000008
+Info 394: 'iss/cpu0_hart0', 0x0000000000010450(__libc_init_array+48): Machine 40295913 srai    s2,s2,0x2
+Info 394: 'iss/cpu0_hart0',   s2 00000008 -> 00000002
+Info 395: 'iss/cpu0_hart0', 0x0000000000010454(__libc_init_array+4c): Machine 00878963 beq     a5,s0,10466
+Info 396: 'iss/cpu0_hart0', 0x0000000000010458(__libc_init_array+50): Machine 4481     li      s1,0
+Info 396: 'iss/cpu0_hart0',   s1 00000000 -> 00000000
+Info 397: 'iss/cpu0_hart0', 0x000000000001045a(__libc_init_array+52): Machine 401c     lw      a5,0(s0)
+Info 397: 'iss/cpu0_hart0',   MEMR 0x7c10c 0x7c10c 4 000100b4
+Info 397: 'iss/cpu0_hart0',   MEMR 0x7c10c 0x7c10c 4 000100b4
+Info 397: 'iss/cpu0_hart0',   a5 0007c114 -> 000100b4
+Info 398: 'iss/cpu0_hart0', 0x000000000001045c(__libc_init_array+54): Machine 0485     addi    s1,s1,1
+Info 398: 'iss/cpu0_hart0',   s1 00000000 -> 00000001
+Info 399: 'iss/cpu0_hart0', 0x000000000001045e(__libc_init_array+56): Machine 0411     addi    s0,s0,4
+Info 399: 'iss/cpu0_hart0',   s0 0007c10c -> 0007c110
+Info 400: 'iss/cpu0_hart0', 0x0000000000010460(__libc_init_array+58): Machine 9782     jalr    a5
+Info 400: 'iss/cpu0_hart0',   ra 000100fc -> 00010462
+Info 401: 'iss/cpu0_hart0', 0x00000000000100b4(register_fini): Machine 00000793 mv      a5,zero
+Info 401: 'iss/cpu0_hart0',   a5 000100b4 -> 00000000
+Info 402: 'iss/cpu0_hart0', 0x00000000000100b8(register_fini+4): Machine c799     beqz    a5,100c6
+Info 403: 'iss/cpu0_hart0', 0x00000000000100c6(register_fini+12): Machine 8082     jr      ra
+Info 404: 'iss/cpu0_hart0', 0x0000000000010462(__libc_init_array+5a): Machine ff24ece3 bltu    s1,s2,1045a
+Info 405: 'iss/cpu0_hart0', 0x000000000001045a(__libc_init_array+52): Machine 401c     lw      a5,0(s0)
+Info 405: 'iss/cpu0_hart0',   MEMR 0x7c110 0x7c110 4 00010138
+Info 405: 'iss/cpu0_hart0',   MEMR 0x7c110 0x7c110 4 00010138
+Info 405: 'iss/cpu0_hart0',   a5 00000000 -> 00010138
+Info 406: 'iss/cpu0_hart0', 0x000000000001045c(__libc_init_array+54): Machine 0485     addi    s1,s1,1
+Info 406: 'iss/cpu0_hart0',   s1 00000001 -> 00000002
+Info 407: 'iss/cpu0_hart0', 0x000000000001045e(__libc_init_array+56): Machine 0411     addi    s0,s0,4
+Info 407: 'iss/cpu0_hart0',   s0 0007c110 -> 0007c114
+Info 408: 'iss/cpu0_hart0', 0x0000000000010460(__libc_init_array+58): Machine 9782     jalr    a5
+Info 408: 'iss/cpu0_hart0',   ra 00010462 -> 00010462
+Info 409: 'iss/cpu0_hart0', 0x0000000000010138(frame_dummy): Machine 00000793 mv      a5,zero
+Info 409: 'iss/cpu0_hart0',   a5 00010138 -> 00000000
+Info 410: 'iss/cpu0_hart0', 0x000000000001013c(frame_dummy+4): Machine cb99     beqz    a5,10152
+Info 411: 'iss/cpu0_hart0', 0x0000000000010152(frame_dummy+1a): Machine 8082     jr      ra
+Info 412: 'iss/cpu0_hart0', 0x0000000000010462(__libc_init_array+5a): Machine ff24ece3 bltu    s1,s2,1045a
+Info 413: 'iss/cpu0_hart0', 0x0000000000010466(__libc_init_array+5e): Machine 40b2     lw      ra,12(sp)
+Info 413: 'iss/cpu0_hart0',   MEMR 0xffffeffc 0xffffeffc 4 000100fc
+Info 413: 'iss/cpu0_hart0',   MEMR 0xffffeffc 0xffffeffc 4 000100fc
+Info 413: 'iss/cpu0_hart0',   ra 00010462 -> 000100fc
+Info 414: 'iss/cpu0_hart0', 0x0000000000010468(__libc_init_array+60): Machine 4422     lw      s0,8(sp)
+Info 414: 'iss/cpu0_hart0',   MEMR 0xffffeff8 0xffffeff8 4 00000000
+Info 414: 'iss/cpu0_hart0',   MEMR 0xffffeff8 0xffffeff8 4 00000000
+Info 414: 'iss/cpu0_hart0',   s0 0007c114 -> 00000000
+Info 415: 'iss/cpu0_hart0', 0x000000000001046a(__libc_init_array+62): Machine 4492     lw      s1,4(sp)
+Info 415: 'iss/cpu0_hart0',   MEMR 0xffffeff4 0xffffeff4 4 00000000
+Info 415: 'iss/cpu0_hart0',   MEMR 0xffffeff4 0xffffeff4 4 00000000
+Info 415: 'iss/cpu0_hart0',   s1 00000002 -> 00000000
+Info 416: 'iss/cpu0_hart0', 0x000000000001046c(__libc_init_array+64): Machine 4902     lw      s2,0(sp)
+Info 416: 'iss/cpu0_hart0',   MEMR 0xffffeff0 0xffffeff0 4 00000000
+Info 416: 'iss/cpu0_hart0',   MEMR 0xffffeff0 0xffffeff0 4 00000000
+Info 416: 'iss/cpu0_hart0',   s2 00000002 -> 00000000
+Info 417: 'iss/cpu0_hart0', 0x000000000001046e(__libc_init_array+66): Machine 0141     addi    sp,sp,16
+Info 417: 'iss/cpu0_hart0',   sp ffffeff0 -> fffff000
+Info 418: 'iss/cpu0_hart0', 0x0000000000010470(__libc_init_array+68): Machine 8082     jr      ra
+Info 419: 'iss/cpu0_hart0', 0x00000000000100fc(_start+34): Machine 4502     lw      a0,0(sp)
+Info 419: 'iss/cpu0_hart0',   MEMR 0xfffff000 0xfffff000 4 00000000
+Info 419: 'iss/cpu0_hart0',   MEMR 0xfffff000 0xfffff000 4 00000000
+Info 419: 'iss/cpu0_hart0',   a0 00000000 -> 00000000
+Info 420: 'iss/cpu0_hart0', 0x00000000000100fe(_start+36): Machine 004c     addi    a1,sp,4
+Info 420: 'iss/cpu0_hart0',   a1 00011380 -> fffff004
+Info 421: 'iss/cpu0_hart0', 0x0000000000010100(_start+38): Machine 4601     li      a2,0
+Info 421: 'iss/cpu0_hart0',   a2 00000000 -> 00000000
+Info 422: 'iss/cpu0_hart0', 0x0000000000010102(_start+3a): Machine 60a020ef jal     ra,1270c
+Info 422: 'iss/cpu0_hart0',   ra 000100fc -> 00010106
+Info 423: 'iss/cpu0_hart0', 0x000000000001270c(main): Machine 1141     addi    sp,sp,-16
+Info 423: 'iss/cpu0_hart0',   sp fffff000 -> ffffeff0
+Info 424: 'iss/cpu0_hart0', 0x000000000001270e(main+2): Machine c606     sw      ra,12(sp)
+Info 424: 'iss/cpu0_hart0',   MEMW 0xffffeffc 0xffffeffc 4 00010106
+Info 424: 'iss/cpu0_hart0',   MEMW 0xffffeffc 0xffffeffc 4 00010106
+Info 425: 'iss/cpu0_hart0', 0x0000000000012710(main+4): Machine c422     sw      s0,8(sp)
+Info 425: 'iss/cpu0_hart0',   MEMW 0xffffeff8 0xffffeff8 4 00000000
+Info 425: 'iss/cpu0_hart0',   MEMW 0xffffeff8 0xffffeff8 4 00000000
+Info 426: 'iss/cpu0_hart0', 0x0000000000012712(main+6): Machine 0800     addi    s0,sp,16
+Info 426: 'iss/cpu0_hart0',   s0 00000000 -> fffff000
+Info 427: 'iss/cpu0_hart0', 0x0000000000012714(main+8): Machine 00004033 xor     zero,zero,zero
+Info 428: 'iss/cpu0_hart0', 0x0000000000012718(main+c): Machine 4ec1a783 lw      a5,1260(gp)
+Info 428: 'iss/cpu0_hart0',   MEMR 0x7e680 0x7e680 4 00000000
+Info 428: 'iss/cpu0_hart0',   MEMR 0x7e680 0x7e680 4 00000000
+Info 428: 'iss/cpu0_hart0',   a5 00000000 -> 00000000
+Info 429: 'iss/cpu0_hart0', 0x000000000001271c(main+10): Machine 0ff7f713 andi    a4,a5,255
+Info 429: 'iss/cpu0_hart0',   a4 00000001 -> 00000000
+Info 430: 'iss/cpu0_hart0', 0x0000000000012720(main+14): Machine 4d01a783 lw      a5,1232(gp)
+Info 430: 'iss/cpu0_hart0',   MEMR 0x7e664 0x7e664 4 00000001
+Info 430: 'iss/cpu0_hart0',   MEMR 0x7e664 0x7e664 4 00000001
+Info 430: 'iss/cpu0_hart0',   a5 00000000 -> 00000001
+Info 431: 'iss/cpu0_hart0', 0x0000000000012724(main+18): Machine 9fe1     zext.b  a5,a5
+Info 431: 'iss/cpu0_hart0',   a5 00000001 -> 00000001
+Info 432: 'iss/cpu0_hart0', 0x0000000000012726(main+1a): Machine 86be     mv      a3,a5
+Info 432: 'iss/cpu0_hart0',   a3 0007e804 -> 00000001
+Info 433: 'iss/cpu0_hart0', 0x0000000000012728(main+1c): Machine 863a     mv      a2,a4
+Info 433: 'iss/cpu0_hart0',   a2 00000000 -> 00000000
+Info 434: 'iss/cpu0_hart0', 0x000000000001272a(main+1e): Machine 0007c7b7 lui     a5,0x7c
+Info 434: 'iss/cpu0_hart0',   a5 00000001 -> 0007c000
+Info 435: 'iss/cpu0_hart0', 0x000000000001272e(main+22): Machine 65078593 addi    a1,a5,1616
+Info 435: 'iss/cpu0_hart0',   a1 fffff004 -> 0007c650
+Info 436: 'iss/cpu0_hart0', 0x0000000000012732(main+26): Machine 0006b7b7 lui     a5,0x6b
+Info 436: 'iss/cpu0_hart0',   a5 0007c000 -> 0006b000
+Info 437: 'iss/cpu0_hart0', 0x0000000000012736(main+2a): Machine fb078513 addi    a0,a5,-80
+Info 437: 'iss/cpu0_hart0',   a0 00000000 -> 0006afb0
+Info 438: 'iss/cpu0_hart0', 0x000000000001273a(main+2e): Machine 257010ef jal     ra,14190
+Info 438: 'iss/cpu0_hart0',   ra 00010106 -> 0001273e
+Info 439: 'iss/cpu0_hart0', 0x0000000000014190(riscv_cfft_f32): Machine 7179     addi    sp,sp,-48
+Info 439: 'iss/cpu0_hart0',   sp ffffeff0 -> ffffefc0
+Info 440: 'iss/cpu0_hart0', 0x0000000000014192(riscv_cfft_f32+2): Machine d606     sw      ra,44(sp)
+Info 440: 'iss/cpu0_hart0',   MEMW 0xffffefec 0xffffefec 4 0001273e
+Info 440: 'iss/cpu0_hart0',   MEMW 0xffffefec 0xffffefec 4 0001273e
+Info 441: 'iss/cpu0_hart0', 0x0000000000014194(riscv_cfft_f32+4): Machine d422     sw      s0,40(sp)
+Info 441: 'iss/cpu0_hart0',   MEMW 0xffffefe8 0xffffefe8 4 fffff000
+Info 441: 'iss/cpu0_hart0',   MEMW 0xffffefe8 0xffffefe8 4 fffff000
+Info 442: 'iss/cpu0_hart0', 0x0000000000014196(riscv_cfft_f32+6): Machine 1800     addi    s0,sp,48
+Info 442: 'iss/cpu0_hart0',   s0 fffff000 -> ffffeff0
+Info 443: 'iss/cpu0_hart0', 0x0000000000014198(riscv_cfft_f32+8): Machine fca42e23 sw      a0,-36(s0)
+Info 443: 'iss/cpu0_hart0',   MEMW 0xffffefcc 0xffffefcc 4 0006afb0
+Info 443: 'iss/cpu0_hart0',   MEMW 0xffffefcc 0xffffefcc 4 0006afb0
+Info 444: 'iss/cpu0_hart0', 0x000000000001419c(riscv_cfft_f32+c): Machine fcb42c23 sw      a1,-40(s0)
+Info 444: 'iss/cpu0_hart0',   MEMW 0xffffefc8 0xffffefc8 4 0007c650
+Info 444: 'iss/cpu0_hart0',   MEMW 0xffffefc8 0xffffefc8 4 0007c650
+Info 445: 'iss/cpu0_hart0', 0x00000000000141a0(riscv_cfft_f32+10): Machine 87b2     mv      a5,a2
+Info 445: 'iss/cpu0_hart0',   a5 0006b000 -> 00000000
+Info 446: 'iss/cpu0_hart0', 0x00000000000141a2(riscv_cfft_f32+12): Machine 8736     mv      a4,a3
+Info 446: 'iss/cpu0_hart0',   a4 00000000 -> 00000001
+Info 447: 'iss/cpu0_hart0', 0x00000000000141a4(riscv_cfft_f32+14): Machine fcf40ba3 sb      a5,-41(s0)
+Info 447: 'iss/cpu0_hart0',   MEMW 0xffffefc7 0xffffefc7 1 00
+Info 447: 'iss/cpu0_hart0',   MEMW 0xffffefc7 0xffffefc7 1 00
+Info 448: 'iss/cpu0_hart0', 0x00000000000141a8(riscv_cfft_f32+18): Machine 87ba     mv      a5,a4
+Info 448: 'iss/cpu0_hart0',   a5 00000000 -> 00000001
+Info 449: 'iss/cpu0_hart0', 0x00000000000141aa(riscv_cfft_f32+1a): Machine fcf40b23 sb      a5,-42(s0)
+Info 449: 'iss/cpu0_hart0',   MEMW 0xffffefc6 0xffffefc6 1 01
+Info 449: 'iss/cpu0_hart0',   MEMW 0xffffefc6 0xffffefc6 1 01
+Info 450: 'iss/cpu0_hart0', 0x00000000000141ae(riscv_cfft_f32+1e): Machine fdc42783 lw      a5,-36(s0)
+Info 450: 'iss/cpu0_hart0',   MEMR 0xffffefcc 0xffffefcc 4 0006afb0
+Info 450: 'iss/cpu0_hart0',   MEMR 0xffffefcc 0xffffefcc 4 0006afb0
+Info 450: 'iss/cpu0_hart0',   a5 00000001 -> 0006afb0
+Info 451: 'iss/cpu0_hart0', 0x00000000000141b2(riscv_cfft_f32+22): Machine 879c     lhu     a5,0(a5)
+Info 451: 'iss/cpu0_hart0',   MEMR 0x6afb0 0x6afb0 2 0400
+Info 451: 'iss/cpu0_hart0',   MEMR 0x6afb0 0x6afb0 2 0400
+Info 451: 'iss/cpu0_hart0',   a5 0006afb0 -> 00000400
+Info 452: 'iss/cpu0_hart0', 0x00000000000141b4(riscv_cfft_f32+24): Machine fef42223 sw      a5,-28(s0)
+Info 452: 'iss/cpu0_hart0',   MEMW 0xffffefd4 0xffffefd4 4 00000400
+Info 452: 'iss/cpu0_hart0',   MEMW 0xffffefd4 0xffffefd4 4 00000400
+Info 453: 'iss/cpu0_hart0', 0x00000000000141b8(riscv_cfft_f32+28): Machine fd744703 lbu     a4,-41(s0)
+Info 453: 'iss/cpu0_hart0',   MEMR 0xffffefc7 0xffffefc7 1 00
+Info 453: 'iss/cpu0_hart0',   MEMR 0xffffefc7 0xffffefc7 1 00
+Info 453: 'iss/cpu0_hart0',   a4 00000001 -> 00000000
+Info 454: 'iss/cpu0_hart0', 0x00000000000141bc(riscv_cfft_f32+2c): Machine 4785     li      a5,1
+Info 454: 'iss/cpu0_hart0',   a5 00000400 -> 00000001
+Info 455: 'iss/cpu0_hart0', 0x00000000000141be(riscv_cfft_f32+2e): Machine 04f71263 bne     a4,a5,14202
+Info 456: 'iss/cpu0_hart0', 0x0000000000014202(riscv_cfft_f32+72): Machine fe442703 lw      a4,-28(s0)
+Info 456: 'iss/cpu0_hart0',   MEMR 0xffffefd4 0xffffefd4 4 00000400
+Info 456: 'iss/cpu0_hart0',   MEMR 0xffffefd4 0xffffefd4 4 00000400
+Info 456: 'iss/cpu0_hart0',   a4 00000000 -> 00000400
+Info 457: 'iss/cpu0_hart0', 0x0000000000014206(riscv_cfft_f32+76): Machine 6785     lui     a5,0x1
+Info 457: 'iss/cpu0_hart0',   a5 00000001 -> 00001000
+Info 458: 'iss/cpu0_hart0', 0x0000000000014208(riscv_cfft_f32+78): Machine 0ef70063 beq     a4,a5,142e8
+Info 459: 'iss/cpu0_hart0', 0x000000000001420c(riscv_cfft_f32+7c): Machine fe442703 lw      a4,-28(s0)
+Info 459: 'iss/cpu0_hart0',   MEMR 0xffffefd4 0xffffefd4 4 00000400
+Info 459: 'iss/cpu0_hart0',   MEMR 0xffffefd4 0xffffefd4 4 00000400
+Info 459: 'iss/cpu0_hart0',   a4 00000400 -> 00000400
+Info 460: 'iss/cpu0_hart0', 0x0000000000014210(riscv_cfft_f32+80): Machine 6785     lui     a5,0x1
+Info 460: 'iss/cpu0_hart0',   a5 00001000 -> 00001000
+Info 461: 'iss/cpu0_hart0', 0x0000000000014212(riscv_cfft_f32+82): Machine 0ee7ea63 bltu    a5,a4,14306
+Info 462: 'iss/cpu0_hart0', 0x0000000000014216(riscv_cfft_f32+86): Machine fe442703 lw      a4,-28(s0)
+Info 462: 'iss/cpu0_hart0',   MEMR 0xffffefd4 0xffffefd4 4 00000400
+Info 462: 'iss/cpu0_hart0',   MEMR 0xffffefd4 0xffffefd4 4 00000400
+Info 462: 'iss/cpu0_hart0',   a4 00000400 -> 00000400
+Info 463: 'iss/cpu0_hart0', 0x000000000001421a(riscv_cfft_f32+8a): Machine 28b01793 bseti   a5,zero,11
+Info 463: 'iss/cpu0_hart0',   a5 00001000 -> 00000800
+Info 464: 'iss/cpu0_hart0', 0x000000000001421e(riscv_cfft_f32+8e): Machine 0af70e63 beq     a4,a5,142da
+Info 465: 'iss/cpu0_hart0', 0x0000000000014222(riscv_cfft_f32+92): Machine fe442703 lw      a4,-28(s0)
+Info 465: 'iss/cpu0_hart0',   MEMR 0xffffefd4 0xffffefd4 4 00000400
+Info 465: 'iss/cpu0_hart0',   MEMR 0xffffefd4 0xffffefd4 4 00000400
+Info 465: 'iss/cpu0_hart0',   a4 00000400 -> 00000400
+Info 466: 'iss/cpu0_hart0', 0x0000000000014226(riscv_cfft_f32+96): Machine 28b01793 bseti   a5,zero,11
+Info 466: 'iss/cpu0_hart0',   a5 00000800 -> 00000800
+Info 467: 'iss/cpu0_hart0', 0x000000000001422a(riscv_cfft_f32+9a): Machine 0ce7ee63 bltu    a5,a4,14306
+Info 468: 'iss/cpu0_hart0', 0x000000000001422e(riscv_cfft_f32+9e): Machine fe442703 lw      a4,-28(s0)
+Info 468: 'iss/cpu0_hart0',   MEMR 0xffffefd4 0xffffefd4 4 00000400
+Info 468: 'iss/cpu0_hart0',   MEMR 0xffffefd4 0xffffefd4 4 00000400
+Info 468: 'iss/cpu0_hart0',   a4 00000400 -> 00000400
+Info 469: 'iss/cpu0_hart0', 0x0000000000014232(riscv_cfft_f32+a2): Machine 40000793 addi    a5,zero,1024
+Info 469: 'iss/cpu0_hart0',   a5 00000800 -> 00000400
+Info 470: 'iss/cpu0_hart0', 0x0000000000014236(riscv_cfft_f32+a6): Machine 08f70b63 beq     a4,a5,142cc
+Info 471: 'iss/cpu0_hart0', 0x00000000000142cc(riscv_cfft_f32+13c): Machine fd842583 lw      a1,-40(s0)
+Info 471: 'iss/cpu0_hart0',   MEMR 0xffffefc8 0xffffefc8 4 0007c650
+Info 471: 'iss/cpu0_hart0',   MEMR 0xffffefc8 0xffffefc8 4 0007c650
+Info 471: 'iss/cpu0_hart0',   a1 0007c650 -> 0007c650
+Info 472: 'iss/cpu0_hart0', 0x00000000000142d0(riscv_cfft_f32+140): Machine fdc42503 lw      a0,-36(s0)
+Info 472: 'iss/cpu0_hart0',   MEMR 0xffffefcc 0xffffefcc 4 0006afb0
+Info 472: 'iss/cpu0_hart0',   MEMR 0xffffefcc 0xffffefcc 4 0006afb0
+Info 472: 'iss/cpu0_hart0',   a0 0006afb0 -> 0006afb0
+Info 473: 'iss/cpu0_hart0', 0x00000000000142d4(riscv_cfft_f32+144): Machine cb7fe0ef jal     ra,12f8a
+Info 473: 'iss/cpu0_hart0',   ra 0001273e -> 000142d8
+Info 474: 'iss/cpu0_hart0', 0x0000000000012f8a(riscv_cfft_radix8by2_f32): Machine 7135     addi    sp,sp,-160
+Info 474: 'iss/cpu0_hart0',   sp ffffefc0 -> ffffef20
+Info 475: 'iss/cpu0_hart0', 0x0000000000012f8c(riscv_cfft_radix8by2_f32+2): Machine cf06     sw      ra,156(sp)
+Info 475: 'iss/cpu0_hart0',   MEMW 0xffffefbc 0xffffefbc 4 000142d8
+Info 475: 'iss/cpu0_hart0',   MEMW 0xffffefbc 0xffffefbc 4 000142d8
+Info 476: 'iss/cpu0_hart0', 0x0000000000012f8e(riscv_cfft_radix8by2_f32+4): Machine cd22     sw      s0,152(sp)
+Info 476: 'iss/cpu0_hart0',   MEMW 0xffffefb8 0xffffefb8 4 ffffeff0
+Info 476: 'iss/cpu0_hart0',   MEMW 0xffffefb8 0xffffefb8 4 ffffeff0
+Info 477: 'iss/cpu0_hart0', 0x0000000000012f90(riscv_cfft_radix8by2_f32+6): Machine 1100     addi    s0,sp,160
+Info 477: 'iss/cpu0_hart0',   s0 ffffeff0 -> ffffefc0
+Info 478: 'iss/cpu0_hart0', 0x0000000000012f92(riscv_cfft_radix8by2_f32+8): Machine f6a42623 sw      a0,-148(s0)
+Info 478: 'iss/cpu0_hart0',   MEMW 0xffffef2c 0xffffef2c 4 0006afb0
+Info 478: 'iss/cpu0_hart0',   MEMW 0xffffef2c 0xffffef2c 4 0006afb0
+Info 479: 'iss/cpu0_hart0', 0x0000000000012f96(riscv_cfft_radix8by2_f32+c): Machine f6b42423 sw      a1,-152(s0)
+Info 479: 'iss/cpu0_hart0',   MEMW 0xffffef28 0xffffef28 4 0007c650
+Info 479: 'iss/cpu0_hart0',   MEMW 0xffffef28 0xffffef28 4 0007c650
+Info 480: 'iss/cpu0_hart0', 0x0000000000012f9a(riscv_cfft_radix8by2_f32+10): Machine f6c42783 lw      a5,-148(s0)
+Info 480: 'iss/cpu0_hart0',   MEMR 0xffffef2c 0xffffef2c 4 0006afb0
+Info 480: 'iss/cpu0_hart0',   MEMR 0xffffef2c 0xffffef2c 4 0006afb0
+Info 480: 'iss/cpu0_hart0',   a5 00000400 -> 0006afb0
+Info 481: 'iss/cpu0_hart0', 0x0000000000012f9e(riscv_cfft_radix8by2_f32+14): Machine 879c     lhu     a5,0(a5)
+Info 481: 'iss/cpu0_hart0',   MEMR 0x6afb0 0x6afb0 2 0400
+Info 481: 'iss/cpu0_hart0',   MEMR 0x6afb0 0x6afb0 2 0400
+Info 481: 'iss/cpu0_hart0',   a5 0006afb0 -> 00000400
+Info 482: 'iss/cpu0_hart0', 0x0000000000012fa0(riscv_cfft_radix8by2_f32+16): Machine fcf42c23 sw      a5,-40(s0)
+Info 482: 'iss/cpu0_hart0',   MEMW 0xffffef98 0xffffef98 4 00000400
+Info 482: 'iss/cpu0_hart0',   MEMW 0xffffef98 0xffffef98 4 00000400
+Info 483: 'iss/cpu0_hart0', 0x0000000000012fa4(riscv_cfft_radix8by2_f32+1a): Machine fd842783 lw      a5,-40(s0)
+Info 483: 'iss/cpu0_hart0',   MEMR 0xffffef98 0xffffef98 4 00000400
+Info 483: 'iss/cpu0_hart0',   MEMR 0xffffef98 0xffffef98 4 00000400
+Info 483: 'iss/cpu0_hart0',   a5 00000400 -> 00000400
+Info 484: 'iss/cpu0_hart0', 0x0000000000012fa8(riscv_cfft_radix8by2_f32+1e): Machine 078a     slli    a5,a5,0x2
+Info 484: 'iss/cpu0_hart0',   a5 00000400 -> 00001000
+Info 485: 'iss/cpu0_hart0', 0x0000000000012faa(riscv_cfft_radix8by2_f32+20): Machine f6842703 lw      a4,-152(s0)
+Info 485: 'iss/cpu0_hart0',   MEMR 0xffffef28 0xffffef28 4 0007c650
+Info 485: 'iss/cpu0_hart0',   MEMR 0xffffef28 0xffffef28 4 0007c650
+Info 485: 'iss/cpu0_hart0',   a4 00000400 -> 0007c650
+Info 486: 'iss/cpu0_hart0', 0x0000000000012fae(riscv_cfft_radix8by2_f32+24): Machine 97ba     add     a5,a5,a4
+Info 486: 'iss/cpu0_hart0',   a5 00001000 -> 0007d650
+Info 487: 'iss/cpu0_hart0', 0x0000000000012fb0(riscv_cfft_radix8by2_f32+26): Machine fef42223 sw      a5,-28(s0)
+Info 487: 'iss/cpu0_hart0',   MEMW 0xffffefa4 0xffffefa4 4 0007d650
+Info 487: 'iss/cpu0_hart0',   MEMW 0xffffefa4 0xffffefa4 4 0007d650
+Info 488: 'iss/cpu0_hart0', 0x0000000000012fb4(riscv_cfft_radix8by2_f32+2a): Machine f6c42783 lw      a5,-148(s0)
+Info 488: 'iss/cpu0_hart0',   MEMR 0xffffef2c 0xffffef2c 4 0006afb0
+Info 488: 'iss/cpu0_hart0',   MEMR 0xffffef2c 0xffffef2c 4 0006afb0
+Info 488: 'iss/cpu0_hart0',   a5 0007d650 -> 0006afb0
+Info 489: 'iss/cpu0_hart0', 0x0000000000012fb8(riscv_cfft_radix8by2_f32+2e): Machine 43dc     lw      a5,4(a5)
+Info 489: 'iss/cpu0_hart0',   MEMR 0x6afb4 0x6afb4 4 000189dc
+Info 489: 'iss/cpu0_hart0',   MEMR 0x6afb4 0x6afb4 4 000189dc
+Info 489: 'iss/cpu0_hart0',   a5 0006afb0 -> 000189dc
+Info 490: 'iss/cpu0_hart0', 0x0000000000012fba(riscv_cfft_radix8by2_f32+30): Machine fef42023 sw      a5,-32(s0)
+Info 490: 'iss/cpu0_hart0',   MEMW 0xffffefa0 0xffffefa0 4 000189dc
+Info 490: 'iss/cpu0_hart0',   MEMW 0xffffefa0 0xffffefa0 4 000189dc
+Info 491: 'iss/cpu0_hart0', 0x0000000000012fbe(riscv_cfft_radix8by2_f32+34): Machine f6842783 lw      a5,-152(s0)
+Info 491: 'iss/cpu0_hart0',   MEMR 0xffffef28 0xffffef28 4 0007c650
+Info 491: 'iss/cpu0_hart0',   MEMR 0xffffef28 0xffffef28 4 0007c650
+Info 491: 'iss/cpu0_hart0',   a5 000189dc -> 0007c650
+Info 492: 'iss/cpu0_hart0', 0x0000000000012fc2(riscv_cfft_radix8by2_f32+38): Machine fcf42a23 sw      a5,-44(s0)
+Info 492: 'iss/cpu0_hart0',   MEMW 0xffffef94 0xffffef94 4 0007c650
+Info 492: 'iss/cpu0_hart0',   MEMW 0xffffef94 0xffffef94 4 0007c650
+Info 493: 'iss/cpu0_hart0', 0x0000000000012fc6(riscv_cfft_radix8by2_f32+3c): Machine fe442783 lw      a5,-28(s0)
+Info 493: 'iss/cpu0_hart0',   MEMR 0xffffefa4 0xffffefa4 4 0007d650
+Info 493: 'iss/cpu0_hart0',   MEMR 0xffffefa4 0xffffefa4 4 0007d650
+Info 493: 'iss/cpu0_hart0',   a5 0007c650 -> 0007d650
+Info 494: 'iss/cpu0_hart0', 0x0000000000012fca(riscv_cfft_radix8by2_f32+40): Machine fcf42823 sw      a5,-48(s0)
+Info 494: 'iss/cpu0_hart0',   MEMW 0xffffef90 0xffffef90 4 0007d650
+Info 494: 'iss/cpu0_hart0',   MEMW 0xffffef90 0xffffef90 4 0007d650
+Info 495: 'iss/cpu0_hart0', 0x0000000000012fce(riscv_cfft_radix8by2_f32+44): Machine fd842783 lw      a5,-40(s0)
+Info 495: 'iss/cpu0_hart0',   MEMR 0xffffef98 0xffffef98 4 00000400
+Info 495: 'iss/cpu0_hart0',   MEMR 0xffffef98 0xffffef98 4 00000400
+Info 495: 'iss/cpu0_hart0',   a5 0007d650 -> 00000400
+Info 496: 'iss/cpu0_hart0', 0x0000000000012fd2(riscv_cfft_radix8by2_f32+48): Machine 8385     srli    a5,a5,0x1
+Info 496: 'iss/cpu0_hart0',   a5 00000400 -> 00000200
+Info 497: 'iss/cpu0_hart0', 0x0000000000012fd4(riscv_cfft_radix8by2_f32+4a): Machine fcf42c23 sw      a5,-40(s0)
+Info 497: 'iss/cpu0_hart0',   MEMW 0xffffef98 0xffffef98 4 00000200
+Info 497: 'iss/cpu0_hart0',   MEMW 0xffffef98 0xffffef98 4 00000200
+Info 498: 'iss/cpu0_hart0', 0x0000000000012fd8(riscv_cfft_radix8by2_f32+4e): Machine fd842783 lw      a5,-40(s0)
+Info 498: 'iss/cpu0_hart0',   MEMR 0xffffef98 0xffffef98 4 00000200
+Info 498: 'iss/cpu0_hart0',   MEMR 0xffffef98 0xffffef98 4 00000200
+Info 498: 'iss/cpu0_hart0',   a5 00000200 -> 00000200
+Info 499: 'iss/cpu0_hart0', 0x0000000000012fdc(riscv_cfft_radix8by2_f32+52): Machine 078a     slli    a5,a5,0x2
+Info 499: 'iss/cpu0_hart0',   a5 00000200 -> 00000800
+Info 500: 'iss/cpu0_hart0', 0x0000000000012fde(riscv_cfft_radix8by2_f32+54): Machine f6842703 lw      a4,-152(s0)
+Info 500: 'iss/cpu0_hart0',   MEMR 0xffffef28 0xffffef28 4 0007c650
+Info 500: 'iss/cpu0_hart0',   MEMR 0xffffef28 0xffffef28 4 0007c650
+Info 500: 'iss/cpu0_hart0',   a4 0007c650 -> 0007c650
+Info 501: 'iss/cpu0_hart0', 0x0000000000012fe2(riscv_cfft_radix8by2_f32+58): Machine 97ba     add     a5,a5,a4
+Info 501: 'iss/cpu0_hart0',   a5 00000800 -> 0007ce50
+Info 502: 'iss/cpu0_hart0', 0x0000000000012fe4(riscv_cfft_radix8by2_f32+5a): Machine fef42623 sw      a5,-20(s0)
+Info 502: 'iss/cpu0_hart0',   MEMW 0xffffefac 0xffffefac 4 0007ce50
+Info 502: 'iss/cpu0_hart0',   MEMW 0xffffefac 0xffffefac 4 0007ce50
+Info 503: 'iss/cpu0_hart0', 0x0000000000012fe8(riscv_cfft_radix8by2_f32+5e): Machine fd842783 lw      a5,-40(s0)
+Info 503: 'iss/cpu0_hart0',   MEMR 0xffffef98 0xffffef98 4 00000200
+Info 503: 'iss/cpu0_hart0',   MEMR 0xffffef98 0xffffef98 4 00000200
+Info 503: 'iss/cpu0_hart0',   a5 0007ce50 -> 00000200
+Info 504: 'iss/cpu0_hart0', 0x0000000000012fec(riscv_cfft_radix8by2_f32+62): Machine 078a     slli    a5,a5,0x2
+Info 504: 'iss/cpu0_hart0',   a5 00000200 -> 00000800
+Info 505: 'iss/cpu0_hart0', 0x0000000000012fee(riscv_cfft_radix8by2_f32+64): Machine fe442703 lw      a4,-28(s0)
+Info 505: 'iss/cpu0_hart0',   MEMR 0xffffefa4 0xffffefa4 4 0007d650
+Info 505: 'iss/cpu0_hart0',   MEMR 0xffffefa4 0xffffefa4 4 0007d650
+Info 505: 'iss/cpu0_hart0',   a4 0007c650 -> 0007d650
+Info 506: 'iss/cpu0_hart0', 0x0000000000012ff2(riscv_cfft_radix8by2_f32+68): Machine 97ba     add     a5,a5,a4
+Info 506: 'iss/cpu0_hart0',   a5 00000800 -> 0007de50
+Info 507: 'iss/cpu0_hart0', 0x0000000000012ff4(riscv_cfft_radix8by2_f32+6a): Machine fef42423 sw      a5,-24(s0)
+Info 507: 'iss/cpu0_hart0',   MEMW 0xffffefa8 0xffffefa8 4 0007de50
+Info 507: 'iss/cpu0_hart0',   MEMW 0xffffefa8 0xffffefa8 4 0007de50
+Info 508: 'iss/cpu0_hart0', 0x0000000000012ff8(riscv_cfft_radix8by2_f32+6e): Machine fd842783 lw      a5,-40(s0)
+Info 508: 'iss/cpu0_hart0',   MEMR 0xffffef98 0xffffef98 4 00000200
+Info 508: 'iss/cpu0_hart0',   MEMR 0xffffef98 0xffffef98 4 00000200
+Info 508: 'iss/cpu0_hart0',   a5 0007de50 -> 00000200
+Info 509: 'iss/cpu0_hart0', 0x0000000000012ffc(riscv_cfft_radix8by2_f32+72): Machine 8389     srli    a5,a5,0x2
+Info 509: 'iss/cpu0_hart0',   a5 00000200 -> 00000080
+Info 510: 'iss/cpu0_hart0', 0x0000000000012ffe(riscv_cfft_radix8by2_f32+74): Machine fcf42e23 sw      a5,-36(s0)
+Info 510: 'iss/cpu0_hart0',   MEMW 0xffffef9c 0xffffef9c 4 00000080
+Info 510: 'iss/cpu0_hart0',   MEMW 0xffffef9c 0xffffef9c 4 00000080
+Info 511: 'iss/cpu0_hart0', 0x0000000000013002(riscv_cfft_radix8by2_f32+78): Machine a911     j       13416
+Info 512: 'iss/cpu0_hart0', 0x0000000000013416(riscv_cfft_radix8by2_f32+48c): Machine fdc42783 lw      a5,-36(s0)
+Info 512: 'iss/cpu0_hart0',   MEMR 0xffffef9c 0xffffef9c 4 00000080
+Info 512: 'iss/cpu0_hart0',   MEMR 0xffffef9c 0xffffef9c 4 00000080
+Info 512: 'iss/cpu0_hart0',   a5 00000080 -> 00000080
+Info 513: 'iss/cpu0_hart0', 0x000000000001341a(riscv_cfft_radix8by2_f32+490): Machine be0795e3 bnez    a5,13004
+Info 514: 'iss/cpu0_hart0', 0x0000000000013004(riscv_cfft_radix8by2_f32+7a): Machine f6842783 lw      a5,-152(s0)
+Info 514: 'iss/cpu0_hart0',   MEMR 0xffffef28 0xffffef28 4 0007c650
+Info 514: 'iss/cpu0_hart0',   MEMR 0xffffef28 0xffffef28 4 0007c650
+Info 514: 'iss/cpu0_hart0',   a5 00000080 -> 0007c650
+Info 515: 'iss/cpu0_hart0', 0x0000000000013008(riscv_cfft_radix8by2_f32+7e): Machine 639c     flw     fa5,0(a5)
+Info 515: 'iss/cpu0_hart0',   mstatus 00002000 -> 00003800
+Info 515: 'iss/cpu0_hart0',   mepc 00000000 -> 00013008
+Info 515: 'iss/cpu0_hart0',   mcause 00000000 -> 30000002
+Error (STF_TRACE) Unhandled exception event (mcause=30000002)
+Info 516: 'iss/cpu0_hart0', 0x0000000000000000: Machine 0000     illegal
+Processor Exception (PC_PRX) Processor 'iss/cpu0_hart0' 0x0: 0000     illegal
+Processor Exception (PC_FIX) Executing at uninitialized address 0x0
+Processor Exception (PC_FUM) NOTE: simulated exceptions are not enabled on processor iss/cpu0_hart0. To continue execution when fetching from uninitialized memory, please ensure simulated exceptions are enabled.
+Info 
+Info ---------------------------------------------------
+Info CPU 'iss/cpu0_hart0' STATISTICS
+Info   Type                  : riscv (M8500)
+Info   Nominal MIPS          : 100
+Info   Final program counter : 0x0
+Info   Simulated instructions: 516
+Info   Simulated MIPS        : run too short for meaningful result
+Info ---------------------------------------------------
+Info 
+Info ---------------------------------------------------
+Info SIMULATION TIME STATISTICS
+Info   Simulated time        : 0.00 seconds
+Info   User time             : 0.03 seconds
+Info   System time           : 0.01 seconds
+Info   Elapsed time          : 0.04 seconds
+Info ---------------------------------------------------
+
+CpuManagerMulti finished: Wed Apr 30 14:25:37 2025
+
+
+CpuManagerMulti (64-Bit)
+Version X-2025.06-PRE-20250417 veng.20250418.0
+Open Virtual Platform simulator from www.Synopsys.com.
+
+Info (STF_TRACE) Trace file closed
+Info Session ended: Wed Apr 30 14:25:37 2025
+
