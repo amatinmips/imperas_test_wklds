@@ -1,0 +1,105 @@
+Info Session started: Thu May  1 16:35:40 2025
+
+Info PROGRAM /home/amatin/work/IMPERAS_0418/Imperas.X-2025.06/bin/Linux64/iss.exe
+Info ------------- ENVIRONMENT -------------
+Info IMPERAS_ARCH                             = Linux64
+Info SNPSLMD_LICENSE_FILE                     = 27010@global-licsrv2
+Info IMPERAS_HOME                             = /home/amatin/work/IMPERAS_0418/Imperas.X-2025.06
+Info IMPERAS_ISS                              = iss.exe
+Info IMPERAS_M32                              = 0
+Info IMPERAS_PERSONALITY                      = CPUMAN_MULTI
+Info IMPERAS_RUNTIME                          = CpuManager
+Info IMPERAS_SHRSUF                           = so
+Info IMPERAS_UNAME                            = Linux
+Info IMPERAS_VLNV                             = /home/amatin/work/IMPERAS_0418/Imperas.X-2025.06/lib/Linux64/ImperasLib
+Info --------------------------------------
+Info -------- FLAGS (from command line)
+Info --program            /home/amatin/work/RAVEN_WKLD/RAVEN_SEMIHOST/v305/trig_math/trig_COS_v305_newlib.elf
+Info --processorvendor    mips.com
+Info --processorname      riscv
+Info --variant            M8500
+Info --override           iss/cpu0/add_Extensions=MACSU
+Info --override           iss/cpu0/mstatus_FS=1
+Info --extlib             iss/cpu0_hart0/stf=imperas.com/intercept/riscvStfTracer/1.0
+Info --override           CLIC_version=0.10-draft-20250317
+Info --override           iss/cpu0/stf/traceFile=/home/amatin/work/RAVEN_WKLD/RAVEN_SEMIHOST/v305/trig_math/trig_COS_v305_newlib.elf.stf
+Info --override           iss/cpu0/Smcsrind=T
+Info --override           iss/cpu0/stf/verbose=T
+Info --override           iss/cpu0/stf/traceMemRead=T
+Info --override           iss/cpu0/stf/traceMemWrite=T
+Info --logfile            /home/amatin/work/RAVEN_WKLD/RAVEN_SEMIHOST/v305/trig_math/trig_COS_v305_newlib.elf.stf.run.log
+Info --verbose           
+IMPERAS Instruction Set Simulator (ISS)
+
+
+CpuManagerMulti (64-Bit)
+Version X-2025.06-PRE-20250417 veng.20250418.0
+Open Virtual Platform simulator from www.Synopsys.com.
+
+
+Copyright (c) 2005-2024 Synopsys, inc.
+This software and the associated documentation are proprietary to Synopsys, Inc.
+This software may only be used in accordance with the terms and conditions
+of a written license agreement with Synopsys, Inc. All other use, reproduction,
+or distribution of this software is strictly prohibited.  Licensed Products
+communicate with Synopsys servers for the purpose of providing software
+updates, detecting software piracy and verifying that customers are using
+Licensed Products in conformity with the applicable License Key for such
+Licensed Products. Synopsys will use information gathered in connection with
+this process to deliver software updates and pursue software pirates and infringers.
+
+Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on Inclusivity and Diversity"
+(Refer to article 000036315 at https://solvnetplus.synopsys.com)
+
+CpuManagerMulti started: Thu May  1 16:35:40 2025
+
+
+Info (OR_OF) Target 'iss/cpu0' has object file read from '/home/amatin/work/RAVEN_WKLD/RAVEN_SEMIHOST/v305/trig_math/trig_COS_v305_newlib.elf'
+Info (OR_PH) Program Headers:
+Info (OR_PH) Type           Offset     VirtAddr   PhysAddr   FileSiz    MemSiz     Flags Align
+Info (OR_PD) PROC           0x00010b7d 0x00000000 0x00000000 0x00000059 0x00000000 R--   1
+Info (OR_PD) LOAD           0x00000000 0x00010000 0x00010000 0x000103f4 0x000103f4 R-E   1000
+Info (OR_PD) LOAD           0x000103f4 0x000213f4 0x000213f4 0x00000750 0x00000a7c RW-   1000
+Info (OR_PD) OS             0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 RW-   10
+Warning (CF_PMP) Override 'iss/cpu0/stf/traceFile' matches 'iss/cpu0_hart0': This method of matching will be removed in the next release. Suggest replacing 'cpu0' with 'cpu0*'
+Warning (CF_PMP) Override 'iss/cpu0/stf/traceMemRead' matches 'iss/cpu0_hart0': This method of matching will be removed in the next release. Suggest replacing 'cpu0' with 'cpu0*'
+Warning (CF_PMP) Override 'iss/cpu0/stf/traceMemWrite' matches 'iss/cpu0_hart0': This method of matching will be removed in the next release. Suggest replacing 'cpu0' with 'cpu0*'
+Warning (CF_PMP) Override 'iss/cpu0/stf/verbose' matches 'iss/cpu0_hart0': This method of matching will be removed in the next release. Suggest replacing 'cpu0' with 'cpu0*'
+Info (STF_TRACE) Opening trace file '/home/amatin/work/RAVEN_WKLD/RAVEN_SEMIHOST/v305/trig_math/trig_COS_v305_newlib.elf.stf.hart0' for writing
+Info (STF_TRACE) Monitoring memory reads between 0x00000000 and 0xffffffff
+Info (STF_TRACE) Monitoring memory writes between 0x00000000 and 0xffffffff
+IN COS
+Error (STF_TRACE) Unhandled exception event (mcause=30000002)
+Processor Exception (PC_PRX) Processor 'iss/cpu0_hart0' 0x0: 0000     illegal
+Processor Exception (PC_FIX) Executing at uninitialized address 0x0
+Processor Exception (PC_FUM) NOTE: simulated exceptions are not enabled on processor iss/cpu0_hart0. To continue execution when fetching from uninitialized memory, please ensure simulated exceptions are enabled.
+Info 
+Info ---------------------------------------------------
+Info CPU 'iss/cpu0_hart0' STATISTICS
+Info   Type                  : riscv (M8500)
+Info   Nominal MIPS          : 100
+Info   Final program counter : 0x0
+Info   Simulated instructions: 6,525
+Info   Simulated MIPS        : run too short for meaningful result
+Info   Translated insns      : 1,229
+Info   Simulated:translated  : 5:1
+Info ---------------------------------------------------
+Info 
+Info ---------------------------------------------------
+Info SIMULATION TIME STATISTICS
+Info   Simulated time        : 0.00 seconds
+Info   User time             : 0.08 seconds
+Info   System time           : 0.00 seconds
+Info   Elapsed time          : 0.08 seconds
+Info ---------------------------------------------------
+
+CpuManagerMulti finished: Thu May  1 16:35:40 2025
+
+
+CpuManagerMulti (64-Bit)
+Version X-2025.06-PRE-20250417 veng.20250418.0
+Open Virtual Platform simulator from www.Synopsys.com.
+
+Info (STF_TRACE) Trace file closed
+Info Session ended: Thu May  1 16:35:40 2025
+
