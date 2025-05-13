@@ -1,0 +1,303 @@
+Info Session started: Tue May 13 10:15:11 2025
+
+Info PROGRAM /home/amatin/work/IMPERAS_DIR/IMPERAS_0418/Imperas.X-2025.06/bin/Linux64/iss.exe
+Info ------------- ENVIRONMENT -------------
+Info IMPERAS_ARCH                             = Linux64
+Info IMPERASD_LICENSE_FILE                    = 27010@global-licsrv2
+Info SNPSLMD_LICENSE_FILE                     = 27010@global-licsrv2
+Info IMPERAS_HOME                             = /home/amatin/work/IMPERAS_DIR/IMPERAS_0418/Imperas.X-2025.06
+Info IMPERAS_ISS                              = iss.exe
+Info IMPERAS_M32                              = 0
+Info IMPERAS_PERSONALITY                      = CPUMAN_MULTI
+Info IMPERAS_RUNTIME                          = CpuManager
+Info IMPERAS_SHRSUF                           = so
+Info IMPERAS_UNAME                            = Linux
+Info IMPERAS_VLNV                             = /home/amatin/work/IMPERAS_DIR/IMPERAS_0418/Imperas.X-2025.06/lib/Linux64/ImperasLib
+Info --------------------------------------
+Info -------- FLAGS (from command line)
+Info --program            /home/amatin/m8500_sdk_v0.1/applications/baremetal/dhrystone/build_plain/dhrystone
+Info --processorvendor    mips.com
+Info --processorname      riscv
+Info --variant            M8500
+Info --override           iss/cpu0/add_Extensions=MACSU
+Info --extlib             iss/cpu0_hart0/stf=imperas.com/intercept/riscvStfTracer/1.0
+Info --override           iss/cpu0*/Smcsrind=T
+Info --override           iss/cpu0*/Zmmul=F
+Info --override           iss/cpu0/simulateexceptions=F
+Info --override           CLIC_version=0.10-draft-20250317
+Info --override           iss/cpu0*/stf/traceFile=dhrystone_raven.stf
+Info --override           iss/cpu0*/stf/verbose=T
+Info --override           iss/cpu0*/stf/traceMemRead=T
+Info --override           iss/cpu0*/stf/traceMemWrite=T
+Info --logfile            dhrystone_raven.stf.run.log
+Info --verbose           
+IMPERAS Instruction Set Simulator (ISS)
+
+
+CpuManagerMulti (64-Bit)
+Version X-2025.06-PRE-20250417 veng.20250418.0
+Open Virtual Platform simulator from www.Synopsys.com.
+
+
+Copyright (c) 2005-2024 Synopsys, inc.
+This software and the associated documentation are proprietary to Synopsys, Inc.
+This software may only be used in accordance with the terms and conditions
+of a written license agreement with Synopsys, Inc. All other use, reproduction,
+or distribution of this software is strictly prohibited.  Licensed Products
+communicate with Synopsys servers for the purpose of providing software
+updates, detecting software piracy and verifying that customers are using
+Licensed Products in conformity with the applicable License Key for such
+Licensed Products. Synopsys will use information gathered in connection with
+this process to deliver software updates and pursue software pirates and infringers.
+
+Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on Inclusivity and Diversity"
+(Refer to article 000036315 at https://solvnetplus.synopsys.com)
+
+CpuManagerMulti started: Tue May 13 10:15:11 2025
+
+
+Info (OR_OF) Target 'iss/cpu0' has object file read from '/home/amatin/m8500_sdk_v0.1/applications/baremetal/dhrystone/build_plain/dhrystone'
+Info (OR_PH) Program Headers:
+Info (OR_PH) Type           Offset     VirtAddr   PhysAddr   FileSiz    MemSiz     Flags Align
+Info (OR_PD) PROC           0x00005d93 0x00000000 0x00000000 0x00000098 0x00000000 R--   1
+Info (OR_PD) LOAD           0x00001000 0x80000000 0x80000000 0x00002798 0x00002798 R-E   1000
+Info (OR_PD) LOAD           0x00004000 0x80080000 0x80002798 0x00000060 0x00002a08 RW-   1000
+Info (OR_PD) LOAD           0x00000a08 0x80082a08 0x80082a08 0x00000000 0x00008008 RW-   1000
+Info (OR_PD) OS             0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 RW-   10
+Info (STF_TRACE) Opening trace file 'dhrystone_raven.stf.hart0' for writing
+Info (STF_TRACE) Monitoring memory reads between 0x00000000 and 0xffffffff
+Info (STF_TRACE) Monitoring memory writes between 0x00000000 and 0xffffffff
+
+Dhrystone Benchmark, Version 2.1 (Language: C)
+
+Program compiled without 'register' attribute
+
+Execution starts, 20 runs through Dhrystone
+Execution ends
+
+Final values of the variables used in the benchmark:
+
+Int_Glob:            5
+        should be:   5
+Bool_Glob:           1
+        should be:   1
+Ch_1_Glob:           A
+        should be:   A
+Ch_2_Glob:           B
+        should be:   B
+Arr_1_Glob[8]:       7
+        should be:   7
+Arr_2_Glob[8][7]:    30
+        should be:   Number_Of_Runs + 10
+Ptr_Glob->
+  Ptr_Comp:          -2146959160
+        should be:   (implementation-dependent)
+  Discr:             0
+        should be:   0
+  Enum_Comp:         2
+        should be:   2
+  Int_Comp:          17
+        should be:   17
+  Str_Comp:          DHRYSTONE PROGRAM, SOME STRING
+        should be:   DHRYSTONE PROGRAM, SOME STRING
+Next_Ptr_Glob->
+  Ptr_Comp:          -2146959160
+        should be:   (implementation-dependent), same as above
+  Discr:             0
+        should be:   0
+  Enum_Comp:         1
+        should be:   1
+  Int_Comp:          18
+        should be:   18
+  Str_Comp:          DHRYSTONE PROGRAM, SOME STRING
+        should be:   DHRYSTONE PROGRAM, SOME STRING
+Int_1_Loc:           5
+        should be:   5
+Int_2_Loc:           13
+        should be:   13
+Int_3_Loc:           7
+        should be:   7
+Enum_Loc:            1
+        should be:   1
+Str_1_Loc:           DHRYSTONE PROGRAM, 1'ST STRING
+        should be:   DHRYSTONE PROGRAM, 1'ST STRING
+Str_2_Loc:           DHRYSTONE PROGRAM, 2'ND STRING
+        should be:   DHRYSTONE PROGRAM, 2'ND STRING
+
+CPU cycles used in execution: 0
+CPU cycles per iteration: 0
+DHRYSTONE RUN COMPLETE
+Info 
+Info ---------------------------------------------------
+Info CPU 'iss/cpu0_hart0' STATISTICS
+Info   Type                  : riscv (M8500)
+Info   Nominal MIPS          : 100
+Info   Final program counter : 0x80000090
+Info   Simulated instructions: 83,817
+Info   Simulated MIPS        : 0.0
+Info   Translated insns      : 1,756
+Info   Simulated:translated  : 47:1
+Info ---------------------------------------------------
+Info 
+Info ---------------------------------------------------
+Info CPU 'iss/cpu0_hart1' STATISTICS
+Info   Type                  : riscv (M8500)
+Info   Nominal MIPS          : 100
+Info   Final program counter : 0x80000096
+Info   Simulated instructions: 6
+Info   Simulated MIPS        : 0.0
+Info ---------------------------------------------------
+Info 
+Info ---------------------------------------------------
+Info CPU 'iss/cpu0_hart2' STATISTICS
+Info   Type                  : riscv (M8500)
+Info   Nominal MIPS          : 100
+Info   Final program counter : 0x80000096
+Info   Simulated instructions: 6
+Info   Simulated MIPS        : 0.0
+Info ---------------------------------------------------
+Info 
+Info ---------------------------------------------------
+Info CPU 'iss/cpu0_hart3' STATISTICS
+Info   Type                  : riscv (M8500)
+Info   Nominal MIPS          : 100
+Info   Final program counter : 0x80000096
+Info   Simulated instructions: 6
+Info   Simulated MIPS        : 0.0
+Info ---------------------------------------------------
+Info 
+Info ---------------------------------------------------
+Info CPU 'iss/cpu0_hart4' STATISTICS
+Info   Type                  : riscv (M8500)
+Info   Nominal MIPS          : 100
+Info   Final program counter : 0x80000096
+Info   Simulated instructions: 6
+Info   Simulated MIPS        : 0.0
+Info ---------------------------------------------------
+Info 
+Info ---------------------------------------------------
+Info CPU 'iss/cpu0_hart5' STATISTICS
+Info   Type                  : riscv (M8500)
+Info   Nominal MIPS          : 100
+Info   Final program counter : 0x80000096
+Info   Simulated instructions: 6
+Info   Simulated MIPS        : 0.0
+Info ---------------------------------------------------
+Info 
+Info ---------------------------------------------------
+Info CPU 'iss/cpu0_hart6' STATISTICS
+Info   Type                  : riscv (M8500)
+Info   Nominal MIPS          : 100
+Info   Final program counter : 0x80000096
+Info   Simulated instructions: 6
+Info   Simulated MIPS        : 0.0
+Info ---------------------------------------------------
+Info 
+Info ---------------------------------------------------
+Info CPU 'iss/cpu0_hart7' STATISTICS
+Info   Type                  : riscv (M8500)
+Info   Nominal MIPS          : 100
+Info   Final program counter : 0x80000096
+Info   Simulated instructions: 6
+Info   Simulated MIPS        : 0.0
+Info ---------------------------------------------------
+Info 
+Info ---------------------------------------------------
+Info CPU 'iss/cpu0_hart8' STATISTICS
+Info   Type                  : riscv (M8500)
+Info   Nominal MIPS          : 100
+Info   Final program counter : 0x80000096
+Info   Simulated instructions: 6
+Info   Simulated MIPS        : 0.0
+Info ---------------------------------------------------
+Info 
+Info ---------------------------------------------------
+Info CPU 'iss/cpu0_hart9' STATISTICS
+Info   Type                  : riscv (M8500)
+Info   Nominal MIPS          : 100
+Info   Final program counter : 0x80000096
+Info   Simulated instructions: 6
+Info   Simulated MIPS        : 0.0
+Info ---------------------------------------------------
+Info 
+Info ---------------------------------------------------
+Info CPU 'iss/cpu0_hart10' STATISTICS
+Info   Type                  : riscv (M8500)
+Info   Nominal MIPS          : 100
+Info   Final program counter : 0x80000096
+Info   Simulated instructions: 6
+Info   Simulated MIPS        : 0.0
+Info ---------------------------------------------------
+Info 
+Info ---------------------------------------------------
+Info CPU 'iss/cpu0_hart11' STATISTICS
+Info   Type                  : riscv (M8500)
+Info   Nominal MIPS          : 100
+Info   Final program counter : 0x80000096
+Info   Simulated instructions: 6
+Info   Simulated MIPS        : 0.0
+Info ---------------------------------------------------
+Info 
+Info ---------------------------------------------------
+Info CPU 'iss/cpu0_hart12' STATISTICS
+Info   Type                  : riscv (M8500)
+Info   Nominal MIPS          : 100
+Info   Final program counter : 0x80000096
+Info   Simulated instructions: 6
+Info   Simulated MIPS        : 0.0
+Info ---------------------------------------------------
+Info 
+Info ---------------------------------------------------
+Info CPU 'iss/cpu0_hart13' STATISTICS
+Info   Type                  : riscv (M8500)
+Info   Nominal MIPS          : 100
+Info   Final program counter : 0x80000096
+Info   Simulated instructions: 6
+Info   Simulated MIPS        : 0.0
+Info ---------------------------------------------------
+Info 
+Info ---------------------------------------------------
+Info CPU 'iss/cpu0_hart14' STATISTICS
+Info   Type                  : riscv (M8500)
+Info   Nominal MIPS          : 100
+Info   Final program counter : 0x80000096
+Info   Simulated instructions: 6
+Info   Simulated MIPS        : 0.0
+Info ---------------------------------------------------
+Info 
+Info ---------------------------------------------------
+Info CPU 'iss/cpu0_hart15' STATISTICS
+Info   Type                  : riscv (M8500)
+Info   Nominal MIPS          : 100
+Info   Final program counter : 0x80000096
+Info   Simulated instructions: 6
+Info   Simulated MIPS        : 0.0
+Info ---------------------------------------------------
+Info 
+Info ---------------------------------------------------
+Info TOTAL
+Info   Simulated instructions: 83,907
+Info   Simulated MIPS        : 0.0
+Info   Translated insns      : 1,876
+Info   Simulated:translated  : 44:1
+Info ---------------------------------------------------
+Info 
+Info ---------------------------------------------------
+Info SIMULATION TIME STATISTICS
+Info   Simulated time        : 7955.02 seconds
+Info   User time             : 2.29 seconds
+Info   System time           : 0.01 seconds
+Info   Elapsed time          : 2.30 seconds
+Info   Real time ratio       : 3458.21x faster
+Info ---------------------------------------------------
+
+CpuManagerMulti finished: Tue May 13 10:15:14 2025
+
+
+CpuManagerMulti (64-Bit)
+Version X-2025.06-PRE-20250417 veng.20250418.0
+Open Virtual Platform simulator from www.Synopsys.com.
+
+Info (STF_TRACE) Trace file closed
+Info Session ended: Tue May 13 10:15:14 2025
+
